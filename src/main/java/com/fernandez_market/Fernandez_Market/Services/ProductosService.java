@@ -1,7 +1,7 @@
 package com.fernandez_market.Fernandez_Market.Services;
 
 import com.fernandez_market.Fernandez_Market.Models.Productos;
-import com.fernandez_market.Fernandez_Market.Projections.ProductosCard;
+import com.fernandez_market.Fernandez_Market.Projections.ProductosCardDTO;
 import com.fernandez_market.Fernandez_Market.Repositories.ProductosRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -31,11 +31,17 @@ public class ProductosService {
         return null;
     }
 
-    public List<ProductosCard> getProductosMasVendidos() {
+    public List<ProductosCardDTO> getProductosMasVendidos() {
         return this.productoRepository.getProductosMasVendidos();
     }
 
-    public List<ProductosCard> getProductosNuevos() {
+    public List<ProductosCardDTO> getProductosNuevos() {
         return this.productoRepository.getProductosNuevos();
+    }
+
+
+
+    public List<ProductosCardDTO> QueryPedorro() {
+        return this.productoRepository.getProductos();
     }
 }

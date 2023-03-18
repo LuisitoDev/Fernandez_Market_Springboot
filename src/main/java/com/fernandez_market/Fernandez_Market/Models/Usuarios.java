@@ -14,35 +14,35 @@ public class Usuarios {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idUsuario;
     @Column(nullable = false, length = 30)
-    private String nombreUsuario;
+    private String NombreUsuario;
     @Column(nullable = false, length = 30)
-    private String apellidoPaternoUsuario;
+    private String ApellidoPaternoUsuario;
     @Column(nullable = false, length = 30)
-    private String apellidoMaternoUsuario;
+    private String ApellidoMaternoUsuario;
 
     @Column(nullable = false, length = 60)
-    private String correoUsuario;
+    private String CorreoUsuario;
     @Column(nullable = false, length = 30)
-    private String passwordUsuario;
+    private String PasswordUsuario;
 
     @JsonFormat(pattern="dd-MM-yyyy", timezone = "UTC")
     @Temporal(TemporalType.DATE)
     @Column(nullable = false)
-    private Date fechaCreacionUsuario;
+    private Date FechaCreacionUsuario;
 
     @Column(nullable = false)
-    private Boolean estadoUsuario = true;
+    private Boolean EstadoUsuario = true;
 
-    @OneToMany(mappedBy = "usuarioPedido")
-    private List<Pedidos> pedidos;
+    @OneToMany(mappedBy = "UsuarioPedido")
+    private List<Pedidos> Pedidos;
 
     public Usuarios() {
     }
 
     public Usuarios(Long idUsuario, String nombreUsuario, String correoUsuario) {
         this.idUsuario = idUsuario;
-        this.nombreUsuario = nombreUsuario;
-        this.correoUsuario = correoUsuario;
+        this.NombreUsuario = nombreUsuario;
+        this.CorreoUsuario = correoUsuario;
     }
 
     public Long getIdUsuario() {
@@ -54,66 +54,66 @@ public class Usuarios {
     }
 
     public String getNombreUsuario() {
-        return nombreUsuario;
+        return NombreUsuario;
     }
 
     public void setNombreUsuario(String nombreUsuario) {
-        this.nombreUsuario = nombreUsuario;
+        this.NombreUsuario = nombreUsuario;
     }
 
     public String getApellidoPaternoUsuario() {
-        return apellidoPaternoUsuario;
+        return ApellidoPaternoUsuario;
     }
 
     public void setApellidoPaternoUsuario(String apellidoPaternoUsuario) {
-        this.apellidoPaternoUsuario = apellidoPaternoUsuario;
+        this.ApellidoPaternoUsuario = apellidoPaternoUsuario;
     }
 
     public String getApellidoMaternoUsuario() {
-        return apellidoMaternoUsuario;
+        return ApellidoMaternoUsuario;
     }
 
     public void setApellidoMaternoUsuario(String apellidoMaternoUsuario) {
-        this.apellidoMaternoUsuario = apellidoMaternoUsuario;
+        this.ApellidoMaternoUsuario = apellidoMaternoUsuario;
     }
 
     public String getCorreoUsuario() {
-        return correoUsuario;
+        return CorreoUsuario;
     }
 
     public void setCorreoUsuario(String correoUsuario) {
-        this.correoUsuario = correoUsuario;
+        this.CorreoUsuario = correoUsuario;
     }
 
     public String getPasswordUsuario() {
-        return passwordUsuario;
+        return PasswordUsuario;
     }
 
     public void setPasswordUsuario(String passwordUsuario) {
-        this.passwordUsuario = passwordUsuario;
+        this.PasswordUsuario = passwordUsuario;
     }
 
     public Date getFechaCreacionUsuario() {
-        return fechaCreacionUsuario;
+        return FechaCreacionUsuario;
     }
 
     public void setFechaCreacionUsuario(Date fechaCreacionUsuario) {
-        this.fechaCreacionUsuario = fechaCreacionUsuario;
+        this.FechaCreacionUsuario = fechaCreacionUsuario;
     }
 
     public Boolean getEstadoUsuario() {
-        return estadoUsuario;
+        return EstadoUsuario;
     }
 
     public void setEstadoUsuario(Boolean estadoUsuario) {
-        this.estadoUsuario = estadoUsuario;
+        this.EstadoUsuario = estadoUsuario;
     }
 
     public String getNombreCompletoUsuario() {
-        return nombreUsuario + " " + apellidoPaternoUsuario + " " + apellidoMaternoUsuario;
+        return NombreUsuario + " " + ApellidoPaternoUsuario + " " + ApellidoMaternoUsuario;
     }
     public String getEstadoUsuarioString() {
-        if (estadoUsuario) {
+        if (EstadoUsuario) {
             return "Activo";
         }
         else {

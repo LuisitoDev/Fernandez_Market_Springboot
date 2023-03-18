@@ -6,7 +6,6 @@ import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
 
 import java.math.BigDecimal;
-import java.time.OffsetDateTime;
 import java.util.Date;
 import java.util.List;
 
@@ -22,30 +21,30 @@ public class Pedidos {
     @JsonFormat(pattern="dd-MM-yyyy", timezone = "UTC")
     @Temporal(TemporalType.DATE)
     @Column(nullable = false)
-    private Date fechaCreacionPedido;
+    private Date FechaCreacionPedido;
 
     @Column(nullable = false, length = 200)
-    private String domicilioPedido;
+    private String DomicilioPedido;
 
     @Column(nullable = false, length = 20)
-    private String telefonoClientePedido;
+    private String TelefonoClientePedido;
 
     @Column(nullable = false, length = 45)
-    private String bancoClientePedido;
+    private String BancoClientePedido;
 
     @Column(nullable = false, length = 20)
-    private String numCuentaClientePedido;
+    private String NumCuentaClientePedido;
 
     @Column(nullable = false, precision = 19, scale = 2)
-    private BigDecimal precioTotalPedido;
+    private BigDecimal PrecioTotalPedido;
 
     @ManyToOne(fetch = FetchType.EAGER, optional = false)
-    @JoinColumn(name = "idUsuario", nullable = false)
+    @JoinColumn(name = "UsuarioPedido", nullable = false)
     @OnDelete(action = OnDeleteAction.CASCADE)
-    private Usuarios usuarioPedido;
+    private Usuarios UsuarioPedido;
 
-    @OneToMany(mappedBy = "pedidoCompra")
-    private List<Compras> compras;
+    @OneToMany(mappedBy = "PedidoCompra")
+    private List<Compras> Compras;
 
     public Long getIdPedido() {
         return idPedido;
@@ -56,59 +55,59 @@ public class Pedidos {
     }
 
     public Date getFechaCreacionPedido() {
-        return fechaCreacionPedido;
+        return FechaCreacionPedido;
     }
 
     public void setFechaCreacionPedido(final Date fechaCreacionPedido) {
-        this.fechaCreacionPedido = fechaCreacionPedido;
+        this.FechaCreacionPedido = fechaCreacionPedido;
     }
 
     public String getDomicilioPedido() {
-        return domicilioPedido;
+        return DomicilioPedido;
     }
 
     public void setDomicilioPedido(final String domicilioPedido) {
-        this.domicilioPedido = domicilioPedido;
+        this.DomicilioPedido = domicilioPedido;
     }
 
     public String getTelefonoClientePedido() {
-        return telefonoClientePedido;
+        return TelefonoClientePedido;
     }
 
     public void setTelefonoClientePedido(final String telefonoClientePedido) {
-        this.telefonoClientePedido = telefonoClientePedido;
+        this.TelefonoClientePedido = telefonoClientePedido;
     }
 
     public String getBancoClientePedido() {
-        return bancoClientePedido;
+        return BancoClientePedido;
     }
 
     public void setBancoClientePedido(final String bancoClientePedido) {
-        this.bancoClientePedido = bancoClientePedido;
+        this.BancoClientePedido = bancoClientePedido;
     }
 
     public String getNumCuentaClientePedido() {
-        return numCuentaClientePedido;
+        return NumCuentaClientePedido;
     }
 
     public void setNumCuentaClientePedido(final String numCuentaClientePedido) {
-        this.numCuentaClientePedido = numCuentaClientePedido;
+        this.NumCuentaClientePedido = numCuentaClientePedido;
     }
 
     public BigDecimal getPrecioTotalPedido() {
-        return precioTotalPedido;
+        return PrecioTotalPedido;
     }
 
     public void setPrecioTotalPedido(final BigDecimal precioTotalPedido) {
-        this.precioTotalPedido = precioTotalPedido;
+        this.PrecioTotalPedido = precioTotalPedido;
     }
 
     public Usuarios getUsuarioPedido() {
-        return usuarioPedido;
+        return UsuarioPedido;
     }
 
     public void setUsuarioPedido(final Usuarios usuarioPedido) {
-        this.usuarioPedido = usuarioPedido;
+        this.UsuarioPedido = usuarioPedido;
     }
 
 }

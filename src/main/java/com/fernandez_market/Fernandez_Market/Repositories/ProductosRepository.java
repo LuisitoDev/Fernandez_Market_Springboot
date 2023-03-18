@@ -1,7 +1,7 @@
 package com.fernandez_market.Fernandez_Market.Repositories;
 
 import com.fernandez_market.Fernandez_Market.Models.Productos;
-import com.fernandez_market.Fernandez_Market.Projections.ProductosCard;
+import com.fernandez_market.Fernandez_Market.Projections.ProductosCardDTO;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
@@ -15,13 +15,13 @@ public interface ProductosRepository extends JpaRepository<Productos, Long> {
     @Query(value =
             "SELECT p.idProducto, p.nombreProducto, p.precioProducto, p.descuentoProducto, p.cantidadStockProducto, p.marcaProductoTexto, SUM(c.cantidadPiezasCompra) as cantVecesComprado " +
                     "FROM productos p " +
-                    "LEFT JOIN compras c on c.idProducto = p.idProducto " +
+                    "LEFT JOIN compras c on c.productoCompra = p.idProducto " +
                 "WHERE p.cantidadStockProducto > 0 " +
                 "GROUP BY p.idProducto " +
                 "ORDER BY cantVecesComprado DESC, p.descuentoProducto DESC, p.precioProducto DESC " +
                 "LIMIT 12"
             ,nativeQuery = true)
-    List<ProductosCard> getProductosMasVendidos();
+    List<ProductosCardDTO> getProductosMasVendidos();
 
 
     @Query(value =
@@ -31,5 +31,12 @@ public interface ProductosRepository extends JpaRepository<Productos, Long> {
                 "ORDER BY p.FechaCreacionProducto DESC " +
                 "LIMIT 12"
             ,nativeQuery = true)
-    List<ProductosCard> getProductosNuevos();
+    List<ProductosCardDTO> getProductosNuevos();
+
+    @Query(value =
+            "SELECT p.idProducto, p.nombreProducto " +
+                    "FROM productos p " +
+                    "LIMIT 12"
+            ,nativeQuery = true)
+    List<ProductosCardDTO> getProductos();
 }

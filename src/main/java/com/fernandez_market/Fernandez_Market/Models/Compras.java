@@ -16,20 +16,20 @@ public class Compras {
     private Long idCompra;
 
     @ManyToOne(fetch = FetchType.EAGER, optional = false)
-    @JoinColumn(name = "idPedido", nullable = false)
+    @JoinColumn(name = "PedidoCompra", nullable = false)
     @OnDelete(action = OnDeleteAction.CASCADE)
-    private Pedidos pedidoCompra;
+    private Pedidos PedidoCompra;
 
     @ManyToOne(fetch = FetchType.EAGER, optional = false)
-    @JoinColumn(name = "idProducto", nullable = false)
+    @JoinColumn(name = "ProductoCompra", nullable = false)
     @OnDelete(action = OnDeleteAction.CASCADE)
-    private Productos productoCompra;
+    private Productos ProductoCompra;
 
     @Column(nullable = false)
-    private Integer cantidadPiezasCompra;
+    private Integer CantidadPiezasCompra;
 
     @Column(precision = 19, scale = 2)
-    private BigDecimal precioProductoCompra;
+    private BigDecimal PrecioProductoCompra;
 
     public Long getIdCompra() {
         return idCompra;
@@ -40,35 +40,35 @@ public class Compras {
     }
 
     public Pedidos getPedidoCompra() {
-        return pedidoCompra;
+        return PedidoCompra;
     }
 
     public void setPedidoCompra(final Pedidos pedidoCompra) {
-        this.pedidoCompra = pedidoCompra;
+        this.PedidoCompra = pedidoCompra;
     }
 
     public Productos getProductoCompra() {
-        return productoCompra;
+        return ProductoCompra;
     }
 
     public void setProductoCompra(final Productos productoCompra) {
-        this.productoCompra = productoCompra;
+        this.ProductoCompra = productoCompra;
     }
 
     public Integer getCantidadPiezasCompra() {
-        return cantidadPiezasCompra;
+        return CantidadPiezasCompra;
     }
 
     public void setCantidadPiezasCompra(final Integer cantidadPiezasCompra) {
-        this.cantidadPiezasCompra = cantidadPiezasCompra;
+        this.CantidadPiezasCompra = cantidadPiezasCompra;
     }
 
     public BigDecimal getPrecioProductoCompra() {
-        return precioProductoCompra;
+        return PrecioProductoCompra;
     }
 
     public void setPrecioProductoCompra(final BigDecimal precioProductoCompra) {
-        this.precioProductoCompra = precioProductoCompra;
+        this.PrecioProductoCompra = precioProductoCompra;
     }
 
 }

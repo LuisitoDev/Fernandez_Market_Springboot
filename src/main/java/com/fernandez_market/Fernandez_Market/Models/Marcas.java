@@ -15,17 +15,17 @@ public class Marcas {
     private Integer idMarca;
 
     @Column(nullable = false, length = 45)
-    private String nombreMarca;
+    private String NombreMarca;
 
     @Column(columnDefinition = "longtext")
     @JsonIgnore
-    private String imagenMarca;
+    private String ImagenMarca;
 
     @Column(length = 100)
-    private String paginaMarca;
+    private String PaginaMarca;
 
-    @OneToMany(mappedBy = "marcaProducto")
-    private List<Productos> productos;
+    @OneToMany(mappedBy = "MarcaProducto")
+    private List<Productos> Productos;
 
     public Integer getIdMarca() {
         return idMarca;
@@ -36,30 +36,27 @@ public class Marcas {
     }
 
     public String getNombreMarca() {
-        return nombreMarca;
+        return NombreMarca;
     }
 
     public void setNombreMarca(final String nombreMarca) {
-        this.nombreMarca = nombreMarca;
+        this.NombreMarca = nombreMarca;
     }
 
     public String getImagenMarca() {
-        return imagenMarca;
+        return ImagenMarca;
     }
 
     public void setImagenMarca(final String imagenMarca) {
-        this.imagenMarca = imagenMarca;
+        this.ImagenMarca = imagenMarca;
     }
 
     public String getPaginaMarca() {
-        return paginaMarca;
+        return PaginaMarca;
     }
 
     public void setPaginaMarca(final String paginaMarca) {
-        this.paginaMarca = paginaMarca;
+        this.PaginaMarca = paginaMarca;
     }
 
-    public String getNombreCategoria() {
-        return "Marca::getNombreCategoria DUMMY";
-    }
 }

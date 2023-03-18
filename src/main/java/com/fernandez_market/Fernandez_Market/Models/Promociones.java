@@ -10,41 +10,41 @@ import org.hibernate.annotations.OnDeleteAction;
 public class Promociones {
 
     @Id
-    @Column(name = "idPromocion", nullable = false)
+    @Column(name = "idPromociones", nullable = false)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long idPromocion;
+    private Long idPromociones;
 
     @Column(nullable = false, columnDefinition = "longtext")
     @JsonIgnore
-    private String imagenPromocion;
+    private String ImagenPromocion;
 
     @ManyToOne(fetch = FetchType.EAGER, optional = false)
-    @JoinColumn(name = "idSubcategoria", nullable = false)
+    @JoinColumn(name = "Subcategoria", nullable = false)
     @OnDelete(action = OnDeleteAction.CASCADE)
-    private Subcategorias subcategoria;
+    private Subcategorias Subcategoria;
 
     public Long getIdPromocion() {
-        return idPromocion;
+        return idPromociones;
     }
 
     public void setIdPromocion(final Long idPromocion) {
-        this.idPromocion = idPromocion;
+        this.idPromociones = idPromocion;
     }
 
     public String getImagenPromocion() {
-        return imagenPromocion;
+        return ImagenPromocion;
     }
 
     public void setImagenPromocion(final String imagenPromocion) {
-        this.imagenPromocion = imagenPromocion;
+        this.ImagenPromocion = imagenPromocion;
     }
 
     public Subcategorias getSubcategoria() {
-        return subcategoria;
+        return Subcategoria;
     }
 
     public void setSubcategoria(final Subcategorias subcategoria) {
-        this.subcategoria = subcategoria;
+        this.Subcategoria = subcategoria;
     }
 
 }

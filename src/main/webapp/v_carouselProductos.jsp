@@ -2,15 +2,15 @@
     pageEncoding="UTF-8"%>
 
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@page import="com.FernandezMarketProject.models.*"%>
+<%@page import="com.fernandez_market.Fernandez_Market.Models.*"%>
 <%@page import="java.util.*"%>
-<%@page import="com.FernandezMarketProject.controllers.GeneralServlet"%>
+<%@page import="com.fernandez_market.Fernandez_Market.Controllers.GeneralController"%>
+<%@page import="com.fernandez_market.Fernandez_Market.Utils.PreciosUtils"%>
 <%@page import ="java.math.BigDecimal" %>
 
 
 <%
-List<Productos_Model> listaProductosGenerales = (List<Productos_Model>) request.getAttribute("listaProductosGenerales");
-pageContext.setAttribute("listaProductosGenerales", listaProductosGenerales);
+
 %>
 
 <div class="row gx-0">
@@ -46,11 +46,11 @@ pageContext.setAttribute("listaProductosGenerales", listaProductosGenerales);
                                 		</h5>
                                 	</c:if>
                                 	
-                                	<h5 class="carousel-producto-precio-final">$ ${iProducto.getPrecioFinalProducto()}</h5>
+                                	<h5 class="carousel-producto-precio-final">$ ${PreciosUtils.getPrecioFinalProducto(iProducto.getPrecioProducto(), iProducto.getDescuentoProducto())}</h5>
                                 	
                                 	<c:if test="${iProducto.getDescuentoProducto().compareTo(BigDecimal.ZERO) == 1}">
                                 		<h5 class="carousel-producto-precio-rebajado">
-                                			Ahorra ${iProducto.getProcentajeDescuentoProducto()}%
+                                			Ahorra ${PreciosUtils.getProcentajeDescuentoProducto(iProducto.getDescuentoProducto())}%
                                 		</h5>
                                 	</c:if>	
                                 	

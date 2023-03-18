@@ -17,11 +17,11 @@ public class Categorias {
     private Integer idCategoria;
 
     @Column(nullable = false, length = 45)
-    private String tituloCategoria;
+    private String TituloCategoria;
 
     @Column(nullable = false, columnDefinition = "longtext")
     @JsonIgnore
-    private String imagenCategoria;
+    private String ImagenCategoria;
 
     public Integer getIdCategoria() {
         return idCategoria;
@@ -32,19 +32,19 @@ public class Categorias {
     }
 
     public String getTituloCategoria() {
-        return tituloCategoria;
+        return TituloCategoria;
     }
 
     public void setTituloCategoria(final String tituloCategoria) {
-        this.tituloCategoria = tituloCategoria;
+        this.TituloCategoria = tituloCategoria;
     }
 
     public String getImagenCategoria() {
-        return imagenCategoria;
+        return ImagenCategoria;
     }
 
     public void setImagenCategoria(final String imagenCategoria) {
-        this.imagenCategoria = imagenCategoria;
+        this.ImagenCategoria = imagenCategoria;
     }
 
 }

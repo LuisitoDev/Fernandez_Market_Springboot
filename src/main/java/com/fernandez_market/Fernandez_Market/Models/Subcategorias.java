@@ -15,21 +15,21 @@ public class Subcategorias {
     private Integer idSubcategoria;
 
     @Column(nullable = false, length = 45)
-    private String tituloSubcategoria;
+    private String TituloSubcategoria;
 
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name="categoriaPadre", nullable = false)
-    private Categorias categoriaPadre;
+    private Categorias CategoriaPadre;
 
     @Column(columnDefinition = "longtext")
     @JsonIgnore
-    private String imagenSubcategorias;
+    private String ImagenSubcategorias;
 
-    @OneToMany(mappedBy = "subcategoria")
-    private List<Promociones> promociones;
+    @OneToMany(mappedBy = "Subcategoria")
+    private List<Promociones> Promociones;
 
-    @OneToMany(mappedBy = "subcategoriaProducto")
-    private List<Productos> productos;
+    @OneToMany(mappedBy = "SubcategoriaProducto")
+    private List<Productos> Productos;
 
     public Integer getIdSubcategoria() {
         return idSubcategoria;
@@ -40,27 +40,27 @@ public class Subcategorias {
     }
 
     public String getTituloSubcategoria() {
-        return tituloSubcategoria;
+        return TituloSubcategoria;
     }
 
     public void setTituloSubcategoria(final String tituloSubcategoria) {
-        this.tituloSubcategoria = tituloSubcategoria;
+        this.TituloSubcategoria = tituloSubcategoria;
     }
 
     public Categorias getCategoriaPadre() {
-        return categoriaPadre;
+        return CategoriaPadre;
     }
 
     public void setCategoriaPadre(final Categorias categoriaPadre) {
-        this.categoriaPadre = categoriaPadre;
+        this.CategoriaPadre = categoriaPadre;
     }
 
     public String getImagenSubcategorias() {
-        return imagenSubcategorias;
+        return ImagenSubcategorias;
     }
 
     public void setImagenSubcategorias(final String imagenSubcategorias) {
-        this.imagenSubcategorias = imagenSubcategorias;
+        this.ImagenSubcategorias = imagenSubcategorias;
     }
 
 }

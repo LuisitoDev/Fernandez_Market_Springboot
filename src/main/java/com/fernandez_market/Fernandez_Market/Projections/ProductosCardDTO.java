@@ -2,7 +2,7 @@ package com.fernandez_market.Fernandez_Market.Projections;
 
 import java.math.BigDecimal;
 
-public interface ProductosCard {
+public interface ProductosCardDTO {
 
     Long getIdProducto();
     String getNombreProducto();
@@ -11,5 +11,4 @@ public interface ProductosCard {
     BigDecimal getDescuentoProducto();
     Integer getCantidadStockProducto();
     String getMarcaProductoTexto();
-
 }

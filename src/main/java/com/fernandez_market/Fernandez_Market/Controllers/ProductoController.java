@@ -1,7 +1,7 @@
 package com.fernandez_market.Fernandez_Market.Controllers;
 
 import com.fernandez_market.Fernandez_Market.Models.Productos;
-import com.fernandez_market.Fernandez_Market.Projections.ProductosCard;
+import com.fernandez_market.Fernandez_Market.Projections.ProductosCardDTO;
 import com.fernandez_market.Fernandez_Market.Services.ProductosService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -35,7 +35,7 @@ public class ProductoController {
     }
 
     @GetMapping("/getProductosMasVendidos")
-    public ResponseEntity<List<ProductosCard>> getRecentBooks(){
+    public ResponseEntity<List<ProductosCardDTO>> getRecentBooks(){
 
         return ResponseEntity.ok(this.productoService.getProductosMasVendidos());
     }

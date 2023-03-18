@@ -2,13 +2,12 @@ package com.fernandez_market.Fernandez_Market.Models;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
 import jakarta.persistence.*;
-import org.hibernate.annotations.Formula;
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
 
 import java.math.BigDecimal;
-import java.time.OffsetDateTime;
 import java.util.Date;
 import java.util.List;
 
@@ -22,50 +21,47 @@ public class Productos {
     private Long idProducto;
 
     @Column(nullable = false, length = 60)
-    private String nombreProducto;
+    private String NombreProducto;
 
     @Column(length = 500)
-    private String descripcionProducto;
+    private String DescripcionProducto;
 
     @Column(columnDefinition = "longtext")
     @JsonIgnore
-    private String imagenProducto;
+    private String ImagenProducto;
 
     @Column(nullable = false, precision = 19, scale = 2)
-    private BigDecimal precioProducto;
+    private BigDecimal PrecioProducto;
 
     @Column(nullable = false, precision = 5, scale = 2)
-    private BigDecimal descuentoProducto;
+    private BigDecimal DescuentoProducto;
 
     @JsonFormat(pattern = "dd-MM-yyyy", timezone = "UTC")
     @Temporal(TemporalType.DATE)
     @Column(nullable = false)
-    private Date fechaCreacionProducto;
+    private Date FechaCreacionProducto;
 
     @Column(nullable = false)
-    private Integer cantidadStockProducto;
+    private Integer CantidadStockProducto;
 
     @ManyToOne(fetch = FetchType.EAGER, optional = false)
-    @JoinColumn(name = "idMarca", nullable = true)
+    @JoinColumn(name = "MarcaProducto", nullable = true)
     @OnDelete(action = OnDeleteAction.CASCADE)
-    private Marcas marcaProducto;
+    private Marcas MarcaProducto;
 
     @ManyToOne(fetch = FetchType.EAGER, optional = false)
-    @JoinColumn(name = "idSubcategoria", nullable = false)
+    @JoinColumn(name = "SubcategoriaProducto", nullable = false)
     @OnDelete(action = OnDeleteAction.CASCADE)
-    private Subcategorias subcategoriaProducto;
+    private Subcategorias SubcategoriaProducto;
 
     @Column(length = 45, nullable = false)
-    private String marcaProductoTexto;
+    private String MarcaProductoTexto;
 
-    @OneToMany(mappedBy = "productoCompra")
-    private List<Compras> compras;
+    @OneToMany(mappedBy = "ProductoCompra")
+    private List<Compras> Compras;
 
-
-    @Formula("(SELECT COUNT(*) FROM productos p " +
-            "left join compras c on c.idProducto = p.idProducto " +
-            "where p.idProducto = idProducto " +
-            "GROUP BY p.idProducto)")
+    @JsonInclude(JsonInclude.Include.NON_NULL)
+    @Transient
     private Long CantVecesComprado;
 
     public Long getIdProducto() {
@@ -77,83 +73,104 @@ public class Productos {
     }
 
     public String getNombreProducto() {
-        return nombreProducto;
+        return NombreProducto;
     }
 
     public void setNombreProducto(final String nombreProducto) {
-        this.nombreProducto = nombreProducto;
+        this.NombreProducto = nombreProducto;
     }
 
     public String getDescripcionProducto() {
-        return descripcionProducto;
+        return DescripcionProducto;
     }
 
     public void setDescripcionProducto(final String descripcionProducto) {
-        this.descripcionProducto = descripcionProducto;
+        this.DescripcionProducto = descripcionProducto;
     }
 
     public String getImagenProducto() {
-        return imagenProducto;
+        return ImagenProducto;
     }
 
     public void setImagenProducto(final String imagenProducto) {
-        this.imagenProducto = imagenProducto;
+        this.ImagenProducto = imagenProducto;
     }
 
     public BigDecimal getPrecioProducto() {
-        return precioProducto;
+        return PrecioProducto;
     }
 
     public void setPrecioProducto(final BigDecimal precioProducto) {
-        this.precioProducto = precioProducto;
+        this.PrecioProducto = precioProducto;
+    }
+
+    public BigDecimal getPrecioFinalProducto() {
+        BigDecimal PrecioFinalProducto = this.PrecioProducto.subtract(getValorDescontado());
+
+        PrecioFinalProducto = PrecioFinalProducto.setScale(2, BigDecimal.ROUND_HALF_EVEN);
+        return PrecioFinalProducto;
+    }
+
+    public BigDecimal getValorDescontado() {
+        BigDecimal valorAux = this.PrecioProducto.multiply(this.DescuentoProducto);
+        BigDecimal divisor = new BigDecimal(100);
+
+        BigDecimal valorDividido = valorAux.divide(divisor);
+
+        valorDividido = valorDividido.setScale(2, BigDecimal.ROUND_HALF_EVEN);
+        return valorDividido;
     }
 
     public BigDecimal getDescuentoProducto() {
-        return descuentoProducto;
+        return DescuentoProducto;
+    }
+
+    public BigDecimal getProcentajeDescuentoProducto() {
+        return this.DescuentoProducto.setScale(0, BigDecimal.ROUND_HALF_EVEN);
     }
 
     public void setDescuentoProducto(final BigDecimal descuentoProducto) {
-        this.descuentoProducto = descuentoProducto;
+        this.DescuentoProducto = descuentoProducto;
     }
 
     public Date getFechaCreacionProducto() {
-        return fechaCreacionProducto;
+        return FechaCreacionProducto;
     }
 
     public void setFechaCreacionProducto(final Date fechaCreacionProducto) {
-        this.fechaCreacionProducto = fechaCreacionProducto;
+        this.FechaCreacionProducto = fechaCreacionProducto;
     }
 
     public Integer getCantidadStockProducto() {
-        return cantidadStockProducto;
+        return CantidadStockProducto;
     }
 
     public void setCantidadStockProducto(final Integer cantidadStockProducto) {
-        this.cantidadStockProducto = cantidadStockProducto;
+        this.CantidadStockProducto = cantidadStockProducto;
     }
 
     public Marcas getMarcaProducto() {
-        return marcaProducto;
+        return MarcaProducto;
     }
 
     public void setMarcaProducto(final Marcas marcaProducto) {
-        this.marcaProducto = marcaProducto;
+        this.MarcaProducto = marcaProducto;
     }
 
     public Subcategorias getSubcategoriaProducto() {
-        return subcategoriaProducto;
+        return SubcategoriaProducto;
     }
 
     public void setSubcategoriaProducto(final Subcategorias subcategoriaProducto) {
-        this.subcategoriaProducto = subcategoriaProducto;
+        this.SubcategoriaProducto = subcategoriaProducto;
     }
 
     public String getMarcaProductoTexto() {
-        return marcaProductoTexto;
+        return MarcaProductoTexto;
     }
 
     public void setMarcaProductoTexto(final String marcaProductoTexto) {
-        this.marcaProductoTexto = marcaProductoTexto;
+        this.MarcaProductoTexto = marcaProductoTexto;
     }
 
 }

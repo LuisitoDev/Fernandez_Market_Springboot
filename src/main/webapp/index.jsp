@@ -2,31 +2,12 @@
     pageEncoding="UTF-8"%>
 
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@page import="com.FernandezMarketProject.models.*"%>
+<%@page import="com.fernandez_market.Fernandez_Market.Models.*"%>
+<%@page import="com.fernandez_market.Fernandez_Market.Projections.*"%>
 <%@page import="java.util.*"%>
 
 <%
-List<Subcategorias_Model> listaSubcategoria = (List<Subcategorias_Model>) request.getAttribute("listaSubcategoria");
-pageContext.setAttribute("listaSubcategoria", listaSubcategoria);
-
-List<Marcas_Model> listaMarcas = (List<Marcas_Model>) request.getAttribute("listaMarcas");
-pageContext.setAttribute("listaMarcas", listaMarcas);
-
-List<Productos_Model> listaProductosInteres = (List<Productos_Model>) request.getAttribute("listaProductosInteres");
-pageContext.setAttribute("listaProductosInteres", listaProductosInteres);
-
-List<Productos_Model> listaProductosMasComprados = (List<Productos_Model>) request.getAttribute("listaProductosMasComprados");
-pageContext.setAttribute("listaProductosMasComprados", listaProductosMasComprados);
-
-List<Productos_Model> listaProductosNuevos = (List<Productos_Model>) request.getAttribute("listaProductosNuevos");
-pageContext.setAttribute("listaProductosNuevos", listaProductosNuevos);
-
-List<Promociones_Model> listaPromociones = (List<Promociones_Model>) request.getAttribute("listaPromociones");
-pageContext.setAttribute("listaPromociones", listaPromociones);
-
 String visualizarOnboarding = "true";
-pageContext.setAttribute("visualizarOnboarding", visualizarOnboarding);
-
 %>
 
 <!DOCTYPE html>
@@ -233,7 +214,7 @@ pageContext.setAttribute("visualizarOnboarding", visualizarOnboarding);
                                             	<img src="GeneralServlet?Imagen=Marca&Id=${iMarcas.getIdMarca()}"
                                                 	class="card-img-top mx-auto w-100" alt="...">
                                             	<div class="card-body py-2 px-0 mx-auto d-flex align-items-center justify-content-center" align = "center">
-	                                                <p class="card-text ">${iMarcas.getNombreCategoria()}</p>
+	                                                <p class="card-text ">${iMarcas.getNombreMarca()}</p>
         	                                    </div>
             	                            </div>
                 	                    </a>

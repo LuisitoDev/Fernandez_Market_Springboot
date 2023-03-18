@@ -2,9 +2,9 @@
     pageEncoding="UTF-8"%>
 
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@page import="com.FernandezMarketProject.models.*"%>
+<%@page import="com.fernandez_market.Fernandez_Market.Models.*"%>
 <%@page import="java.util.*"%>
-<%@page import="com.FernandezMarketProject.controllers.GeneralServlet"%>
+<%@page import="com.fernandez_market.Fernandez_Market.Controllers.GeneralController"%>
 <%@page import ="java.math.BigDecimal" %>
 
 

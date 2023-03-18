@@ -2,7 +2,7 @@
 	pageEncoding="UTF-8"%>
 
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@page import="com.FernandezMarketProject.models.*"%>
+<%@page import="com.fernandez_market.Fernandez_Market.Models.*"%>
 <%@page import="java.util.*"%>
 
 <%
