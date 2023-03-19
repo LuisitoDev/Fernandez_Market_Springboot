@@ -33,7 +33,7 @@ String error = request.getAttribute("error").toString();
 <body class="main-registro">
 
     <header data-position="bottom"
-        data-intro="Página de error: Si al momento de navegar hubo un error en la página, aquí se reflejara cuál fue ese error.">
+        data-intro="Página de error: Si al momento de navegar hubo un error en la página, aqui se reflejara cuál fue ese error.">
         <!-- <div id="basicNavbarPage"></div> -->
 <!--         <div id="navbarPage"></div> -->
         <jsp:include page="v_navbar.jsp"></jsp:include>

@@ -45,11 +45,11 @@ pageContext.setAttribute("visualizarOnboarding", visualizarOnboarding);
 </head>
 
 <body class="page">
-   	<header data-position="left" data-intro="Bienvenido a la página de Fernandez Market, si deseas tomar una guía de la página da click en 'Next', si deseas omitir la guía da click en la 'x'"
+   	<header data-position="left" data-intro="Bienvenido a la página de Fernandez Market, si deseas tomar una guia de la página da click en 'Next', si deseas omitir la guia da click en la 'x'"
             class="sticky-top" style="z-index: 10000000">
 <!--	<div id="navbarPage" class="navbar-complete"></div> -->
 		<c:set var="visualizarOnboarding" value="${visualizarOnboarding}" scope="request"/>
-        <div  data-position="left" data-intro="Barra de navegación, se encuentra en varias paginas para poder navegar más facilmente entre estas">
+        <div  data-position="left" data-intro="Barra de navegacion, se encuentra en varias paginas para poder navegar más facilmente entre estas">
             <jsp:include page="v_navbar.jsp"></jsp:include>
         </div>
     </header>
@@ -125,10 +125,10 @@ pageContext.setAttribute("visualizarOnboarding", visualizarOnboarding);
 
 			<c:if test="${not empty listaProductosInteres}">
                 <div data-position="left" 
-                data-intro="Carousel de productos que te podrían interesar según tus compras, puedes dar click en la imagen y el título para ver los detalles del producto.">
+                data-intro="Carousel de productos que te podrian interesar segun tus compras, puedes dar click en la imagen y el titulo para ver los detalles del producto.">
         	        <div class="row gx-0 mt-4 mb-3">
 	                    <div class="carousel-productos-titulo-fondo col-12 py-2 col-md-6 col-lg-4 " align="center">
-            	            <h1 class="index-barra-titulo">Te podrían interesar</h1>
+            	            <h1 class="index-barra-titulo">Te podrian interesar</h1>
                 	    </div>
             	    </div>
 
@@ -139,10 +139,10 @@ pageContext.setAttribute("visualizarOnboarding", visualizarOnboarding);
 			</c:if>
 			
             <div  data-position="left"
-                data-intro="Subcategorías de la tienda, puede dar click a las opciones para visualizar los productos de tal subcategoría">
+                data-intro="Subcategorias de la tienda, puede dar click a las opciones para visualizar los productos de tal subcategoria">
                 <div class="row gx-0 mt-4 mb-3">
                     <div class="index-carousel-categorias-titulo-fondo col-12 py-2 col-md-6 col-lg-4 " align="center">
-                        <a href="SubcategoriaProductos?IdSubcategoria=0&numeroPagina=1" class="index-barra-titulo-enlace">Subcategorías</a>
+                        <a href="SubcategoriaProductos?IdSubcategoria=0&numeroPagina=1" class="index-barra-titulo-enlace">Subcategorias</a>
                     </div>
                 </div>
 
@@ -178,7 +178,7 @@ pageContext.setAttribute("visualizarOnboarding", visualizarOnboarding);
             </div>
 
             <div data-position="left" 
-            data-intro="Carousel de productos más comprados por los usuarios, puedes dar click en la imagen y el título para ver los detalles del producto.">
+            data-intro="Carousel de productos más comprados por los usuarios, puedes dar click en la imagen y el titulo para ver los detalles del producto.">
 
                 <div class="row gx-0 mt-4 mb-3">
                     <div class="carousel-productos-titulo-fondo col-12 py-2 col-md-6 col-lg-4 " align="center">
@@ -234,7 +234,7 @@ pageContext.setAttribute("visualizarOnboarding", visualizarOnboarding);
 
             
             <div data-position="left" 
-            data-intro="Carousel de productos nuevos o que han sido recientemente agregados en almacén, puedes dar click en la imagen y el título para ver los detalles del producto.">
+            data-intro="Carousel de productos nuevos o que han sido recientemente agregados en almacen, puedes dar click en la imagen y el titulo para ver los detalles del producto.">
                 <div class="row gx-0 mt-4 mb-3">
                     <div class="carousel-productos-titulo-fondo col-12 py-2 col-md-6 col-lg-4 " align="center">
                         <h1 class="index-barra-titulo">Productos nuevos</h1>

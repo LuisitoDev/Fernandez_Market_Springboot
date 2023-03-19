@@ -44,7 +44,7 @@ pageContext.setAttribute("listaPedidos", listaPedidos);
 
 <body class="page">
 	<header  data-position="bottom"
-    data-intro="Página de perfil: En esta página se podrá ver información del usuario y sus pedidos"
+    data-intro="Página de perfil: En esta página se podrá ver informacion del usuario y sus pedidos"
     class = "sticky-top" style="z-index: 10000000">
 		<!--             <div id="navbarPage" class="navbar-complete"></div> -->
 		<jsp:include page="v_navbar.jsp"></jsp:include>
@@ -58,7 +58,7 @@ pageContext.setAttribute("listaPedidos", listaPedidos);
 	<main>
 		<div class="container-fluid p-0">
 			<div   data-position="bottom" 
-            data-intro="Barra de título de la página, aquí te mostrará en que página te encuentras y navegar entre cada apartado más fácil" 
+            data-intro="Barra de titulo de la página, aqui te mostrará en que página te encuentras y navegar entre cada apartado más fácil" 
             class="row gx-0 my-4 profileUser-barra-titulo-fondo">
 				<div class="col-11 mt-2 mx-auto pb-2">
 					<a href="/home" class="profileUser-barra-titulo-enlace">Inicio</a> <i
@@ -76,7 +76,7 @@ pageContext.setAttribute("listaPedidos", listaPedidos);
 
 					<div class="profileUser-formulario-registro row gx-0 ">
 						<div  data-position="bottom"
-                        data-intro="En este apartado se muestra la información del usuario, su nombre completo y el email registrado"
+                        data-intro="En este apartado se muestra la informacion del usuario, su nombre completo y el email registrado"
 						class="col-12 mx-auto px-3 pb-4">
 
 
@@ -110,7 +110,7 @@ pageContext.setAttribute("listaPedidos", listaPedidos);
 
 
 								<div  data-position="bottom"
-                                data-intro="Si se desea actualizar la información del usuario se puede dar click al botón 'Editar perfil'"
+                                data-intro="Si se desea actualizar la informacion del usuario se puede dar click al boton 'Editar perfil'"
 								class="row mt-4 justify-content-center">
 									<div class="col-8 col-md-4 col-lg-7">
 										<button id="button_main-container" form="form_main-container"
@@ -127,7 +127,7 @@ pageContext.setAttribute("listaPedidos", listaPedidos);
 				<div class="col-11 mt-4 col-sm-9 col-md-8 col-lg-6 mt-lg-0 col-xl-7">
 					<div class="row gx-0">
 						<div  data-position="bottom"
-                        data-intro="En este apartado se visualizarán todos los pedidos que el usuario ha realizado, junto a la información principal. Si se desea saber más detalles del pedido se puede dar click a cada uno y se desplegarán los detalles de este"
+                        data-intro="En este apartado se visualizarán todos los pedidos que el usuario ha realizado, junto a la informacion principal. Si se desea saber más detalles del pedido se puede dar click a cada uno y se desplegarán los detalles de este"
 						class="col-12 px-3 pb-4 profileUser-formulario-registro">
 							<div class="row gx-0 linea-bottom">
 								<div class="col-12 mx-auto my-2">

@@ -59,7 +59,7 @@ pageContext.setAttribute("IdUsuarioActivo", IdUsuarioActivo);
 </head>
 
 <body class="page">
-	<header  data-position="bottom" data-intro="Carrito de compra: Aquí podrás ver todos los productos que has ido agregando, cambiar la cantidad de piezas, quitarlos del carrito, y finalizar la compra" 
+	<header  data-position="bottom" data-intro="Carrito de compra: Aqui podrás ver todos los productos que has ido agregando, cambiar la cantidad de piezas, quitarlos del carrito, y finalizar la compra" 
     class="sticky-top" style="z-index: 10000000">
 		<!-- fixed-top  -->
 		<!--             <div id="navbarPage" class="navbar-complete"></div> -->
@@ -74,7 +74,7 @@ pageContext.setAttribute("IdUsuarioActivo", IdUsuarioActivo);
 	<main>
 		<div class="container-fluid p-0">
             <div data-position="bottom" 
-            data-intro="Barra de título de la página, aquí te mostrará en que página te encuentras y navegar entre cada apartado más fácil" 
+            data-intro="Barra de titulo de la página, aqui te mostrará en que página te encuentras y navegar entre cada apartado más fácil" 
             class="row gx-0 my-4 cart-barra-titulo-fondo">
 				<div class="col-11 mt-2 mx-auto pb-2">
 
@@ -131,7 +131,7 @@ pageContext.setAttribute("IdUsuarioActivo", IdUsuarioActivo);
 											<h1 class="cart-carrito-compras-texto">Carrito de compras</h1>
             	            	            <h2 class="cart-producto-precio-total-texto">Total:</h2>
         	            	                <h2 id = "totalPedidoPhone"  class="cart-producto-precio-total-cantidad">$${totalPedido}</h2>
-    	            	                    <h2 id = "cantidadPiezasTotalesPhone" class="cart-producto-articulos-total-texto">(${cantidadPiezasTotales} artículos)</h2>
+    	            	                    <h2 id = "cantidadPiezasTotalesPhone" class="cart-producto-articulos-total-texto">(${cantidadPiezasTotales} articulos)</h2>
 										</div>
 										<!-- align = "center" -->
 										<div class="col-4 my-auto px-2  col-sm-3  col-md-2 col-xl-3">
@@ -164,7 +164,7 @@ pageContext.setAttribute("IdUsuarioActivo", IdUsuarioActivo);
 									</c:forEach>
 
     	        	                <div  data-position="top" 
-	        	                    data-intro="Para finalizar la compra da click en el botón derecho<br>Para seguir viendo productos da click en el botón izquierdo" 
+	        	                    data-intro="Para finalizar la compra da click en el boton derecho<br>Para seguir viendo productos da click en el boton izquierdo" 
 										class="cart-carrito-compras row gx-0 py-2 mt-3 d-none d-lg-flex">
 										<div class="col-3 my-auto px-2 col-xl-2">
 											<form action = "/home	" method = "get">
@@ -179,7 +179,7 @@ pageContext.setAttribute("IdUsuarioActivo", IdUsuarioActivo);
 											align="right">
 											<h1 class="cart-producto-precio-total-texto">Total:</h1>
 											<h1 id = "totalPedidoPC" class="cart-producto-precio-total-cantidad">$${totalPedido}</h1>
-											<h2 id = "cantidadPiezasTotalesPC" class="cart-producto-articulos-total-texto">(${cantidadPiezasTotales} artículos)</h2>
+											<h2 id = "cantidadPiezasTotalesPC" class="cart-producto-articulos-total-texto">(${cantidadPiezasTotales} articulos)</h2>
 										</div>
 										<!-- align = "center" -->
 										<div class="col-3 my-auto px-2 col-xl-2">

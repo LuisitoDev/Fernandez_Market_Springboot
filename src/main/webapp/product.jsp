@@ -44,7 +44,7 @@ pageContext.setAttribute("listaProductosRelacionados", listaProductosRelacionado
 </head>
 
 <body class="page">
-	<header  data-position="bottom" data-intro="Página de productos: aquí podrás ver los detalles de cada productos y agregarlos al carrito"
+	<header  data-position="bottom" data-intro="Página de productos: aqui podrás ver los detalles de cada productos y agregarlos al carrito"
     class="sticky-top" style="z-index: 10000000">
 		<!--             <div id="navbarPage" class="navbar-complete"></div> -->
 		<jsp:include page="v_navbar.jsp"></jsp:include>
@@ -60,7 +60,7 @@ pageContext.setAttribute("listaProductosRelacionados", listaProductosRelacionado
 		<div class="container-fluid p-0">
 
 			<div data-position="bottom" 
-            data-intro="Barra de título de la página, aquí te mostrará en que página te encuentras y navegar entre cada apartado más fácil" 
+            data-intro="Barra de titulo de la página, aqui te mostrará en que página te encuentras y navegar entre cada apartado más fácil" 
             class="row gx-0 my-4 producto-barra-titulo-fondo">
 				<div class="col-11 mt-2 mx-auto pb-2">
 
@@ -128,11 +128,11 @@ pageContext.setAttribute("listaProductosRelacionados", listaProductosRelacionado
 
 							
 							<div  data-position="bottom"
-                                data-intro="Para comprar un producto elegimos la cantidad de piezas y damos click al botón 'Agregar al carrito', la cantidad de piezas disponibles aparece en el recuadro blanco">
+                                data-intro="Para comprar un producto elegimos la cantidad de piezas y damos click al boton 'Agregar al carrito', la cantidad de piezas disponibles aparece en el recuadro blanco">
 
 								<div class="input-group">
 									<span class="input-group-text producto-cantidad-span px-2 w-75 w-xl-50">
-                                        <p class="producto-cantidad-span-titulo my-0">Cant. En almacén: </p>
+                                        <p class="producto-cantidad-span-titulo my-0">Cant. En almacen: </p>
             	                        <p class = "producto-cantidad-span-cantidad ps-2  my-0">${productoElegido.getCantidadStockProducto()}</p>
                 	                </span>
 								</div>
@@ -177,7 +177,7 @@ pageContext.setAttribute("listaProductosRelacionados", listaProductosRelacionado
 		</div>
 
         <div  data-position="left" 
-        data-intro="Después de haberlo agregado al carrito, podemos ver productos relacionados">
+        data-intro="Despues de haberlo agregado al carrito, podemos ver productos relacionados">
 
 			<div class="row gx-0 mt-4 mb-3">
 	            <div class="carousel-productos-titulo-fondo col-12 py-2 col-md-6 col-lg-4 " align="center">

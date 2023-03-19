@@ -44,7 +44,7 @@ pageContext.setAttribute("pedidoElegido", pedidoElegido);
 
 <body class="page">
 	<header  data-position="bottom"
-    data-intro="Página de pedido: Aquí se llenarán unos datos necesarios para realizar el pedido y finalizar la compra"
+    data-intro="Página de pedido: Aqui se llenarán unos datos necesarios para realizar el pedido y finalizar la compra"
     class = "sticky-top" style="z-index: 10000000">
 		<!--             <div id="navbarPage" class="navbar-complete"></div> -->
 		<jsp:include page="v_navbar.jsp"></jsp:include>
@@ -58,7 +58,7 @@ pageContext.setAttribute("pedidoElegido", pedidoElegido);
 	<main>
 		<div class="container-fluid p-0">
 			 <div data-position="bottom" 
-            data-intro="Barra de título de la página: Aquí te mostrará en que página te encuentras y navegar entre cada apartado más fácil" 
+            data-intro="Barra de titulo de la página: Aqui te mostrará en que página te encuentras y navegar entre cada apartado más fácil" 
             class="row gx-0 my-4 pedido-barra-titulo-fondo">
 				<div class="col-11 mt-2 mx-auto pb-2">
 
@@ -73,7 +73,7 @@ pageContext.setAttribute("pedidoElegido", pedidoElegido);
 
 			<div class="row gx-0 linea-top linea-bottom">
 				<div  data-position="bottom"
-                data-intro="En este apartado se escribira en cada campo la información correspondiente, dentro de cada campo viene un ejemplo de como ira la información"
+                data-intro="En este apartado se escribira en cada campo la informacion correspondiente, dentro de cada campo viene un ejemplo de como ira la informacion"
                 class="pedido-contenedor col-11 mx-auto my-4 col-sm-11 col-lg-10 col-xl-7">
 					<div class="row gx-0 mt-3">
 						<div class="col-11 mx-auto col-sm-10">
@@ -87,7 +87,7 @@ pageContext.setAttribute("pedidoElegido", pedidoElegido);
 							<div class="row gx-0 mt-2 mb-4">
 								<form id = "form_main-container" class = "form_main-container" method="post" action="CrearPedido">
                                 <div  data-position="bottom"
-                                data-intro="Se llenará información sobre el domicilio y contacto, en los campos 'Numero Int/Ext', 'Telefono' y 'Código postal' deben ser ingresados puros numeros"
+                                data-intro="Se llenará informacion sobre el domicilio y contacto, en los campos 'Numero Int/Ext', 'Telefono' y 'Codigo postal' deben ser ingresados puros numeros"
 									class="col-12">
 										<div class="row gx-0">
 											<div class="col-12 mt-2 mx-auto col-md-6 linea-md-right">
@@ -179,11 +179,11 @@ pageContext.setAttribute("pedidoElegido", pedidoElegido);
 																selected="selected"
 															</c:if>
 															>Chihuahua</option>
-															<option value="Estado de México"
-															<c:if test="${pedidoElegido.getEstado() == 'Estado de México'}">
+															<option value="Estado de Mexico"
+															<c:if test="${pedidoElegido.getEstado() == 'Estado de Mexico'}">
 																selected="selected"
 															</c:if>
-															>Estado de México</option>
+															>Estado de Mexico</option>
 															<option value="Coahuila"
 															<c:if test="${pedidoElegido.getEstado() == 'Coahuila'}">
 																selected="selected"
@@ -199,11 +199,11 @@ pageContext.setAttribute("pedidoElegido", pedidoElegido);
 																selected="selected"
 															</c:if>
 															>Durango</option>
-															<option value="Ciudad de México"
-															<c:if test="${pedidoElegido.getEstado() == 'Ciudad de México'}">
+															<option value="Ciudad de Mexico"
+															<c:if test="${pedidoElegido.getEstado() == 'Ciudad de Mexico'}">
 																selected="selected"
 															</c:if>
-															>Ciudad de México</option>
+															>Ciudad de Mexico</option>
 															<option value="Guanajuato"
 															<c:if test="${pedidoElegido.getEstado() == 'Guanajuato'}">
 																selected="selected"
@@ -239,11 +239,11 @@ pageContext.setAttribute("pedidoElegido", pedidoElegido);
 																selected="selected"
 															</c:if>
 															>Nayarit</option>
-															<option value="Nuevo León"
-															<c:if test="${pedidoElegido.getEstado() == 'Nuevo León'}">
+															<option value="Nuevo Leon"
+															<c:if test="${pedidoElegido.getEstado() == 'Nuevo Leon'}">
 																selected="selected"
 															</c:if>
-															>Nuevo León</option>
+															>Nuevo Leon</option>
 															<option value="Oaxaca"
 															<c:if test="${pedidoElegido.getEstado() == 'Oaxaca'}">
 																selected="selected"
@@ -254,21 +254,21 @@ pageContext.setAttribute("pedidoElegido", pedidoElegido);
 																selected="selected"
 															</c:if>
 															>Puebla</option>
-															<option value="Querétaro"
-															<c:if test="${pedidoElegido.getEstado() == 'Querétaro'}">
+															<option value="Queretaro"
+															<c:if test="${pedidoElegido.getEstado() == 'Queretaro'}">
 																selected="selected"
 															</c:if>
-															>Querétaro</option>
+															>Queretaro</option>
 															<option value="Quintana Roo"
 															<c:if test="${pedidoElegido.getEstado() == 'Quintana Roo'}">
 																selected="selected"
 															</c:if>
 															>Quintana Roo</option>
-															<option value="San Luis Potosí"
-															<c:if test="${pedidoElegido.getEstado() == 'San Luis Potosí'}">
+															<option value="San Luis Potosi"
+															<c:if test="${pedidoElegido.getEstado() == 'San Luis Potosi'}">
 																selected="selected"
 															</c:if>
-															>San Luis Potosí</option>
+															>San Luis Potosi</option>
 															<option value="Sinaloa"
 															<c:if test="${pedidoElegido.getEstado() == 'Sinaloa'}">
 																selected="selected"
@@ -324,7 +324,7 @@ pageContext.setAttribute("pedidoElegido", pedidoElegido);
 													<div class="col-12 mt-4 mx-auto col-md-11">
 														<div class="row gx-0 justify-content-between">
 															<div class="col-6 pe-2">
-																<label for="Telefono" required>Teléfono (10 digitos):</label>
+																<label for="Telefono" required>Telefono (10 digitos):</label>
 															</div>
 															<div class="col-6 ps-2">
 																<label for="CP" required>Codigo postal:</label>
@@ -351,7 +351,7 @@ pageContext.setAttribute("pedidoElegido", pedidoElegido);
 
 									<div class="col-12">
 										<div  data-position="bottom"
-	                                    data-intro="Se llenará información el metodo de pago, en el campo 'Numero de cuenta' deben ser ingresados puros numeros"
+	                                    data-intro="Se llenará informacion el metodo de pago, en el campo 'Numero de cuenta' deben ser ingresados puros numeros"
 										class="row gx-0 mt-4 linea-top">
 											<div class="col-12 mx-auto mt-3 col-md-6  linea-md-right">
 												<div class="col-12 mx-auto col-md-11">
@@ -380,7 +380,7 @@ pageContext.setAttribute("pedidoElegido", pedidoElegido);
 								</form>
 								
                                 <div  data-position="bottom"
-                                data-intro="Finalmente, se dara click en el botón para finalizar la compra"
+                                data-intro="Finalmente, se dara click en el boton para finalizar la compra"
 								class="col-8 mt-4 mx-auto col-sm-5 col-md-5 col-lg-4">
 								
 									<button id="button-pedido_main-container" form="form_main-container"

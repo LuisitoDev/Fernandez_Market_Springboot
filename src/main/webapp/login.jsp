@@ -40,7 +40,7 @@ if(request.getAttribute("usuarioIncorrecto") != null)
 
 <body class="main-registro">
 	<header  data-position="bottom"
-	data-intro="Página de login: Aquí se ingresará el correo y contraseña del usuario para iniciar sesión">
+	data-intro="Página de login: Aqui se ingresará el correo y contraseña del usuario para iniciar sesion">
 		<!-- 			<div id="basicNavbarPage"></div> -->
 <%-- 		<jsp:include page="v_basicNavbar.jsp"></jsp:include> --%>
 		<jsp:include page="v_navbar.jsp"></jsp:include>
@@ -56,11 +56,11 @@ if(request.getAttribute("usuarioIncorrecto") != null)
 		<div class="container-fluid p-0">
 			<div class="row gx-0 mt-5">
 				<div  data-position="bottom"
-				data-intro="Deben ser llenados los campos de correo y contraseña correctamente, de lo contrario no se podrá iniciar sesión"
+				data-intro="Deben ser llenados los campos de correo y contraseña correctamente, de lo contrario no se podrá iniciar sesion"
 				class="col-11 ps-3 pe-3 pt-3 pb-4 mx-auto col-md-5 col-lg-4 ps-lg-3 pe-lg-3 col-xl-3  formulario-registro">
 					<div class="row  linea-bottom">
 						<div class="col-12 mx-auto mb-2">
-							<h2>Inicia sesión</h2>
+							<h2>Inicia sesion</h2>
 						</div>
 					</div>
 
@@ -93,7 +93,7 @@ if(request.getAttribute("usuarioIncorrecto") != null)
 										<p data-position="bottom"
 										data-intro="Si la persona no tiene una cuenta puede crear una dando click en el texto remarcado"
 										class="texto-sm-normal texto-md-normal">
-											¿Aún no tienes cuenta? <a class="link" href="/signUp.jsp"> ¡Crea
+											¿Aun no tienes cuenta? <a class="link" href="/signUp.jsp"> ¡Crea
 												una ahora mismo! </a>
 										</p>
 									</div>
@@ -106,7 +106,7 @@ if(request.getAttribute("usuarioIncorrecto") != null)
 					</form>
 
 					<div  data-position="bottom"
-					data-intro="Una vez se hayan llenado los campos correspondientes, se dará click a este botón para iniciar sesión en la página"
+					data-intro="Una vez se hayan llenado los campos correspondientes, se dará click a este boton para iniciar sesion en la página"
 					class="row mt-2 justify-content-center">
 						<div class="col-8">
 							<button id="button_main-container" form="form_main-container"

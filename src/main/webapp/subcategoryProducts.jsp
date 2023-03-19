@@ -64,7 +64,7 @@
 	<main>
 		<div class="container-fluid p-0">
 			<div   data-position="bottom" 
-            data-intro="Barra de título de la página, aqui te mostrará en que página te encuentras y navegar entre cada apartado más fácil" 
+            data-intro="Barra de titulo de la página, aqui te mostrará en que página te encuentras y navegar entre cada apartado más fácil" 
 			class="row gx-0 my-4 subcategoria-barra-titulo-fondo">
 				<div class="col-11 mt-2 mx-auto pb-2">
 
@@ -135,7 +135,7 @@
 
                 <div class="col-2 d-none d-lg-inline ms-5">
                     <div data-position="right" 
-                    data-intro="Subcategorías de la página, puede filtrar todos sus productos por cada subcategoría haciendo click en una, o buscar en general">
+                    data-intro="Subcategorias de la página, puede filtrar todos sus productos por cada subcategoria haciendo click en una, o buscar en general">
 						<div class="subcategorias-contenedor-desplegar py-2 px-3">
 							<div class="container-fluid d-flex justify-content-between">
 								<h1 class="subcategorias-opcion-titulo my-1">Subcategorias</h1>
@@ -178,7 +178,7 @@
 					class="col-12 col-lg-9 mx-auto mb-3 subcategorias-contenedor-productos">
 					<%-- TODO: ESTE DIV DE ABAJO SUPUESTAMENTE DEBE IR HASTA DESPUES DE PONER EL PRODUCTO, PERO IGUAL CREO QUE NO HAY PROBLEMA SI LO DEJO ASI (PENDIENTE REVISAER) --%>
                     <div  data-position="left" 
-                    data-intro="Productos de la subcategoría elegida, puedes visualizar los detalles de cada uno dando click a la imagen y el título"
+                    data-intro="Productos de la subcategoria elegida, puedes visualizar los detalles de cada uno dando click a la imagen y el titulo"
 					class="row gx-0 justify-content-center align-items-center" style = "height: 100%">
 					
 						<c:if test="${not empty nombreProducto}">
@@ -216,7 +216,7 @@
 								<div class="row gx-0 justify-content-center">
 									<div class="col-11" align="center">
 										<p class="subcategorias-Descripcion">
-											Intente buscar en otra categoría
+											Intente buscar en otra categoria
 											<c:if test="${not empty nombreProducto}">
 											, o buscar con otro nombre
 											</c:if>
@@ -236,7 +236,7 @@
 							</div>
 						</c:forEach>
 						
-						<div  data-position="bottom" data-intro="Botones de navegación para moverse entre las páginas y seguir buscando productos"
+						<div  data-position="bottom" data-intro="Botones de navegacion para moverse entre las páginas y seguir buscando productos"
                    		 	class="paginacion d-flex justify-content-center mt-2 mb-3">
 						<c:if test="${numeroPagina > 1 && CantidadBotones < paginaFinal}">
 							<a href="/subcategoria/${tituloSubcategoriaElegidaURL}/${numeroPagina - 1}${nombreProductoQuery}"

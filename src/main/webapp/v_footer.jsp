@@ -45,7 +45,7 @@
 			</h1>
 
 			<p class="descripcion-footer">
-				Av. Coyoacán #456 Col. Unidad Modelo<br> Monterrey Nuevo León,
+				Av. Coyoacán #456 Col. Unidad Modelo<br> Monterrey Nuevo Leon,
 				C.P. 64140<br> Tel. 1292-9310<br>
 			</p>
 
@@ -59,8 +59,8 @@
 				</a>
 			</h1>
 			<p class="descripcion-footer">
-				Av. Los Angeles #1000 Int. 438 Col. Garza Cantú<br> San Nicolás
-				de los Garza Nuevo León, C.P. 66480<br> Tel. 81-1292-9300<br>
+				Av. Los Angeles #1000 Int. 438 Col. Garza Cantu<br> San Nicolás
+				de los Garza Nuevo Leon, C.P. 66480<br> Tel. 81-1292-9300<br>
 			</p>
 
 
@@ -77,8 +77,8 @@
 				</a>
 			</h1>
 			<p class="descripcion-footer">
-				Av. Los Angeles #1000 Int. 201 Col. Garza Cantú<br> San Nicolás
-				de los Garza Nuevo León, C.P. 66480<br> Tel. 81-1292-9308<br>
+				Av. Los Angeles #1000 Int. 201 Col. Garza Cantu<br> San Nicolás
+				de los Garza Nuevo Leon, C.P. 66480<br> Tel. 81-1292-9308<br>
 			</p>
 
 			<h1>
@@ -91,7 +91,7 @@
 				</a>
 			</h1>
 			<p class="descripcion-footer">
-				Av. Diego Díaz de Berlanga #203<br> Col. Industrial Nogalar
+				Av. Diego Diaz de Berlanga #203<br> Col. Industrial Nogalar
 				C.P. 66484<br> Tel. 81-1159-3931<br>
 			</p>
 
@@ -109,8 +109,8 @@
 			</h1>
 
 			<p class="descripcion-footer">
-				Av. Los Angeles #1000 Int. 390 Col. Garza Cantú<br> San Nicolás
-				de los Garza Nuevo León, C.P. 66480<br> Tel. 81-1292-9300<br>
+				Av. Los Angeles #1000 Int. 390 Col. Garza Cantu<br> San Nicolás
+				de los Garza Nuevo Leon, C.P. 66480<br> Tel. 81-1292-9300<br>
 			</p>
 
 			<h1>
@@ -124,8 +124,8 @@
 			</h1>
 
 			<p class="descripcion-footer">
-				Av. Los Angeles #1000 Int. 471 Col. Garza Cantú<br> San Nicolás
-				de los Garza Nuevo León, C.P. 66480<br> Tel. 81-1292-9300<br>
+				Av. Los Angeles #1000 Int. 471 Col. Garza Cantu<br> San Nicolás
+				de los Garza Nuevo Leon, C.P. 66480<br> Tel. 81-1292-9300<br>
 			</p>
 		</div>
 

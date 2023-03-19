@@ -41,8 +41,8 @@ $(function() {
 
 				$('#totalPedidoPhone').text('$' + totalPedido);
 				$('#totalPedidoPC').text('$' + totalPedido);
-				$('#cantidadPiezasTotalesPhone').text('(' + cantidadPiezasTotales + ' artículos)');
-				$('#cantidadPiezasTotalesPC').text('(' + cantidadPiezasTotales + ' artículos)');
+				$('#cantidadPiezasTotalesPhone').text('(' + cantidadPiezasTotales + ' articulos)');
+				$('#cantidadPiezasTotalesPC').text('(' + cantidadPiezasTotales + ' articulos)');
 
 				var carritoProductosSpan = $('#navbar-carrito-cantidad-productos');
 				var carritoCantidadProductos = +carritoProductosSpan.text() - 1;
@@ -146,8 +146,8 @@ $(function() {
 				$('#totalPorPiezasProducto' + IdProducto).text('$' + precioFinalPorPiezas);
 				$('#totalPedidoPhone').text('$' + totalPedido);
 				$('#totalPedidoPC').text('$' + totalPedido);
-				$('#cantidadPiezasTotalesPhone').text('(' + cantidadPiezasTotales + ' artículos)');
-				$('#cantidadPiezasTotalesPC').text('(' + cantidadPiezasTotales + ' artículos)');
+				$('#cantidadPiezasTotalesPhone').text('(' + cantidadPiezasTotales + ' articulos)');
+				$('#cantidadPiezasTotalesPC').text('(' + cantidadPiezasTotales + ' articulos)');
 
 			}
 		});

@@ -65,7 +65,7 @@
                                     <div class="col-12 mt-2 mb-2 mx-auto">
                                         <p class="nos_suc-parrafos">
                                             Av. Coyoacán #456 Col. Unidad Modelo
-                                            Monterrey Nuevo León, C.P. 64140
+                                            Monterrey Nuevo Leon, C.P. 64140
                                         </p>
                                         <a href = "tel:81-1292-9310" class="nos_suc-parrafos">
                                             Tel. 81-1292-9310
@@ -99,8 +99,8 @@
 
                                     <div class="col-12 mt-2 mb-2 mx-auto">
                                         <p class="nos_suc-parrafos">
-                                            Av. Los Angeles #1000 Int. 438 Col. Garza Cantú
-                                            San Nicolás de los Garza Nuevo León, C.P. 66480
+                                            Av. Los Angeles #1000 Int. 438 Col. Garza Cantu
+                                            San Nicolás de los Garza Nuevo Leon, C.P. 66480
                                         </p>
                                         <a href = "tel:81-1292-9300" class="nos_suc-parrafos">
                                             Tel. 81-1292-9300
@@ -134,8 +134,8 @@
 
                                     <div class="col-12 mt-2 mb-2 mx-auto">
                                         <p class="nos_suc-parrafos">
-                                            Av. Los Angeles #1000 Int. 201 Col. Garza Cantú
-                                            San Nicolás de los Garza Nuevo León, C.P. 66480
+                                            Av. Los Angeles #1000 Int. 201 Col. Garza Cantu
+                                            San Nicolás de los Garza Nuevo Leon, C.P. 66480
                                         </p>
                                         <a href = "tel:81-1159-3931" class="nos_suc-parrafos">
                                             Tel. 81-1159-3931
@@ -169,7 +169,7 @@
 
                                     <div class="col-12 mt-2 mb-2 mx-auto">
                                         <p class="nos_suc-parrafos">
-                                            Av. Diego Díaz de Berlanga #203
+                                            Av. Diego Diaz de Berlanga #203
                                             Col. Industrial Nogalar C.P. 66484
                                         </p>
                                         <a href = "tel:81-1292-9308" class="nos_suc-parrafos">
@@ -204,8 +204,8 @@
 
                                     <div class="col-12 mt-2 mb-2 mx-auto">
                                         <p class="nos_suc-parrafos">
-                                            Av. Los Angeles #1000 Int. 390 Col. Garza Cantú
-                                            San Nicolás de los Garza Nuevo León, C.P. 66480
+                                            Av. Los Angeles #1000 Int. 390 Col. Garza Cantu
+                                            San Nicolás de los Garza Nuevo Leon, C.P. 66480
                                         </p>
                                         <a href = "tel:81-1292-9308" class="nos_suc-parrafos">
                                             Tel. 81-1292-9308
@@ -239,8 +239,8 @@
 
                                     <div class="col-12 mt-2 mb-2 mx-auto">
                                         <p class="nos_suc-parrafos">
-                                            Av. Los Angeles #1000 Int. 471 Col. Garza Cantú
-                                            San Nicolás de los Garza Nuevo León, C.P. 66480
+                                            Av. Los Angeles #1000 Int. 471 Col. Garza Cantu
+                                            San Nicolás de los Garza Nuevo Leon, C.P. 66480
                                         </p>
                                         <a href = "tel:81-1159-3932" class="nos_suc-parrafos">
                                             Tel. 81-1159-3932

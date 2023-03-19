@@ -27,7 +27,7 @@
 <body class="page">
 
     <header data-position="bottom"
-        data-intro="Página de Nosotros: En esta página se muestra toda la información relacionada de la tienda Fernandez Market."
+        data-intro="Página de Nosotros: En esta página se muestra toda la informacion relacionada de la tienda Fernandez Market."
         class="sticky-top"  style="z-index: 10000000">
 <!--         <div id="navbarPage" class="navbar-complete"></div> -->
         <jsp:include page="v_navbar.jsp"></jsp:include>
@@ -63,16 +63,16 @@
 
                             <div class="row gx-0">
                                 <div class="col-12 mt-3 pb-2 mx-auto col-md-6 pe-md-3 mb-2 linea-bottom">
-                                    <h2 class="nos_suc-subtitulos">Misión <i class="fas fa-chart-line"></i></h2>
+                                    <h2 class="nos_suc-subtitulos">Mision <i class="fas fa-chart-line"></i></h2>
                                     <p class="nos_suc-parrafos">Proveer un amplio surtido para el hogar, tienda o
                                         negocio de nuestros clientes
-                                        poniendo a su disposición una extensa variedad de productos con precios bajos
+                                        poniendo a su disposicion una extensa variedad de productos con precios bajos
                                         y un excelente servicio.</p>
                                 </div>
 
                                 <div class="col-12 mt-3 pb-2 mx-auto col-md-6 ps-md-3 mb-2 linea-bottom">
-                                    <h2 class="nos_suc-subtitulos">Visión <i class="fas fa-eye"></i></h2>
-                                    <p class="nos_suc-parrafos">Ser una empresa líder en México, reconocida por su
+                                    <h2 class="nos_suc-subtitulos">Vision <i class="fas fa-eye"></i></h2>
+                                    <p class="nos_suc-parrafos">Ser una empresa lider en Mexico, reconocida por su
                                         excelente trato al cliente,
                                         amplio surtido y precios bajos.</p>
 
@@ -104,7 +104,7 @@
                                             <p class="nos_suc-parrafos">Buscar siempre el apoyo colectivo.</p>
                                         </li>
                                         <li>
-                                            <strong class="nos_suc-parrafos">Alegría: </strong>
+                                            <strong class="nos_suc-parrafos">Alegria: </strong>
                                             <p class="nos_suc-parrafos">Buen ambiente de trabajo y llevar siempre una
                                                 sonrisa.</p>
                                         </li>

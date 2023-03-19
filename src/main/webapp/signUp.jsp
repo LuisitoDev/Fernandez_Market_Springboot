@@ -31,7 +31,7 @@ if(request.getAttribute("emailEncontrado") != null)
 
 <body class="main-registro">
     <header  data-position="bottom"
-        data-intro="Página de registro: Aquí la persona podra llenar su información y crear un usuario para iniciar sesión en la página">
+        data-intro="Página de registro: Aqui la persona podra llenar su informacion y crear un usuario para iniciar sesion en la página">
 		            <%-- <div id="basicNavbarPage"></div> --%>
 <%-- 		<jsp:include page="v_basicNavbar.jsp"></jsp:include> --%>
 		<jsp:include page="v_navbar.jsp"></jsp:include>
@@ -47,7 +47,7 @@ if(request.getAttribute("emailEncontrado") != null)
 		<div class="container-fluid p-0">
             <div class="row gx-0 mt-5">
                 <div  data-position="bottom"
-                    data-intro="En este apartado el usuario ingresará su información en cada campo siguiendo ciertas restricciones que se presenaran a continuacion. Los campos con un '*' rojo son obligatorios"
+                    data-intro="En este apartado el usuario ingresará su informacion en cada campo siguiendo ciertas restricciones que se presenaran a continuacion. Los campos con un '*' rojo son obligatorios"
                     class="col-11 ps-3 pe-3 pt-3 pb-4 mx-auto col-lg-8 ps-lg-5 pe-lg-5 col-xl-6  formulario-registro">
 					<div class="row  linea-bottom">
 						<div class="col-12 mx-auto mx-md-3 mb-2">
@@ -114,7 +114,7 @@ if(request.getAttribute("emailEncontrado") != null)
 
 
 									<div  data-position="right"
-                                        data-intro="La contraseña debe terner al menos 7 caracteres, la confirmación debe coincidir con la contraseña ingresada">
+                                        data-intro="La contraseña debe terner al menos 7 caracteres, la confirmacion debe coincidir con la contraseña ingresada">
 
 										<div class="col-12 mt-4 mx-auto col-md-11">
 											<label for="password" required>Contraseña:</label>
@@ -150,7 +150,7 @@ if(request.getAttribute("emailEncontrado") != null)
 
 					<div class="row mt-4 justify-content-center">
                         <div  data-position="bottom"
-                        data-intro="Una vez se haya llenado toda la información, se dara click en este botón y se creará una cuenta para el usuario"
+                        data-intro="Una vez se haya llenado toda la informacion, se dara click en este boton y se creará una cuenta para el usuario"
 						class="col-8 col-md-4 ">
 							<button id="button-signup_main-container" form="form_main-container"
 								class="w-100 button-ok py-2">Registrarme</button>

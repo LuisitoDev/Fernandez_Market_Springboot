@@ -39,7 +39,7 @@
 	<div class="row gx-0 sub-footer">
 		<div class="col-10 mt-2 mx-auto">
 			<p style="text-align: center;">
-				Copyright @ 2021 <a class="link" href="/home"> Fernéndez Market. </a>
+				Copyright @ 2021 <a class="link" href="/home"> Fernendez Market. </a>
 				Todos los derechos reservados.
 			</p>
 		</div>

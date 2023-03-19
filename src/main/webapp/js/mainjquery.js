@@ -274,7 +274,7 @@ jQuery.validator.methods.email = function( value, element ) {
           },
           password: {
             required: "*Ingrese una contraseña",
-            complexpassword: "La contraseña debe llevar por lo menos 8 caracteres, una letra mayúscula, una minúscula, un número y un signo de puntuacion."
+            complexpassword: "La contraseña debe llevar por lo menos 8 caracteres, una letra mayuscula, una minuscula, un numero y un signo de puntuacion."
           },
           passconfirm: {
             required: "*Confirme su contraseña",
@@ -331,7 +331,7 @@ jQuery.validator.methods.email = function( value, element ) {
           },
           password: {
             required: "*Ingrese una contraseña",
-            complexpassword: "La contraseña debe llevar por lo menos 8 caracteres, una letra mayúscula, una minúscula, un número y un signo de puntuacion."
+            complexpassword: "La contraseña debe llevar por lo menos 8 caracteres, una letra mayuscula, una minuscula, un numero y un signo de puntuacion."
           },
           passconfirm: {
             required: "*Confirme su contraseña",
@@ -410,11 +410,11 @@ jQuery.validator.methods.email = function( value, element ) {
              required: "*Ingrese un municipio"
           },
           Telefono: {
-            required:  "*Ingrese su numero de teléfono.",
+            required:  "*Ingrese su numero de telefono.",
             phoneFormat: "*Ingrese correctamente el formato del telefono."
           },
           CP: {
-            required:  "*Ingrese su código postal.",
+            required:  "*Ingrese su codigo postal.",
             numbersonly: "*Ingrese solamente numeros, max 15 digitos"
           },
           Banco: {

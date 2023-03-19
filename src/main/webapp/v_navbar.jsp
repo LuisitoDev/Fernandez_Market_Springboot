@@ -38,7 +38,7 @@ pageContext.setAttribute("cantidadProductosCarrito", cantidadProductosCarrito);
         <div
 			<c:if test="${not empty visualizarOnboarding}">         	
         		data-position="left"
-            	data-intro="Buscador de productos, puede ingresar el nombre de un producto y dar click en el botón de la lupa para buscar todos los productos con un nombre similar"
+            	data-intro="Buscador de productos, puede ingresar el nombre de un producto y dar click en el boton de la lupa para buscar todos los productos con un nombre similar"
             </c:if>
         class="order-3 col-12 px-2 mt-1 order-lg-2 col-lg-5  mt-lg-0  col-xl-4">
             <form class="d-flex justify-content-center"  action = "SubcategoriaProductos" method = "get"  autocomplete="off">
@@ -56,7 +56,7 @@ pageContext.setAttribute("cantidadProductosCarrito", cantidadProductosCarrito);
         	<div   
         		<c:if test="${not empty visualizarOnboarding}">
         		data-position="left"
-                data-intro="Botón para iniciar sesión<br>Si ya te encuentras registrado podrás dar click para entrar a tu perfil"
+                data-intro="Boton para iniciar sesion<br>Si ya te encuentras registrado podrás dar click para entrar a tu perfil"
                 </c:if>
                 style="display: inline;">
             
@@ -81,7 +81,7 @@ pageContext.setAttribute("cantidadProductosCarrito", cantidadProductosCarrito);
             <a 
             	<c:if test="${not empty visualizarOnboarding}">
 	            	data-position="left"
-    	        	data-intro="Botón ver el carrito de productos comprados"
+    	        	data-intro="Boton ver el carrito de productos comprados"
             	</c:if>
             	
             href="CarritoProductos" class="link-navbar" id = "navbar-carrito-icono" >
@@ -94,7 +94,7 @@ pageContext.setAttribute("cantidadProductosCarrito", cantidadProductosCarrito);
                 <div 
                     <c:if test="${not empty visualizarOnboarding}">
                 		data-position="left"
-                    	data-intro="Botón para iniciar sesión<br>Si ya te encuentras registrado podrás dar click para entrar a tu perfil"
+                    	data-intro="Boton para iniciar sesion<br>Si ya te encuentras registrado podrás dar click para entrar a tu perfil"
                     </c:if>
                     
                     style="display: inline">
@@ -125,7 +125,7 @@ pageContext.setAttribute("cantidadProductosCarrito", cantidadProductosCarrito);
             <button 
             	<c:if test="${not empty visualizarOnboarding}">
             		data-position="left"
-            		data-intro="Botón que despliega las categorias de la tienda"
+            		data-intro="Boton que despliega las categorias de la tienda"
             	</c:if>
             	
             	class="sub-navbar-categorias-button categories-text" type="button" id="dropdownMenuButton1"
@@ -149,7 +149,7 @@ pageContext.setAttribute("cantidadProductosCarrito", cantidadProductosCarrito);
             <a 
            	<c:if test="${not empty visualizarOnboarding}">
             	data-position="bottom" 
-            	data-intro="Botón para ir a la página de inicio"
+            	data-intro="Boton para ir a la página de inicio"
             </c:if>
             
             class="nav-link categories-text" href="/home">
@@ -158,7 +158,7 @@ pageContext.setAttribute("cantidadProductosCarrito", cantidadProductosCarrito);
             <a 
             	<c:if test="${not empty visualizarOnboarding}">
             		data-position="bottom" 
-            		data-intro="Botón para ir a la página 'Nosotros' donde se encuentra información de la tienda como su propósito y datos de contacto"
+            		data-intro="Boton para ir a la página 'Nosotros' donde se encuentra informacion de la tienda como su proposito y datos de contacto"
             	</c:if>
             	
             class="nav-link categories-text" href="/nosotros">
@@ -167,7 +167,7 @@ pageContext.setAttribute("cantidadProductosCarrito", cantidadProductosCarrito);
             <a 
 				<c:if test="${not empty visualizarOnboarding}">
             		data-position="bottom" 
-            		data-intro="Botón para ir a la página 'Sucursales' donde se encuentra información de cada sucursal, junto a su dirección y teléfono"
+            		data-intro="Boton para ir a la página 'Sucursales' donde se encuentra informacion de cada sucursal, junto a su direccion y telefono"
             	</c:if>
             	
              class="nav-link categories-text" href="/sucursales">

@@ -41,7 +41,7 @@ pageContext.setAttribute("usuarioElegido", usuarioElegido);
 <body>
 
     <header  data-position="bottom"
-        data-intro="Página de editar perfil: Esta página es similar a la página de registrarse, aquí se podra editar el perfil de cada usuario"
+        data-intro="Página de editar perfil: Esta página es similar a la página de registrarse, aqui se podra editar el perfil de cada usuario"
         class="sticky-top" style="z-index: 10000000">
 <!--             <div id="navbarPage" class="navbar-complete"></div> -->
 			<jsp:include page="v_navbar.jsp"></jsp:include>
@@ -58,7 +58,7 @@ pageContext.setAttribute("usuarioElegido", usuarioElegido);
 
             <div class="row gx-0 mt-4">
                  <div  data-position="bottom"
-                    data-intro="Aquí se actualizará la información de cada apartado siguiendo las mismas restricciones que en la página de registro. Los campos con un '*' rojo son obligatorios"
+                    data-intro="Aqui se actualizará la informacion de cada apartado siguiendo las mismas restricciones que en la página de registro. Los campos con un '*' rojo son obligatorios"
                     class="col-11 ps-3 pe-3 pt-3 pb-4 mx-auto col-lg-8 ps-lg-5 pe-lg-5 col-xl-6  formulario-registro">
                     <div class="row  linea-bottom">
                         <div class="col-12 mx-auto mx-md-3 mb-2">
@@ -148,7 +148,7 @@ pageContext.setAttribute("usuarioElegido", usuarioElegido);
 
                     <div class="row mt-4 justify-content-center">
                          <div  data-position="bottom"
-                        data-intro="Una vez se haya llenado toda la información, se dara click en este botón y todos los cambios serán correctamente actualizados"
+                        data-intro="Una vez se haya llenado toda la informacion, se dara click en este boton y todos los cambios serán correctamente actualizados"
                         class="col-8 col-md-4 ">
                         	<button id="button-edit_main-container" form="form_main-container"
 								class="w-100 button-ok py-2">Editar perfil</button>
