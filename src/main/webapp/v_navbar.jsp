@@ -9,14 +9,17 @@
 
 <%
 Usuarios usuarioElegido = GeneralController.getUsuario();
+pageContext.setAttribute("usuarioElegido", usuarioElegido);
 
 List<Subcategorias> listaSubcategorias = GeneralController.getSubcategorias();
+pageContext.setAttribute("listaSubcategorias", listaSubcategorias);
 
 String visualizarOnboarding = "true";
+pageContext.setAttribute("visualizarOnboarding", visualizarOnboarding);
 
-int cantidadProductosCarrito = 10;
+int cantidadProductosCarrito = 20;
+pageContext.setAttribute("cantidadProductosCarrito", cantidadProductosCarrito);
 %>
-
 
 <div class="container-fluid p-0">
 
@@ -27,8 +30,8 @@ int cantidadProductosCarrito = 10;
                 data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
 
             </button>
-            <a class="navbar-brand px-1" href="IndexPagina">
-                <img src="img/Logo.png" alt="" style="width: 120px">
+            <a class="navbar-brand px-1" href="/home">
+                <img src="/img/Logo.png" alt="" style="width: 120px">
             </a>
         </div>
 
@@ -131,13 +134,13 @@ int cantidadProductosCarrito = 10;
                 <p style="display: inline;">Categorias</p>
             </button>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                <li><a class="dropdown-item navbar-categoria-opcion" href="SubcategoriaProductos?IdSubcategoria=0&numeroPagina=1">General</a></li>
+                <li><a class="dropdown-item navbar-categoria-opcion" href="/subcategoria/General/1">General</a></li>
                 <li>
                     <hr class="dropdown-divider">
                 </li>
 
 				<c:forEach var="iSubcategoria" items="${listaSubcategorias}">
-					<li><a class="dropdown-item navbar-categoria-opcion" href="SubcategoriaProductos?IdSubcategoria=${iSubcategoria.getIdSubcategoria()}&numeroPagina=1">${iSubcategoria.getTituloSubcategoria()}</a></li>
+					<li><a class="dropdown-item navbar-categoria-opcion" href="/subcategoria/${iSubcategoria.getTituloSubcategoriaURL()}/1">${iSubcategoria.getTituloSubcategoria()}</a></li>
 				</c:forEach>
             </ul>
         </div>
@@ -149,7 +152,7 @@ int cantidadProductosCarrito = 10;
             	data-intro="Botón para ir a la página de inicio"
             </c:if>
             
-            class="nav-link categories-text" href="IndexPagina">
+            class="nav-link categories-text" href="/home">
                 Inicio 
             </a>
             <a 
@@ -158,7 +161,7 @@ int cantidadProductosCarrito = 10;
             		data-intro="Botón para ir a la página 'Nosotros' donde se encuentra información de la tienda como su propósito y datos de contacto"
             	</c:if>
             	
-            class="nav-link categories-text" href="nosotros.jsp">
+            class="nav-link categories-text" href="/nosotros">
                 Nosotros 
             </a>
             <a 
@@ -167,7 +170,7 @@ int cantidadProductosCarrito = 10;
             		data-intro="Botón para ir a la página 'Sucursales' donde se encuentra información de cada sucursal, junto a su dirección y teléfono"
             	</c:if>
             	
-             class="nav-link categories-text" href="sucursales.jsp">
+             class="nav-link categories-text" href="/sucursales">
                 Sucursales 
             </a>
         </div>

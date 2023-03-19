@@ -1,4 +1,4 @@
-package com.fernandez_market.Fernandez_Market.Controllers;
+package com.fernandez_market.Fernandez_Market.Controllers.api;
 
 import com.fernandez_market.Fernandez_Market.Models.Marcas;
 import com.fernandez_market.Fernandez_Market.Services.MarcasService;
@@ -10,11 +10,11 @@ import java.util.List;
 
 @RestController
 @RequestMapping(path = "/api/marca")
-public class MarcaController {
+public class API_MarcaController {
 
     private final MarcasService marcasService;
 
-    public MarcaController(MarcasService marcasService) {
+    public API_MarcaController(MarcasService marcasService) {
         this.marcasService = marcasService;
     }
 

@@ -24,19 +24,19 @@ pageContext.setAttribute("pedidoElegido", pedidoElegido);
 <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
 <title>Fernandez Market</title>
 
-<link rel="stylesheet" href="Bootstrap/css/bootstrap.min.css" crossorigin="anonymous">
+<link rel="stylesheet" href="/Bootstrap/css/bootstrap.min.css" crossorigin="anonymous">
 
-<link rel="stylesheet" href="css/owlcarousel/owl.carousel.min.css">
-<link rel="stylesheet" href="css/owlcarousel/owl.theme.default.min.css">
-<link rel="stylesheet" href="css/introjs.css">
-<link rel="stylesheet" href="css/Autocomplete/jquery-ui.css">
-<link rel="stylesheet" href="css/Autocomplete/jquery-ui.structure.css">
-<link rel="stylesheet" href="css/Autocomplete/jquery-ui.theme.css">
+<link rel="stylesheet" href="/css/owlcarousel/owl.carousel.min.css">
+<link rel="stylesheet" href="/css/owlcarousel/owl.theme.default.min.css">
+<link rel="stylesheet" href="/css/introjs.css">
+<link rel="stylesheet" href="/css/Autocomplete/jquery-ui.css">
+<link rel="stylesheet" href="/css/Autocomplete/jquery-ui.structure.css">
+<link rel="stylesheet" href="/css/Autocomplete/jquery-ui.theme.css">
 
 
-<link rel="stylesheet" href="css/generalStyles.css">
-<link rel="stylesheet" href="css/widthme.css">
-<link rel="stylesheet" href="css/pedido.css">
+<link rel="stylesheet" href="/css/generalStyles.css">
+<link rel="stylesheet" href="/css/widthme.css">
+<link rel="stylesheet" href="/css/pedido.css">
 
 
 
@@ -62,7 +62,7 @@ pageContext.setAttribute("pedidoElegido", pedidoElegido);
             class="row gx-0 my-4 pedido-barra-titulo-fondo">
 				<div class="col-11 mt-2 mx-auto pb-2">
 
-					<a href="IndexPagina" class="pedido-barra-titulo-enlace">Inicio</a>
+					<a href="/home" class="pedido-barra-titulo-enlace">Inicio</a>
 					<i class="fas fa-angle-right pedido-barra-titulo"></i> <a
 						href="CarritoProductos" class="pedido-barra-titulo-enlace">Carrito
 						de compra</a> <i class="fas fa-angle-right pedido-barra-titulo"></i>
@@ -405,16 +405,16 @@ pageContext.setAttribute("pedidoElegido", pedidoElegido);
 
 
 	<script src="https://kit.fontawesome.com/d253da1760.js" crossorigin="anonymous"></script>
-	<script src="Bootstrap/js/popper.min.js"></script>
-	<script src="Bootstrap/js/bootstrap.min.js"></script>
+	<script src="/Bootstrap/js/popper.min.js"></script>
+	<script src="/Bootstrap/js/bootstrap.min.js"></script>
 
-	<script src="js/jquery.js"></script>
-	<script src="js/owlcarousel/owl.carousel.min.js"></script>
+	<script src="/js/jquery.js"></script>
+	<script src="/js/owlcarousel/owl.carousel.min.js"></script>
 	<script src ="js/jquery.validate.min.js"></script>
-	<script src="js/intro.js"></script>
-    <script src="js/jquery-ui.js"></script>
+	<script src="/js/intro.js"></script>
+    <script src="/js/jquery-ui.js"></script>
 
-	<script src="js/mainjquery.js"></script>
-	<script src="js/autocomplete.js"></script>
+	<script src="/js/mainjquery.js"></script>
+	<script src="/js/autocomplete.js"></script>
 
 </html>

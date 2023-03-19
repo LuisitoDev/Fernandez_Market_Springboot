@@ -20,18 +20,18 @@ pageContext.setAttribute("usuarioElegido", usuarioElegido);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fernandez Market</title>
 
-    <link rel="stylesheet" href="Bootstrap/css/bootstrap.min.css" crossorigin = "anonymous">
-    <link rel="stylesheet" href="css/owlcarousel/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/owlcarousel/owl.theme.default.min.css">
-    <link rel="stylesheet" href="css/introjs.css">
-    <link rel="stylesheet" href="css/Autocomplete/jquery-ui.css">
-    <link rel="stylesheet" href="css/Autocomplete/jquery-ui.structure.css">
-    <link rel="stylesheet" href="css/Autocomplete/jquery-ui.theme.css">
+    <link rel="stylesheet" href="/Bootstrap/css/bootstrap.min.css" crossorigin = "anonymous">
+    <link rel="stylesheet" href="/css/owlcarousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="/css/owlcarousel/owl.theme.default.min.css">
+    <link rel="stylesheet" href="/css/introjs.css">
+    <link rel="stylesheet" href="/css/Autocomplete/jquery-ui.css">
+    <link rel="stylesheet" href="/css/Autocomplete/jquery-ui.structure.css">
+    <link rel="stylesheet" href="/css/Autocomplete/jquery-ui.theme.css">
 
 
-    <link rel="stylesheet" href="css/generalStyles.css">
-    <link rel="stylesheet" href="css/widthme.css">
-    <link rel="stylesheet" href="css/editUser.css">
+    <link rel="stylesheet" href="/css/generalStyles.css">
+    <link rel="stylesheet" href="/css/widthme.css">
+    <link rel="stylesheet" href="/css/editUser.css">
 
 
     
@@ -171,12 +171,12 @@ pageContext.setAttribute("usuarioElegido", usuarioElegido);
     <script src="https://kit.fontawesome.com/d253da1760.js" crossorigin="anonymous"></script>
     <script src = "Bootstrap/js/popper.min.js"></script>
     <script src = "Bootstrap/js/bootstrap.min.js"></script>
-    <script src="js/jquery.js"></script>
+    <script src="/js/jquery.js"></script>
 	<script src ="js/jquery.validate.min.js"></script>
-    <script src="js/owlcarousel/owl.carousel.min.js"></script>    
-    <script src="js/intro.js"></script>
-    <script src="js/jquery-ui.js"></script>
+    <script src="/js/owlcarousel/owl.carousel.min.js"></script>    
+    <script src="/js/intro.js"></script>
+    <script src="/js/jquery-ui.js"></script>
 
-    <script src="js/mainjquery.js"></script>
-    <script src="js/autocomplete.js"></script>
+    <script src="/js/mainjquery.js"></script>
+    <script src="/js/autocomplete.js"></script>
 </html>

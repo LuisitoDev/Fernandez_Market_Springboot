@@ -4,7 +4,11 @@ import com.fernandez_market.Fernandez_Market.Models.Productos;
 import com.fernandez_market.Fernandez_Market.Projections.ProductosCardDTO;
 import com.fernandez_market.Fernandez_Market.Repositories.ProductosRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.PathVariable;
 
 import java.util.List;
 
@@ -39,9 +43,8 @@ public class ProductosService {
         return this.productoRepository.getProductosNuevos();
     }
 
+    public List<ProductosCardDTO> getProductosBySubcategoriaNombrePagina(int id_subcategoria, String nombreProducto, int page, int quantity) {
 
-
-    public List<ProductosCardDTO> QueryPedorro() {
-        return this.productoRepository.getProductos();
+        return this.productoRepository.getProductosBySubcategoria(id_subcategoria, nombreProducto, PageRequest.of(page  - 1, quantity));
     }
 }

@@ -32,25 +32,6 @@ public class HomeController {
         this.productosService = productosService;
     }
 
-//    @GetMapping(path="/api")
-//    public ResponseEntity<Object> getHomeAPI(){
-//        HashMap<String, Object> response=new HashMap<>();
-//
-//        List<Marcas> marcas = this.marcasService.getMarcas();
-//        List<Promociones> promociones = this.promocionesService.getPromociones();
-//        List<Subcategorias> subcategorias = this.subcategoriasService.getSubcategorias();
-//        List<ProductosCard> productosMasVendidos = this.productosService.getProductosMasVendidos();
-//        List<ProductosCard> productosNuevos = this.productosService.getProductosNuevos();
-//
-//        response.put("marcas", marcas);
-//        response.put("promociones", promociones);
-//        response.put("subcategorias", subcategorias);
-//        response.put("productosMasVendidos", productosMasVendidos);
-//        response.put("productosNuevos", productosNuevos);
-//
-//        return ResponseEntity.ok(response);
-//    }
-
     @GetMapping()
     public String getHome(Model modelo){
         List<Marcas> marcas = this.marcasService.getMarcas();
@@ -59,17 +40,12 @@ public class HomeController {
         List<ProductosCardDTO> productosMasVendidos = this.productosService.getProductosMasVendidos();
         List<ProductosCardDTO> productosNuevos = this.productosService.getProductosNuevos();
 
-        //List<ProductosCard> productosMasVendidos = this.productosService.QueryPedorro();
-
         modelo.addAttribute("listaMarcas", marcas);
         modelo.addAttribute("listaPromociones", promociones);
         modelo.addAttribute("listaSubcategoria", subcategorias);
         modelo.addAttribute("listaProductosInteres", productosMasVendidos);
         modelo.addAttribute("listaProductosMasComprados", productosMasVendidos);
         modelo.addAttribute("listaProductosNuevos", productosNuevos);
-
-
-        //modelo.addAttribute("listaProductosNuevos", productosMasVendidos);
 
         return "index";
     }

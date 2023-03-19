@@ -8,6 +8,7 @@
 
 <%
 String visualizarOnboarding = "true";
+pageContext.setAttribute("visualizarOnboarding", visualizarOnboarding);
 %>
 
 <!DOCTYPE html>
@@ -21,21 +22,21 @@ String visualizarOnboarding = "true";
 
     
     
-    <link rel="stylesheet" href="Bootstrap/css/bootstrap.min.css" crossorigin = "anonymous">
-	<link rel="stylesheet" href="css/introjs.css">
-    <link rel="stylesheet" href="css/Autocomplete/jquery-ui.css">
-    <link rel="stylesheet" href="css/Autocomplete/jquery-ui.structure.css">
-    <link rel="stylesheet" href="css/Autocomplete/jquery-ui.theme.css">
+    <link rel="stylesheet" href="/Bootstrap/css/bootstrap.min.css" crossorigin = "anonymous">
+	<link rel="stylesheet" href="/css/introjs.css">
+    <link rel="stylesheet" href="/css/Autocomplete/jquery-ui.css">
+    <link rel="stylesheet" href="/css/Autocomplete/jquery-ui.structure.css">
+    <link rel="stylesheet" href="/css/Autocomplete/jquery-ui.theme.css">
     
     
 
-    <link rel="stylesheet" href="css/owlcarousel/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/owlcarousel/owl.theme.default.min.css">
+    <link rel="stylesheet" href="/css/owlcarousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="/css/owlcarousel/owl.theme.default.min.css">
 
-    <link rel="stylesheet" href="css/generalStyles.css">
-    <link rel="stylesheet" href="css/widthme.css">
-    <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="css/carouselProductos.css">
+    <link rel="stylesheet" href="/css/generalStyles.css">
+    <link rel="stylesheet" href="/css/widthme.css">
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/carouselProductos.css">
 
 
 
@@ -98,8 +99,8 @@ String visualizarOnboarding = "true";
                                     </c:if>
 									" data-bs-interval="10000">
                                     
-                                    <a href = "SubcategoriaProductos?IdSubcategoria=${iPromocion.getSubcategoria()}&numeroPagina=1">
-                                        <img src="GeneralServlet?Imagen=Promocion&Id=${iPromocion.getIdPromocion()}" class="d-block w-100"
+                                    <a href = "/subcategoria/${iPromocion.getSubcategoria().getTituloSubcategoriaURL()}/1">
+                                        <img src="/images/Promocion/${iPromocion.getIdPromocion()}" class="d-block w-100"
                                             alt="...">
                                     </a>
                                 </div>
@@ -155,9 +156,9 @@ String visualizarOnboarding = "true";
                                 <div class="owl-carousel owl-theme categorias-carousel">
                             
                                 	<c:forEach var="iSubcategoria" items="${listaSubcategoria}">
-            				    		<a href="SubcategoriaProductos?IdSubcategoria=${iSubcategoria.getIdSubcategoria()}&numeroPagina=1" class = "carousel-subcategoria-card">
+            				    		<a href="/subcategoria/${iSubcategoria.getTituloSubcategoriaURL()}/1" class = "carousel-subcategoria-card">
                                         	<div class="card index-carousel-categoria carousel-subcategoria-card">
-                                            	<img src="GeneralServlet?Imagen=Subcategoria&Id=${iSubcategoria.getIdSubcategoria()}"
+                                            	<img src="/images/Subcategoria/${iSubcategoria.getIdSubcategoria()}"
                                                 	class="card-img-top mx-auto w-100" alt="...">
                                         	    <div class="card-body py-2 px-0 mx-1 py-auto  d-flex align-items-center justify-content-center" align = "center">
                                                 	<p class="card-text d-inline my-auto ">${iSubcategoria.getTituloSubcategoria() }</p>
@@ -211,7 +212,7 @@ String visualizarOnboarding = "true";
             						
 						    			<a href="${iMarcas.getPaginaMarca()}" class = "carousel-marca-card" target="_blank">
                                         	<div class="card index-carousel-marca carousel-marca-card">
-                                            	<img src="GeneralServlet?Imagen=Marca&Id=${iMarcas.getIdMarca()}"
+                                            	<img src="/images/Marca/${iMarcas.getIdMarca()}"
                                                 	class="card-img-top mx-auto w-100" alt="...">
                                             	<div class="card-body py-2 px-0 mx-auto d-flex align-items-center justify-content-center" align = "center">
 	                                                <p class="card-text ">${iMarcas.getNombreMarca()}</p>
@@ -258,27 +259,27 @@ String visualizarOnboarding = "true";
 
 
     <%-- <script src="https://kit.fontawesome.com/d253da1760.js" crossorigin="anonymous"></script>
-    <script src="Bootstrap/js/popper.min.js"></script>
-    <script src="Bootstrap/js/bootstrap.min.js"></script>
-    <script src="js/jquery.js"></script>
-    <script src="js/owlcarousel/owl.carousel.min.js"></script>
-    <script src="js/jquery-ui.js"></script>
-    <script src="js/intro.js"></script>
+    <script src="/Bootstrap/js/popper.min.js"></script>
+    <script src="/Bootstrap/js/bootstrap.min.js"></script>
+    <script src="/js/jquery.js"></script>
+    <script src="/js/owlcarousel/owl.carousel.min.js"></script>
+    <script src="/js/jquery-ui.js"></script>
+    <script src="/js/intro.js"></script>
 
-    <script src="js/mainjquery.js"></script> --%>
+    <script src="/js/mainjquery.js"></script> --%>
 
  <script src="https://kit.fontawesome.com/d253da1760.js" crossorigin="anonymous"></script>
     <script src = "Bootstrap/js/popper.min.js"></script>
     <script src = "Bootstrap/js/bootstrap.min.js"></script>
     
-     <script src="js/jquery.js"></script>
-    <script src="js/owlcarousel/owl.carousel.min.js"></script>
-    <script src="js/intro.js"></script>
-    <script src="js/owlJquery.js"></script>
-    <script src="js/jquery-ui.js"></script>
+     <script src="/js/jquery.js"></script>
+    <script src="/js/owlcarousel/owl.carousel.min.js"></script>
+    <script src="/js/intro.js"></script>
+    <script src="/js/owlJquery.js"></script>
+    <script src="/js/jquery-ui.js"></script>
     
 
-    <script src="js/mainjquery.js"></script>
-    <script src="js/autocomplete.js"></script>
+    <script src="/js/mainjquery.js"></script>
+    <script src="/js/autocomplete.js"></script>
     	
 </html>

@@ -22,18 +22,18 @@ List<Subcategorias> listaSubcategorias = GeneralController.getSubcategorias();
         <div class="offcanvas-body">
             <div class="row px-0">
                 <div class="col-12 py-2 linea-top linea-bottom">
-                    <a class="nav-link categories-text" href="IndexPagina">
+                    <a class="nav-link categories-text" href="/home">
                         Inicio 
                     </a>
 
                 </div>
                 <div class="col-12 py-2 linea-bottom">
-                    <a class="nav-link categories-text" href="nosotros.jsp">
+                    <a class="nav-link categories-text" href="/nosotros">
                         Nosotros 
                     </a>
                 </div>
                 <div class="col-12 py-2 linea-bottom">
-                    <a class="nav-link categories-text" href="sucursales.jsp">
+                    <a class="nav-link categories-text" href="/sucursales">
                         Sucursales 
                     </a>
                 </div>
@@ -47,12 +47,12 @@ List<Subcategorias> listaSubcategorias = GeneralController.getSubcategorias();
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                         
                         <c:forEach var="iSubcategoria" items="${listaSubcategorias}" begin = "0" end = "5">
-							<li><a class="dropdown-item navbar-categoria-opcion" href="SubcategoriaProductos?IdSubcategoria=${iSubcategoria.getIdSubcategoria()}&numeroPagina=1">${iSubcategoria.getTituloSubcategoria()}</a></li>
+							<li><a class="dropdown-item navbar-categoria-opcion" href="/subcategoria/${iSubcategoria.getTituloSubcategoriaURL()}/1">${iSubcategoria.getTituloSubcategoria()}</a></li>
 						</c:forEach>
 						<li>
                             <hr class="dropdown-divider">
                         </li>
-                        <li><a class="dropdown-item navbar-categoria-opcion" href="SubcategoriaProductos?IdSubcategoria=0&numeroPagina=1">Ver más</a></li>
+                        <li><a class="dropdown-item navbar-categoria-opcion" href="/subcategoria/General/1">Ver más</a></li>
                     </ul>
                 </div>
 
@@ -66,7 +66,7 @@ List<Subcategorias> listaSubcategorias = GeneralController.getSubcategorias();
 
         <div class="row gx-0">
             <div class="col-10 mb-3 ms-3">
-                <a class="navbar-brand" href="IndexPagina"> <img src="img/Logo.png" alt=""
+                <a class="navbar-brand" href="/home"> <img src="/img/Logo.png" alt=""
                         class="w-50">
                 </a>
             </div>

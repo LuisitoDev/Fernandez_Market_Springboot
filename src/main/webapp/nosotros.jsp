@@ -7,17 +7,17 @@
     <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
     <title>Fernandez Market</title>
 
-    <link rel="stylesheet" href="Bootstrap/css/bootstrap.min.css" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/owlcarousel/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/owlcarousel/owl.theme.default.min.css">
-    <link rel="stylesheet" href="css/introjs.css">
-    <link rel="stylesheet" href="css/Autocomplete/jquery-ui.css">
-    <link rel="stylesheet" href="css/Autocomplete/jquery-ui.structure.css">
-    <link rel="stylesheet" href="css/Autocomplete/jquery-ui.theme.css">
+    <link rel="stylesheet" href="/Bootstrap/css/bootstrap.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/owlcarousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="/css/owlcarousel/owl.theme.default.min.css">
+    <link rel="stylesheet" href="/css/introjs.css">
+    <link rel="stylesheet" href="/css/Autocomplete/jquery-ui.css">
+    <link rel="stylesheet" href="/css/Autocomplete/jquery-ui.structure.css">
+    <link rel="stylesheet" href="/css/Autocomplete/jquery-ui.theme.css">
 
-    <link rel="stylesheet" href="css/generalStyles.css">
-    <link rel="stylesheet" href="css/widthme.css">
-    <link rel="stylesheet" href="css/nosotros&sucursal.css">
+    <link rel="stylesheet" href="/css/generalStyles.css">
+    <link rel="stylesheet" href="/css/widthme.css">
+    <link rel="stylesheet" href="/css/nosotros&sucursal.css">
 
 
     
@@ -27,7 +27,7 @@
 <body class="page">
 
     <header data-position="bottom"
-        data-intro="Página de Nosotros: En esta página se muestra toda la información relacionada de la tienda Fernandez Market."
+        data-intro="PÃ¡gina de Nosotros: En esta pÃ¡gina se muestra toda la informaciÃ³n relacionada de la tienda Fernandez Market."
         class="sticky-top"  style="z-index: 10000000">
 <!--         <div id="navbarPage" class="navbar-complete"></div> -->
         <jsp:include page="v_navbar.jsp"></jsp:include>
@@ -43,7 +43,7 @@
             <div class="row gx-0 my-4 nos_suc-barra-titulo-fondo">
                 <div class="col-11 mt-2 mx-auto pb-2">
 
-                    <a href="IndexPagina" class="nos_suc-barra-titulo-enlace">Inicio</a>
+                    <a href="/home" class="nos_suc-barra-titulo-enlace">Inicio</a>
                     <i class="fas fa-angle-right nos_suc-barra-titulo"></i>
                     <h1 class="nos_suc-barra-titulo">Nosotros</h1>
                 </div>
@@ -63,16 +63,16 @@
 
                             <div class="row gx-0">
                                 <div class="col-12 mt-3 pb-2 mx-auto col-md-6 pe-md-3 mb-2 linea-bottom">
-                                    <h2 class="nos_suc-subtitulos">Misión <i class="fas fa-chart-line"></i></h2>
+                                    <h2 class="nos_suc-subtitulos">MisiÃ³n <i class="fas fa-chart-line"></i></h2>
                                     <p class="nos_suc-parrafos">Proveer un amplio surtido para el hogar, tienda o
                                         negocio de nuestros clientes
-                                        poniendo a su disposición una extensa variedad de productos con precios bajos
+                                        poniendo a su disposiciÃ³n una extensa variedad de productos con precios bajos
                                         y un excelente servicio.</p>
                                 </div>
 
                                 <div class="col-12 mt-3 pb-2 mx-auto col-md-6 ps-md-3 mb-2 linea-bottom">
-                                    <h2 class="nos_suc-subtitulos">Visión <i class="fas fa-eye"></i></h2>
-                                    <p class="nos_suc-parrafos">Ser una empresa líder en México, reconocida por su
+                                    <h2 class="nos_suc-subtitulos">VisiÃ³n <i class="fas fa-eye"></i></h2>
+                                    <p class="nos_suc-parrafos">Ser una empresa lÃ­der en MÃ©xico, reconocida por su
                                         excelente trato al cliente,
                                         amplio surtido y precios bajos.</p>
 
@@ -104,7 +104,7 @@
                                             <p class="nos_suc-parrafos">Buscar siempre el apoyo colectivo.</p>
                                         </li>
                                         <li>
-                                            <strong class="nos_suc-parrafos">Alegría: </strong>
+                                            <strong class="nos_suc-parrafos">AlegrÃ­a: </strong>
                                             <p class="nos_suc-parrafos">Buen ambiente de trabajo y llevar siempre una
                                                 sonrisa.</p>
                                         </li>
@@ -113,10 +113,10 @@
                                 </div>
                                 <div class="col-12 py-4 mb-2 mx-auto col-md-6 px-3 linea-bottom" align = "center">
                                     <div class="nos_suc-imagen-div">
-                                        <img src="img/Nosotros.png" class="card-img-top w-100 nos_suc-imagen"
+                                        <img src="/img/Nosotros.png" class="card-img-top w-100 nos_suc-imagen"
                                             alt="...">
                                     </div>
-									<form action = "sucursales.jsp" method = "get">
+									<form action = "/sucursales" method = "get">
                                     	<button id="button_main-container" form="form_main-container"
                                     	class="mt-4 button-ok py-2">Ver sucursales</button>
 									</form>
@@ -158,13 +158,13 @@
 
     <script src="https://kit.fontawesome.com/d253da1760.js" crossorigin="anonymous"></script>
     
-    <script src="Bootstrap/js/popper.min.js"></script>
-    <script src="Bootstrap/js/bootstrap.min.js"></script>
-    <script src="js/jquery.js"></script>
-    <script src="js/owlcarousel/owl.carousel.min.js"></script>
-    <script src="js/intro.js"></script>
-    <script src="js/jquery-ui.js"></script>
+    <script src="/Bootstrap/js/popper.min.js"></script>
+    <script src="/Bootstrap/js/bootstrap.min.js"></script>
+    <script src="/js/jquery.js"></script>
+    <script src="/js/owlcarousel/owl.carousel.min.js"></script>
+    <script src="/js/intro.js"></script>
+    <script src="/js/jquery-ui.js"></script>
 
-    <script src="js/mainjquery.js"></script>
-    <script src="js/autocomplete.js"></script>
+    <script src="/js/mainjquery.js"></script>
+    <script src="/js/autocomplete.js"></script>
 </html>

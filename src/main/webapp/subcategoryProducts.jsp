@@ -6,31 +6,18 @@
 <%@page import="java.util.*"%>
 
 <%
-List<Subcategorias_Model> listaSubcategorias = (List<Subcategorias_Model>) request.getAttribute("listaSubcategorias");
-pageContext.setAttribute("listaSubcategorias", listaSubcategorias);
-
-List<Productos_Model> listaProductos = (List<Productos_Model>) request.getAttribute("listaProductos");
-pageContext.setAttribute("listaProductos", listaProductos);
-
-int idBoton = (int) request.getAttribute("idBoton");
-pageContext.setAttribute("idBoton", idBoton);
-
-int CantidadBotones = (int) request.getAttribute("CantidadBotones");
-pageContext.setAttribute("CantidadBotones", CantidadBotones);
-
-Subcategorias_Model subcategoriaElegida = (Subcategorias_Model) request.getAttribute("subcategoriaElegida");
-pageContext.setAttribute("subcategoriaElegida", subcategoriaElegida);
-
-int paginaFinal = (int) request.getAttribute("paginaFinal");
-pageContext.setAttribute("paginaFinal", paginaFinal);
-
-
-String nombreProducto = (String) request.getAttribute("nombreProducto");
-pageContext.setAttribute("nombreProducto", nombreProducto);
-
-String nombreProductoQuery = (String) request.getAttribute("nombreProductoQuery");
-pageContext.setAttribute("nombreProductoQuery", nombreProductoQuery);
 %>
+
+
+<c:if test="${not empty subcategoriaElegida}">
+	<c:set var="tituloSubcategoriaElegidaURL" value="${subcategoriaElegida.getTituloSubcategoriaURL()}" />
+</c:if>
+<c:if test="${empty subcategoriaElegida}">
+	<c:set var="tituloSubcategoriaElegidaURL" value="General" />
+</c:if>
+
+<c:set var="nombreProductoQuery" value="" />
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -41,29 +28,23 @@ pageContext.setAttribute("nombreProductoQuery", nombreProductoQuery);
 <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
 <title>Fernandez Market</title>
 
-<link rel="stylesheet" href="Bootstrap/css/bootstrap.min.css" crossorigin="anonymous">
-<link rel="stylesheet" href="css/owlcarousel/owl.carousel.min.css">
-<link rel="stylesheet" href="css/owlcarousel/owl.theme.default.min.css">
+<link rel="stylesheet" href="/Bootstrap/css/bootstrap.min.css" crossorigin="anonymous">
+<link rel="stylesheet" href="/css/owlcarousel/owl.carousel.min.css">
+<link rel="stylesheet" href="/css/owlcarousel/owl.theme.default.min.css">
 
 
-<link rel="stylesheet" href="css/Autocomplete/jquery-ui.css">
-<link rel="stylesheet" href="css/Autocomplete/jquery-ui.structure.css">
-<link rel="stylesheet" href="css/Autocomplete/jquery-ui.theme.css">
+<link rel="stylesheet" href="/css/Autocomplete/jquery-ui.css">
+<link rel="stylesheet" href="/css/Autocomplete/jquery-ui.structure.css">
+<link rel="stylesheet" href="/css/Autocomplete/jquery-ui.theme.css">
 
-<link rel="stylesheet" href="css/generalStyles.css">
-<link rel="stylesheet" href="css/widthme.css">
-<link rel="stylesheet" href="css/carouselProductos.css">
-<link rel="stylesheet" href="css/subcategoryProducts.css">
-<link rel="stylesheet" href="css/introjs.css">
+<link rel="stylesheet" href="/css/generalStyles.css">
+<link rel="stylesheet" href="/css/widthme.css">
+<link rel="stylesheet" href="/css/carouselProductos.css">
+<link rel="stylesheet" href="/css/subcategoryProducts.css">
+<link rel="stylesheet" href="/css/introjs.css">
 
 	
-	
-<c:if test="${not empty subcategoriaElegida}">
-	<c:set var="idSubcategoriaElegida" value="${subcategoriaElegida.getIdSubcategoria()}" />
-</c:if>
-<c:if test="${empty subcategoriaElegida}"> 
-	<c:set var="idSubcategoriaElegida" value="0" />
-</c:if>
+
 	
 	
 </head>
@@ -87,7 +68,7 @@ pageContext.setAttribute("nombreProductoQuery", nombreProductoQuery);
 			class="row gx-0 my-4 subcategoria-barra-titulo-fondo">
 				<div class="col-11 mt-2 mx-auto pb-2">
 
-					<a href="IndexPagina" class="subcategoria-barra-titulo-enlace">Inicio</a>
+					<a href="/home" class="subcategoria-barra-titulo-enlace">Inicio</a>
 					<i class="fas fa-angle-right subcategoria-barra-titulo"></i>
 					<h1 class="subcategoria-barra-titulo">
 					<c:if test="${not empty subcategoriaElegida}">
@@ -123,7 +104,7 @@ pageContext.setAttribute("nombreProductoQuery", nombreProductoQuery);
 					<div class="collapse subcategorias-contenedor-opciones"
 						id="subcategoriesContent">
 						<div class="row gx-0">
-							<a href="SubcategoriaProductos?IdSubcategoria=0&numeroPagina=1${nombreProductoQuery}"
+							<a href="/subcategoria/General/1${nombreProductoQuery}"
 								class="subcategorias-opcion">
 								<div
 									class="col-12 mx-auto py-2 px-3 
@@ -138,7 +119,7 @@ pageContext.setAttribute("nombreProductoQuery", nombreProductoQuery);
 
 
 
-								<a href="SubcategoriaProductos?IdSubcategoria=${iSubcategoria.getIdSubcategoria()}&numeroPagina=1${nombreProductoQuery}"
+								<a href="/subcategoria/${iSubcategoria.getTituloSubcategoriaURL()}/1${nombreProductoQuery}"
 									class="subcategorias-opcion">
 									<div class="col-12 mx-auto py-2 px-3 
                             		<c:if test="${iSubcategoria.getIdSubcategoria() eq subcategoriaElegida.getIdSubcategoria()}">
@@ -164,7 +145,7 @@ pageContext.setAttribute("nombreProductoQuery", nombreProductoQuery);
 						<div class="subcategorias-contenedor-opciones">
 							<div class="row gx-0 ">
 
-								<a href="SubcategoriaProductos?IdSubcategoria=0&numeroPagina=1${nombreProductoQuery}"
+								<a href="/subcategoria/General/1${nombreProductoQuery}"
 									class="subcategorias-opcion">
 									<div
 										class="col-12 mx-auto py-2 px-3 
@@ -176,7 +157,7 @@ pageContext.setAttribute("nombreProductoQuery", nombreProductoQuery);
 								</a>
 
 								<c:forEach var="iSubcategoria" items="${listaSubcategorias}">
-									<a href="SubcategoriaProductos?IdSubcategoria=${iSubcategoria.getIdSubcategoria()}&numeroPagina=1${nombreProductoQuery}"
+									<a href="/subcategoria/${iSubcategoria.getTituloSubcategoriaURL()}/1${nombreProductoQuery}"
 										class="subcategorias-opcion">
 										<div
 											class="col-12 mx-auto py-2 px-3 
@@ -208,7 +189,7 @@ pageContext.setAttribute("nombreProductoQuery", nombreProductoQuery);
 											<h1 class="subcategorias-busqueda-titulo">Producto buscado con nombre:</h1>
 											<h1 class="subcategorias-busqueda-titulo-producto">${nombreProducto}</h1>
 										</div>
-										<a href="SubcategoriaProductos?IdSubcategoria=${idSubcategoriaElegida}&numeroPagina=1" class="text-end"><i class="fas fa-times-circle subcategorias-busqueda-titulo-eliminar"></i></a>
+										<a href="/subcategoria/${tituloSubcategoriaElegidaURL.replace('-', ' ')}/1${nombreProductoQuery}" class="text-end"><i class="fas fa-times-circle subcategorias-busqueda-titulo-eliminar"></i></a>
 									</div>
 								</div>
 							</div>
@@ -258,14 +239,14 @@ pageContext.setAttribute("nombreProductoQuery", nombreProductoQuery);
 						<div  data-position="bottom" data-intro="Botones de navegación para moverse entre las páginas y seguir buscando productos"
                    		 	class="paginacion d-flex justify-content-center mt-2 mb-3">
 						<c:if test="${numeroPagina > 1 && CantidadBotones < paginaFinal}">
-							<a href="SubcategoriaProductos?IdSubcategoria=${idSubcategoriaElegida}&numeroPagina=${numeroPagina - 1}${nombreProductoQuery}"
+							<a href="/subcategoria/${tituloSubcategoriaElegidaURL}/${numeroPagina - 1}${nombreProductoQuery}"
 								class="btn btn-primary subcategorias-boton-paginacion ms-1  px-2 py-1 mx-sm-1  px-sm-3 py-sm-2">
 								<i class="fas fa-arrow-left"></i>
 							</a>
 						</c:if>
 						
 						<c:if test="${CantidadBotones < paginaFinal && numeroPagina != 1}">
-							<a href="SubcategoriaProductos?IdSubcategoria=${idSubcategoriaElegida}&numeroPagina=1${nombreProductoQuery}"
+							<a href="/subcategoria/${tituloSubcategoriaElegidaURL}/1${nombreProductoQuery}"
 								class="btn btn-primary subcategorias-boton-paginacion ms-1  px-2 py-1 mx-sm-1 px-sm-3 py-sm-2">
 								1...
 							</a>
@@ -275,7 +256,7 @@ pageContext.setAttribute("nombreProductoQuery", nombreProductoQuery);
 
 						<c:if test="${CantidadBotones > 0}">
 							<c:forEach begin="0" end="${CantidadBotones - 1}">
-								<a href="SubcategoriaProductos?IdSubcategoria=${idSubcategoriaElegida}&numeroPagina=${idBoton}${nombreProductoQuery}"
+								<a href="/subcategoria/${tituloSubcategoriaElegidaURL}/${idBoton}${nombreProductoQuery}"
 									class="btn btn-primary subcategorias-boton-paginacion ms-1 px-2 py-1 mx-sm-1 px-sm-3 py-sm-2
 									
 									<c:if test="${idBoton == numeroPagina}">
@@ -290,7 +271,7 @@ pageContext.setAttribute("nombreProductoQuery", nombreProductoQuery);
 						
 						
 						<c:if test="${CantidadBotones < paginaFinal && (numeroPagina + CantidadBotones - 1) < paginaFinal}">
-							<a href="SubcategoriaProductos?IdSubcategoria=${idSubcategoriaElegida}&numeroPagina=${paginaFinal}${nombreProductoQuery}"
+							<a href="/subcategoria/${tituloSubcategoriaElegidaURL}/${paginaFinal}${nombreProductoQuery}"
 								class="btn btn-primary subcategorias-boton-paginacion ms-1  px-2 py-1 mx-sm-1 px-sm-3 py-sm-2">
 								...${paginaFinal}
 							</a>
@@ -316,15 +297,15 @@ pageContext.setAttribute("nombreProductoQuery", nombreProductoQuery);
 
 
 	<script src="https://kit.fontawesome.com/d253da1760.js" crossorigin="anonymous"></script>
-	<script src="Bootstrap/js/popper.min.js"></script>
-	<script src="Bootstrap/js/bootstrap.min.js"></script>
-	<script src="js/jquery.js"></script>
-	<script src="js/owlcarousel/owl.carousel.min.js"></script>
-	<script src="js/intro.js"></script>
-	<script src="js/jquery-ui.js"></script>
+	<script src="/Bootstrap/js/popper.min.js"></script>
+	<script src="/Bootstrap/js/bootstrap.min.js"></script>
+	<script src="/js/jquery.js"></script>
+	<script src="/js/owlcarousel/owl.carousel.min.js"></script>
+	<script src="/js/intro.js"></script>
+	<script src="/js/jquery-ui.js"></script>
 
-	<script src="js/mainjquery.js"></script>
-	<script src="js/autocomplete.js"></script>
+	<script src="/js/mainjquery.js"></script>
+	<script src="/js/autocomplete.js"></script>
 
 	
 </html>

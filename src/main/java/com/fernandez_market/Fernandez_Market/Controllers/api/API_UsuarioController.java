@@ -1,4 +1,4 @@
-package com.fernandez_market.Fernandez_Market.Controllers;
+package com.fernandez_market.Fernandez_Market.Controllers.api;
 
 import com.fernandez_market.Fernandez_Market.Models.Usuarios;
 import com.fernandez_market.Fernandez_Market.Services.UsuarioService;
@@ -11,12 +11,12 @@ import java.util.List;
 
 @RestController
 @RequestMapping(path = "/api/usuario")
-public class UsuarioController {
+public class API_UsuarioController {
 
     private final UsuarioService usuarioService;
 
     @Autowired
-    public UsuarioController(UsuarioService usuarioService) {
+    public API_UsuarioController(UsuarioService usuarioService) {
         this.usuarioService = usuarioService;
     }
 

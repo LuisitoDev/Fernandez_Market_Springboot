@@ -6,11 +6,9 @@
 <%@page import="java.util.*"%>
 <%@page import="com.fernandez_market.Fernandez_Market.Controllers.GeneralController"%>
 <%@page import ="java.math.BigDecimal" %>
-
+<%@page import="com.fernandez_market.Fernandez_Market.Utils.PreciosUtils"%>
 
 <%
-Productos_Model iProducto = (Productos_Model) request.getAttribute("iPregunta");
-pageContext.setAttribute("iProducto", iProducto);
 %>
 
 <div class="subcategorias-producto-card mx-3">
@@ -19,7 +17,7 @@ pageContext.setAttribute("iProducto", iProducto);
     <a href="DetallesProducto?IdProducto=${iProducto.getIdProducto()}" class = "subcategorias-producto-enlace">
         <div class="row gx-0 subcategorias-producto-imagen_precio">
             <div class="col-6">
-                <img src="GeneralServlet?Imagen=Producto&Id=${iProducto.getIdProducto()}" class="w-100" alt="...">
+                <img src="/images/Producto/${iProducto.getIdProducto()}" class="w-100" alt="...">
             </div>
 
 
@@ -34,13 +32,13 @@ pageContext.setAttribute("iProducto", iProducto);
                 </div>
                 <div class="row">
                     <div class="col-12">
-                        <h5 class="subcategorias-producto-precio-final" descuento = "${iProducto.getDescuentoProducto()}">$ ${iProducto.getPrecioFinalProducto()}</h5>
+                        <h5 class="subcategorias-producto-precio-final" descuento = "${iProducto.getDescuentoProducto()}">$ ${PreciosUtils.getPrecioFinalProducto(iProducto.getPrecioProducto(), iProducto.getDescuentoProducto())}</h5>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-12">
                     	<c:if test="${iProducto.getDescuentoProducto().compareTo(BigDecimal.ZERO) == 1}">
-                        	<h5 class="subcategorias-producto-precio-rebajado">Ahorra ${iProducto.getProcentajeDescuentoProducto()}%</h5>
+                        	<h5 class="subcategorias-producto-precio-rebajado">Ahorra ${PreciosUtils.getProcentajeDescuentoProducto(iProducto.getDescuentoProducto())}%</h5>
                         </c:if>
                     </div>
                 </div>

@@ -17,9 +17,10 @@ public class Marcas {
     @Column(nullable = false, length = 45)
     private String NombreMarca;
 
-    @Column(columnDefinition = "longtext")
+    @Lob
+    @Column(nullable = false)
     @JsonIgnore
-    private String ImagenMarca;
+    private byte[] imagenMarca;
 
     @Column(length = 100)
     private String PaginaMarca;
@@ -43,12 +44,12 @@ public class Marcas {
         this.NombreMarca = nombreMarca;
     }
 
-    public String getImagenMarca() {
-        return ImagenMarca;
+    public byte[] getImagenMarca() {
+        return imagenMarca;
     }
 
-    public void setImagenMarca(final String imagenMarca) {
-        this.ImagenMarca = imagenMarca;
+    public void setImagenMarca(final byte[] imagenMarca) {
+        this.imagenMarca = imagenMarca;
     }
 
     public String getPaginaMarca() {

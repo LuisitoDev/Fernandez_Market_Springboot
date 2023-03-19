@@ -6,11 +6,11 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("/producto")
-public class ProductoController {
+@RequestMapping("/editar_perfil")
+public class EditarPerfilController {
 
     @GetMapping
-    public String getProductPage(Model modelo){
-        return "product";
+    public String getEditProfilePage(Model modelo){
+        return "editUser";
     }
 }

@@ -25,7 +25,7 @@
                     <c:forEach var="iProducto" items="${listaProductosGenerales}">
             			<div class="carousel-producto-card">
                         	<a href="DetallesProducto?IdProducto=${iProducto.getIdProducto()}">
-                            	<img src="GeneralServlet?Imagen=Producto&Id=${iProducto.getIdProducto()}" class="carousel-producto-imagen" alt="...">
+                            	<img src="/images/Producto/${iProducto.getIdProducto()}" class="carousel-producto-imagen" alt="...">
                         	</a>
 
                         	<div class="card-body card-producto-texto">

@@ -14,9 +14,10 @@ public class Promociones {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idPromociones;
 
-    @Column(nullable = false, columnDefinition = "longtext")
+    @Lob
+    @Column(nullable = false)
     @JsonIgnore
-    private String ImagenPromocion;
+    private byte[] ImagenPromocion;
 
     @ManyToOne(fetch = FetchType.EAGER, optional = false)
     @JoinColumn(name = "Subcategoria", nullable = false)
@@ -31,11 +32,11 @@ public class Promociones {
         this.idPromociones = idPromocion;
     }
 
-    public String getImagenPromocion() {
+    public byte[] getImagenPromocion() {
         return ImagenPromocion;
     }
 
-    public void setImagenPromocion(final String imagenPromocion) {
+    public void setImagenPromocion(final byte[] imagenPromocion) {
         this.ImagenPromocion = imagenPromocion;
     }
 

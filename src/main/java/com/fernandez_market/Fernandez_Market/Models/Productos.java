@@ -26,9 +26,10 @@ public class Productos {
     @Column(length = 500)
     private String DescripcionProducto;
 
-    @Column(columnDefinition = "longtext")
+    @Lob
+    @Column(nullable = false)
     @JsonIgnore
-    private String ImagenProducto;
+    private byte[] imagenProducto;
 
     @Column(nullable = false, precision = 19, scale = 2)
     private BigDecimal PrecioProducto;
@@ -88,12 +89,12 @@ public class Productos {
         this.DescripcionProducto = descripcionProducto;
     }
 
-    public String getImagenProducto() {
-        return ImagenProducto;
+    public byte[] getImagenProducto() {
+        return imagenProducto;
     }
 
-    public void setImagenProducto(final String imagenProducto) {
-        this.ImagenProducto = imagenProducto;
+    public void setImagenProducto(final byte[] imagenProducto) {
+        this.imagenProducto = imagenProducto;
     }
 
     public BigDecimal getPrecioProducto() {

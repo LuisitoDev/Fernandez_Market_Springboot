@@ -23,20 +23,20 @@ pageContext.setAttribute("listaPedidos", listaPedidos);
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Fernandez Market</title>
 
-<link rel="stylesheet" href="Bootstrap/css/bootstrap.min.css" crossorigin="anonymous">
-<link rel="stylesheet" href="css/owlcarousel/owl.carousel.min.css">
-<link rel="stylesheet" href="css/owlcarousel/owl.theme.default.min.css">
-<link rel="stylesheet" href="css/introjs.css">
-<link rel="stylesheet" href="css/Autocomplete/jquery-ui.css">
-<link rel="stylesheet" href="css/Autocomplete/jquery-ui.structure.css">
-<link rel="stylesheet" href="css/Autocomplete/jquery-ui.theme.css">
+<link rel="stylesheet" href="/Bootstrap/css/bootstrap.min.css" crossorigin="anonymous">
+<link rel="stylesheet" href="/css/owlcarousel/owl.carousel.min.css">
+<link rel="stylesheet" href="/css/owlcarousel/owl.theme.default.min.css">
+<link rel="stylesheet" href="/css/introjs.css">
+<link rel="stylesheet" href="/css/Autocomplete/jquery-ui.css">
+<link rel="stylesheet" href="/css/Autocomplete/jquery-ui.structure.css">
+<link rel="stylesheet" href="/css/Autocomplete/jquery-ui.theme.css">
 
 
-<link rel="stylesheet" href="css/generalStyles.css">
-<link rel="stylesheet" href="css/widthme.css">
-<link rel="stylesheet" href="css/editUser.css">
-<link rel="stylesheet" href="css/profileUser.css">
-<link rel="stylesheet" href="css/shoppingCart.css">
+<link rel="stylesheet" href="/css/generalStyles.css">
+<link rel="stylesheet" href="/css/widthme.css">
+<link rel="stylesheet" href="/css/editUser.css">
+<link rel="stylesheet" href="/css/profileUser.css">
+<link rel="stylesheet" href="/css/shoppingCart.css">
 
 
 
@@ -61,7 +61,7 @@ pageContext.setAttribute("listaPedidos", listaPedidos);
             data-intro="Barra de título de la página, aquí te mostrará en que página te encuentras y navegar entre cada apartado más fácil" 
             class="row gx-0 my-4 profileUser-barra-titulo-fondo">
 				<div class="col-11 mt-2 mx-auto pb-2">
-					<a href="IndexPagina" class="profileUser-barra-titulo-enlace">Inicio</a> <i
+					<a href="/home" class="profileUser-barra-titulo-enlace">Inicio</a> <i
 						class="fas fa-angle-right profileUser-barra-titulo"></i>
 					<h1 class="profileUser-barra-titulo">Perfil de Usuario</h1>
 				</div>
@@ -156,15 +156,15 @@ pageContext.setAttribute("listaPedidos", listaPedidos);
 
 
 <script src="https://kit.fontawesome.com/d253da1760.js" crossorigin="anonymous"></script>
-<script src="Bootstrap/js/popper.min.js"></script>
-<script src="Bootstrap/js/bootstrap.min.js"></script>
-<script src="js/jquery.js"></script>
-<script src="js/owlcarousel/owl.carousel.min.js"></script>
-<script src="js/intro.js"></script>
-<script src="js/jquery-ui.js"></script>
+<script src="/Bootstrap/js/popper.min.js"></script>
+<script src="/Bootstrap/js/bootstrap.min.js"></script>
+<script src="/js/jquery.js"></script>
+<script src="/js/owlcarousel/owl.carousel.min.js"></script>
+<script src="/js/intro.js"></script>
+<script src="/js/jquery-ui.js"></script>
 
-<script src="js/mainjquery.js"></script>
-<script src="js/autocomplete.js"></script>
+<script src="/js/mainjquery.js"></script>
+<script src="/js/autocomplete.js"></script>
 
 
 </html>

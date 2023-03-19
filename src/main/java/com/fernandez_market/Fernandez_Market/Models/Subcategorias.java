@@ -21,9 +21,10 @@ public class Subcategorias {
     @JoinColumn(name="categoriaPadre", nullable = false)
     private Categorias CategoriaPadre;
 
-    @Column(columnDefinition = "longtext")
+    @Lob
+    @Column(nullable = false)
     @JsonIgnore
-    private String ImagenSubcategorias;
+    private byte[] imagenSubcategorias;
 
     @OneToMany(mappedBy = "Subcategoria")
     private List<Promociones> Promociones;
@@ -43,6 +44,10 @@ public class Subcategorias {
         return TituloSubcategoria;
     }
 
+    public String getTituloSubcategoriaURL() {
+        return TituloSubcategoria.replace(" ", "-");
+    }
+
     public void setTituloSubcategoria(final String tituloSubcategoria) {
         this.TituloSubcategoria = tituloSubcategoria;
     }
@@ -55,12 +60,12 @@ public class Subcategorias {
         this.CategoriaPadre = categoriaPadre;
     }
 
-    public String getImagenSubcategorias() {
-        return ImagenSubcategorias;
+    public byte[] getImagenSubcategorias() {
+        return imagenSubcategorias;
     }
 
-    public void setImagenSubcategorias(final String imagenSubcategorias) {
-        this.ImagenSubcategorias = imagenSubcategorias;
+    public void setImagenSubcategorias(final byte[] imagenSubcategorias) {
+        this.imagenSubcategorias = imagenSubcategorias;
     }
 
 }

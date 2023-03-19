@@ -1,11 +1,7 @@
 package com.fernandez_market.Fernandez_Market.Models;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 
 @Entity
@@ -19,9 +15,10 @@ public class Categorias {
     @Column(nullable = false, length = 45)
     private String TituloCategoria;
 
-    @Column(nullable = false, columnDefinition = "longtext")
+    @Lob
+    @Column(nullable = false)
     @JsonIgnore
-    private String ImagenCategoria;
+    private byte[] imagenCategoria;
 
     public Integer getIdCategoria() {
         return idCategoria;
@@ -39,12 +36,12 @@ public class Categorias {
         this.TituloCategoria = tituloCategoria;
     }
 
-    public String getImagenCategoria() {
-        return ImagenCategoria;
+    public byte[] getImagenCategoria() {
+        return imagenCategoria;
     }
 
-    public void setImagenCategoria(final String imagenCategoria) {
-        this.ImagenCategoria = imagenCategoria;
+    public void setImagenCategoria(final byte[] imagenCategoria) {
+        this.imagenCategoria = imagenCategoria;
     }
 
 }

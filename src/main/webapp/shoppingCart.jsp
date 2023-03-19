@@ -38,20 +38,20 @@ pageContext.setAttribute("IdUsuarioActivo", IdUsuarioActivo);
 <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
 <title>Fernandez Market</title>
 
-<link rel="stylesheet" href="Bootstrap/css/bootstrap.min.css" crossorigin="anonymous">
+<link rel="stylesheet" href="/Bootstrap/css/bootstrap.min.css" crossorigin="anonymous">
 
-<link rel="stylesheet" href="css/owlcarousel/owl.carousel.min.css">
-<link rel="stylesheet" href="css/owlcarousel/owl.theme.default.min.css">
-<link rel="stylesheet" href="css/introjs.css">
+<link rel="stylesheet" href="/css/owlcarousel/owl.carousel.min.css">
+<link rel="stylesheet" href="/css/owlcarousel/owl.theme.default.min.css">
+<link rel="stylesheet" href="/css/introjs.css">
 
-<link rel="stylesheet" href="css/Autocomplete/jquery-ui.css">
-<link rel="stylesheet" href="css/Autocomplete/jquery-ui.structure.css">
-<link rel="stylesheet" href="css/Autocomplete/jquery-ui.theme.css">
+<link rel="stylesheet" href="/css/Autocomplete/jquery-ui.css">
+<link rel="stylesheet" href="/css/Autocomplete/jquery-ui.structure.css">
+<link rel="stylesheet" href="/css/Autocomplete/jquery-ui.theme.css">
 
-<link rel="stylesheet" href="css/generalStyles.css">
-<link rel="stylesheet" href="css/widthme.css">
+<link rel="stylesheet" href="/css/generalStyles.css">
+<link rel="stylesheet" href="/css/widthme.css">
 
-<link rel="stylesheet" href="css/shoppingCart.css">
+<link rel="stylesheet" href="/css/shoppingCart.css">
 
 
 
@@ -78,7 +78,7 @@ pageContext.setAttribute("IdUsuarioActivo", IdUsuarioActivo);
             class="row gx-0 my-4 cart-barra-titulo-fondo">
 				<div class="col-11 mt-2 mx-auto pb-2">
 
-					<a href="IndexPagina" class="cart-barra-titulo-enlace">Inicio</a> <i
+					<a href="/home" class="cart-barra-titulo-enlace">Inicio</a> <i
 						class="fas fa-angle-right cart-barra-titulo"></i>
 					<h1 class="cart-barra-titulo">Carrito de compra</h1>
 					<i class="fas fa-angle-right cart-barra-titulo"></i> 
@@ -167,8 +167,8 @@ pageContext.setAttribute("IdUsuarioActivo", IdUsuarioActivo);
 	        	                    data-intro="Para finalizar la compra da click en el botón derecho<br>Para seguir viendo productos da click en el botón izquierdo" 
 										class="cart-carrito-compras row gx-0 py-2 mt-3 d-none d-lg-flex">
 										<div class="col-3 my-auto px-2 col-xl-2">
-											<form action = "IndexPagina	" method = "get">
-												<button class="btn cart-producto-button-volver w-100 py-2" type="submit" href="IndexPagina">
+											<form action = "/home	" method = "get">
+												<button class="btn cart-producto-button-volver w-100 py-2" type="submit" href="/home">
 													Seguir comprando
 												</button>
 											</form>									
@@ -223,15 +223,15 @@ pageContext.setAttribute("IdUsuarioActivo", IdUsuarioActivo);
 </body>
 
 <script src="https://kit.fontawesome.com/d253da1760.js" crossorigin="anonymous"></script>
-<script src="Bootstrap/js/popper.min.js"></script>
-<script src="Bootstrap/js/bootstrap.min.js"></script>
-<script src="js/jquery.js"></script>
-<script src="js/owlcarousel/owl.carousel.min.js"></script>
-<script src="js/intro.js"></script>
-<script src="js/jquery-ui.js"></script>
+<script src="/Bootstrap/js/popper.min.js"></script>
+<script src="/Bootstrap/js/bootstrap.min.js"></script>
+<script src="/js/jquery.js"></script>
+<script src="/js/owlcarousel/owl.carousel.min.js"></script>
+<script src="/js/intro.js"></script>
+<script src="/js/jquery-ui.js"></script>
 
-<script src="js/mainjquery.js"></script>
-<script src="js/carrito.js"></script>
-<script src="js/autocomplete.js"></script>
+<script src="/js/mainjquery.js"></script>
+<script src="/js/carrito.js"></script>
+<script src="/js/autocomplete.js"></script>
 
 </html>

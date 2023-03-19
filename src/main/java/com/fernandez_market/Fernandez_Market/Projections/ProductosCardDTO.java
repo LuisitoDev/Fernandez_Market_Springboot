@@ -6,6 +6,7 @@ public interface ProductosCardDTO {
 
     Long getIdProducto();
     String getNombreProducto();
+    String getDescripcionProducto();
     Long getCantVecesComprado();
     BigDecimal getPrecioProducto();
     BigDecimal getDescuentoProducto();

@@ -7,18 +7,18 @@
     <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
     <title>Fernandez Market</title>
 
-    <link rel="stylesheet" href="Bootstrap/css/bootstrap.min.css" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/owlcarousel/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/owlcarousel/owl.theme.default.min.css">
-    <link rel="stylesheet" href="css/introjs.css">
-    <link rel="stylesheet" href="css/Autocomplete/jquery-ui.css">
-    <link rel="stylesheet" href="css/Autocomplete/jquery-ui.structure.css">
-    <link rel="stylesheet" href="css/Autocomplete/jquery-ui.theme.css">
+    <link rel="stylesheet" href="/Bootstrap/css/bootstrap.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/owlcarousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="/css/owlcarousel/owl.theme.default.min.css">
+    <link rel="stylesheet" href="/css/introjs.css">
+    <link rel="stylesheet" href="/css/Autocomplete/jquery-ui.css">
+    <link rel="stylesheet" href="/css/Autocomplete/jquery-ui.structure.css">
+    <link rel="stylesheet" href="/css/Autocomplete/jquery-ui.theme.css">
     
 
-    <link rel="stylesheet" href="css/generalStyles.css">
-    <link rel="stylesheet" href="css/widthme.css">
-    <link rel="stylesheet" href="css/nosotros&sucursal.css">
+    <link rel="stylesheet" href="/css/generalStyles.css">
+    <link rel="stylesheet" href="/css/widthme.css">
+    <link rel="stylesheet" href="/css/nosotros&sucursal.css">
 
 
 
@@ -27,7 +27,7 @@
 <body class="page">
 
     <header data-position="bottom"
-        data-intro="P·gina de Sucursales En esta p·gina se despliegan las sucursales de la tienda Fernandez Market." 
+        data-intro="P√°gina de Sucursales En esta p√°gina se despliegan las sucursales de la tienda Fernandez Market." 
     class="sticky-top"  style="z-index: 10000000">
 <!--         <div id="navbarPage" class="navbar-complete"></div> -->
         <jsp:include page="v_navbar.jsp"></jsp:include>
@@ -43,7 +43,7 @@
             <div class="row gx-0 my-4 nos_suc-barra-titulo-fondo">
                 <div class="col-11 mt-2 mx-auto pb-2">
 
-                    <a href="IndexPagina" class="nos_suc-barra-titulo-enlace">Inicio</a>
+                    <a href="/home" class="nos_suc-barra-titulo-enlace">Inicio</a>
                     <i class="fas fa-angle-right nos_suc-barra-titulo"></i>
                     <h1 class="nos_suc-barra-titulo">Sucursales</h1>
                 </div>
@@ -64,8 +64,8 @@
 
                                     <div class="col-12 mt-2 mb-2 mx-auto">
                                         <p class="nos_suc-parrafos">
-                                            Av. Coyoac·n #456 Col. Unidad Modelo
-                                            Monterrey Nuevo LeÛn, C.P. 64140
+                                            Av. Coyoac√°n #456 Col. Unidad Modelo
+                                            Monterrey Nuevo Le√≥n, C.P. 64140
                                         </p>
                                         <a href = "tel:81-1292-9310" class="nos_suc-parrafos">
                                             Tel. 81-1292-9310
@@ -74,7 +74,7 @@
 
                                     <div class="col-12 px-3 pt-2 pb-4 mb-2 mx-auto col-sm-6 pb-sm-5 linea-bottom">
                                         <div class="nos_suc-imagen-div">
-                                            <img src="img/FERNANDEZ COMPANY.png"
+                                            <img src="/img/FERNANDEZ COMPANY.png"
                                                 class="card-img-top w-100 nos_suc-imagen" alt="...">
                                         </div>
 
@@ -99,8 +99,8 @@
 
                                     <div class="col-12 mt-2 mb-2 mx-auto">
                                         <p class="nos_suc-parrafos">
-                                            Av. Los Angeles #1000 Int. 438 Col. Garza Cant˙
-                                            San Nicol·s de los Garza Nuevo LeÛn, C.P. 66480
+                                            Av. Los Angeles #1000 Int. 438 Col. Garza Cant√∫
+                                            San Nicol√°s de los Garza Nuevo Le√≥n, C.P. 66480
                                         </p>
                                         <a href = "tel:81-1292-9300" class="nos_suc-parrafos">
                                             Tel. 81-1292-9300
@@ -109,7 +109,7 @@
 
                                     <div class="col-12 px-3 pt-2 pb-4 mb-2 mx-auto col-sm-6 pb-sm-5 linea-bottom">
                                         <div class="nos_suc-imagen-div">
-                                            <img src="img/HUEVOS EL TAL-IVAN.png"
+                                            <img src="/img/HUEVOS EL TAL-IVAN.png"
                                                 class="card-img-top w-100 nos_suc-imagen" alt="...">
                                         </div>
 
@@ -134,8 +134,8 @@
 
                                     <div class="col-12 mt-2 mb-2 mx-auto">
                                         <p class="nos_suc-parrafos">
-                                            Av. Los Angeles #1000 Int. 201 Col. Garza Cant˙
-                                            San Nicol·s de los Garza Nuevo LeÛn, C.P. 66480
+                                            Av. Los Angeles #1000 Int. 201 Col. Garza Cant√∫
+                                            San Nicol√°s de los Garza Nuevo Le√≥n, C.P. 66480
                                         </p>
                                         <a href = "tel:81-1159-3931" class="nos_suc-parrafos">
                                             Tel. 81-1159-3931
@@ -145,7 +145,7 @@
 
                                     <div class="col-12 px-3 pt-2 pb-4 mb-2 mx-auto col-sm-6 pb-sm-5 linea-bottom">
                                         <div class="nos_suc-imagen-div">
-                                            <img src="img/BODEGA 201.png" class="card-img-top w-100 nos_suc-imagen"
+                                            <img src="/img/BODEGA 201.png" class="card-img-top w-100 nos_suc-imagen"
                                                 alt="...">
                                         </div>
 
@@ -169,7 +169,7 @@
 
                                     <div class="col-12 mt-2 mb-2 mx-auto">
                                         <p class="nos_suc-parrafos">
-                                            Av. Diego DÌaz de Berlanga #203
+                                            Av. Diego D√≠az de Berlanga #203
                                             Col. Industrial Nogalar C.P. 66484
                                         </p>
                                         <a href = "tel:81-1292-9308" class="nos_suc-parrafos">
@@ -180,7 +180,7 @@
 
                                     <div class="col-12 px-3 pt-2 pb-4 mb-2 mx-auto col-sm-6 pb-sm-5 linea-bottom">
                                         <div class="nos_suc-imagen-div">
-                                            <img src="img/BODEGA 203.jpg"
+                                            <img src="/img/BODEGA 203.jpg"
                                                 class="card-img-top w-100 nos_suc-imagen" alt="...">
                                         </div>
 
@@ -204,8 +204,8 @@
 
                                     <div class="col-12 mt-2 mb-2 mx-auto">
                                         <p class="nos_suc-parrafos">
-                                            Av. Los Angeles #1000 Int. 390 Col. Garza Cant˙
-                                            San Nicol·s de los Garza Nuevo LeÛn, C.P. 66480
+                                            Av. Los Angeles #1000 Int. 390 Col. Garza Cant√∫
+                                            San Nicol√°s de los Garza Nuevo Le√≥n, C.P. 66480
                                         </p>
                                         <a href = "tel:81-1292-9308" class="nos_suc-parrafos">
                                             Tel. 81-1292-9308
@@ -214,7 +214,7 @@
 
                                     <div class="col-12 px-3 pt-2 pb-4 mb-2 mx-auto col-sm-6 pb-sm-5 linea-bottom">
                                         <div class="nos_suc-imagen-div">
-                                            <img src="img/BODEGA 390.png" class="card-img-top w-100 nos_suc-imagen"
+                                            <img src="/img/BODEGA 390.png" class="card-img-top w-100 nos_suc-imagen"
                                                 alt="...">
                                         </div>
 
@@ -239,8 +239,8 @@
 
                                     <div class="col-12 mt-2 mb-2 mx-auto">
                                         <p class="nos_suc-parrafos">
-                                            Av. Los Angeles #1000 Int. 471 Col. Garza Cant˙
-                                            San Nicol·s de los Garza Nuevo LeÛn, C.P. 66480
+                                            Av. Los Angeles #1000 Int. 471 Col. Garza Cant√∫
+                                            San Nicol√°s de los Garza Nuevo Le√≥n, C.P. 66480
                                         </p>
                                         <a href = "tel:81-1159-3932" class="nos_suc-parrafos">
                                             Tel. 81-1159-3932
@@ -250,7 +250,7 @@
 
                                     <div class="col-12 px-3 pt-2 pb-4 mb-2 mx-auto col-sm-6 pb-sm-5 linea-bottom">
                                         <div class="nos_suc-imagen-div">
-                                            <img src="img/BODEGA 471.png" class="card-img-top w-100 nos_suc-imagen"
+                                            <img src="/img/BODEGA 471.png" class="card-img-top w-100 nos_suc-imagen"
                                                 alt="...">
                                         </div>
 
@@ -281,13 +281,13 @@
 </body>
 
     <script src="https://kit.fontawesome.com/d253da1760.js" crossorigin="anonymous"></script>
-    <script src="Bootstrap/js/popper.min.js"></script>
-    <script src="Bootstrap/js/bootstrap.min.js"></script>
-    <script src="js/jquery.js"></script>
-    <script src="js/owlcarousel/owl.carousel.min.js"></script>
-    <script src="js/intro.js"></script>
-    <script src="js/jquery-ui.js"></script>
+    <script src="/Bootstrap/js/popper.min.js"></script>
+    <script src="/Bootstrap/js/bootstrap.min.js"></script>
+    <script src="/js/jquery.js"></script>
+    <script src="/js/owlcarousel/owl.carousel.min.js"></script>
+    <script src="/js/intro.js"></script>
+    <script src="/js/jquery-ui.js"></script>
 
-    <script src="js/mainjquery.js"></script>
-    <script src="js/autocomplete.js"></script> 
+    <script src="/js/mainjquery.js"></script>
+    <script src="/js/autocomplete.js"></script> 
 </html>
