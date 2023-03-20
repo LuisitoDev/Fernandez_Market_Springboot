@@ -61,7 +61,7 @@ pageContext.setAttribute("cantidadProductosCarrito", cantidadProductosCarrito);
                 style="display: inline;">
             
         	<c:if test="${not empty usuarioElegido}">
-            	<a href="PerfilUsuario" class="link-navbar">
+            	<a href="/perfil" class="link-navbar">
                 	<h1 class = "label-navbar-sesion d-none d-xl-inline">Hola ${usuarioElegido.getNombreUsuario()}</h1>
                 	<i class="fas fa-user button-navbar-icons mx-sm-1"></i>
             	</a>

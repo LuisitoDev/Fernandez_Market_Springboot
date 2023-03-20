@@ -7,8 +7,7 @@
 
 
 <%
-Usuario_Model usuarioElegido = (Usuario_Model) request.getAttribute("usuarioElegido");
-pageContext.setAttribute("usuarioElegido", usuarioElegido);
+
 %>
 
 <!DOCTYPE html>
@@ -66,7 +65,7 @@ pageContext.setAttribute("usuarioElegido", usuarioElegido);
                         </div>
                     </div>
 
-                    <form id="form_main-container" class = "form_main-container" method = "post" action = "EditarPerfilUsuario" >
+                    <form id="form_main-container" class = "form_main-container" method = "post" action = "/editar_perfil" >
                         <div class="row mt-2 ">
                             <div class="col-12 mt-2 col-md-6 linea-md-right">
                                 <div class="row">

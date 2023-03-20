@@ -3,6 +3,7 @@ package com.fernandez_market.Fernandez_Market.Models;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;
 
+import java.util.Collections;
 import java.util.Date;
 import java.util.List;
 
@@ -119,6 +120,16 @@ public class Usuarios {
         else {
             return "Inactivo";
         }
+    }
+
+
+    public List<com.fernandez_market.Fernandez_Market.Models.Pedidos> getPedidos() {
+        Collections.reverse(Pedidos);
+        return Pedidos;
+    }
+
+    public void setPedidos(List<com.fernandez_market.Fernandez_Market.Models.Pedidos> pedidos) {
+        Pedidos = pedidos;
     }
 
 }

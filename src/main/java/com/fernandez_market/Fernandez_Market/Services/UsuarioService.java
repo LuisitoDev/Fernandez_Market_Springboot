@@ -16,14 +16,12 @@ public class UsuarioService {
         this.usuarioRepository = usuarioRepository;
     }
 
-    public void saveUsuario(String nombre, String apellidoP, String apellidoM, String email, String password){
-        Usuarios usuarioNuevo = new Usuarios();
-        usuarioNuevo.setNombreUsuario(nombre);
-        usuarioNuevo.setApellidoPaternoUsuario(apellidoP);
-        usuarioNuevo.setApellidoMaternoUsuario(apellidoM);
-        usuarioNuevo.setCorreoUsuario(email);
-        usuarioNuevo.setPasswordUsuario(password);
+    public void saveUsuario(Usuarios usuarioNuevo){
         this.usuarioRepository.save(usuarioNuevo);
+    }
+
+    public void updateUsuario(Usuarios usuarioActualizar){
+        this.usuarioRepository.save(usuarioActualizar);
     }
 
     public Optional<Usuarios> getUsuarioById(long idUsuario){

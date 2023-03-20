@@ -7,11 +7,7 @@
 
 
 <%
-Usuario_Model usuarioElegido = (Usuario_Model)request.getAttribute("usuarioElegido");
-pageContext.setAttribute("usuarioElegido", usuarioElegido);
 
-List<Pedidos_Model> listaPedidos = (List<Pedidos_Model>) request.getAttribute("listaPedidos");
-pageContext.setAttribute("listaPedidos", listaPedidos);
 %>
 
 
@@ -114,7 +110,7 @@ pageContext.setAttribute("listaPedidos", listaPedidos);
 								class="row mt-4 justify-content-center">
 									<div class="col-8 col-md-4 col-lg-7">
 										<button id="button_main-container" form="form_main-container"
-											class="w-100 button-ok py-2"><a href = "EditarPerfilUsuario" style = "color: rgb(250,250,250);">Editar perfil</a></button>
+											class="w-100 button-ok py-2"><a href = "/editar_perfil" style = "color: rgb(250,250,250);">Editar perfil</a></button>
 									</div>
 								</div>
 

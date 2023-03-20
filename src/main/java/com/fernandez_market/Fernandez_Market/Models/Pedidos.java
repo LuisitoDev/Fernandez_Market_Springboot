@@ -2,6 +2,7 @@ package com.fernandez_market.Fernandez_Market.Models;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;
+import org.hibernate.annotations.Formula;
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
 
@@ -38,7 +39,7 @@ public class Pedidos {
     @Column(name = "PrecioTotalPedido", nullable = false, precision = 19, scale = 2)
     private BigDecimal precioTotalPedido;
 
-    @ManyToOne(fetch = FetchType.EAGER, optional = false)
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "UsuarioPedido", nullable = false)
     @OnDelete(action = OnDeleteAction.CASCADE)
     private Usuarios UsuarioPedido;
@@ -102,12 +103,5 @@ public class Pedidos {
         this.precioTotalPedido = precioTotalPedido;
     }
 
-    public Usuarios getUsuarioPedido() {
-        return UsuarioPedido;
-    }
-
-    public void setUsuarioPedido(final Usuarios usuarioPedido) {
-        this.UsuarioPedido = usuarioPedido;
-    }
 
 }

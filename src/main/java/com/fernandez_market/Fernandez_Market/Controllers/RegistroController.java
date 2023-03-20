@@ -34,7 +34,15 @@ public class RegistroController {
             return "signUp";
         }
 
-        this.usuarioService.saveUsuario(nombre, apellidoP, apellidoM, email, password);
+        Usuarios usuarioNuevo = new Usuarios();
+        usuarioNuevo.setNombreUsuario(nombre);
+        usuarioNuevo.setApellidoPaternoUsuario(apellidoP);
+        usuarioNuevo.setApellidoMaternoUsuario(apellidoM);
+        usuarioNuevo.setCorreoUsuario(email);
+        usuarioNuevo.setPasswordUsuario(password);
+
+
+        this.usuarioService.saveUsuario(usuarioNuevo);
 
         return "login";
     }

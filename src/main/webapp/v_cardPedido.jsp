@@ -9,8 +9,6 @@
 
 
 <%
-Pedidos_Model iPedido = (Pedidos_Model) request.getAttribute("iPedido");
-pageContext.setAttribute("iPedido", iPedido);
 %>
 
 <div class="row gx-0 mt-3">
