@@ -24,13 +24,13 @@
                     
                     <c:forEach var="iProducto" items="${listaProductosGenerales}">
             			<div class="carousel-producto-card">
-                        	<a href="DetallesProducto?IdProducto=${iProducto.getIdProducto()}">
+                        	<a href="/producto/${iProducto.getIdProducto()}">
                             	<img src="/images/Producto/${iProducto.getIdProducto()}" class="carousel-producto-imagen" alt="...">
                         	</a>
 
                         	<div class="card-body card-producto-texto">
 
-                            	<a class="carousel-producto-titulo" href="DetallesProducto?IdProducto=${iProducto.getIdProducto()}">${iProducto.getNombreProducto()}</a> 
+                            	<a class="carousel-producto-titulo" href="/producto/${iProducto.getIdProducto()}">${iProducto.getNombreProducto()}</a> 
                             	<br>
 								 
                             

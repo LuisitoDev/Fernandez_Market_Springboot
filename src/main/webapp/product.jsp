@@ -6,14 +6,9 @@
 <%@page import="java.util.*"%>
 <%@page import="com.fernandez_market.Fernandez_Market.Controllers.GeneralController"%>
 <%@page import="java.math.BigDecimal"%>
+<%@page import="com.fernandez_market.Fernandez_Market.Utils.PreciosUtils"%>
 
 <%
-Productos_Model productoElegido = (Productos_Model) request.getAttribute("productoElegido");
-pageContext.setAttribute("productoElegido", productoElegido);
-
-List<Productos_Model> listaProductosRelacionados = (List<Productos_Model>) request
-		.getAttribute("listaProductosRelacionados");
-pageContext.setAttribute("listaProductosRelacionados", listaProductosRelacionados);
 %>
 
 <!DOCTYPE html>
@@ -64,11 +59,11 @@ pageContext.setAttribute("listaProductosRelacionados", listaProductosRelacionado
             class="row gx-0 my-4 producto-barra-titulo-fondo">
 				<div class="col-11 mt-2 mx-auto pb-2">
 
-					<a href="/home" class="producto-barra-titulo-enlace">Inicio</a>
+					<a href="/inicio" class="producto-barra-titulo-enlace">Inicio</a>
 					<i class="fas fa-angle-right producto-barra-titulo"></i>
 					<!--                         TODO: TRAERME EL TITULO DE LA SUBCATEGORIA DEL PRODUCTO -->
-					<a href="SubcategoriaProductos?IdSubcategoria=${productoElegido.getSubcategoriaProducto()}&numeroPagina=1"
-						class="producto-barra-titulo-enlace">${productoElegido.getTituloSubcategoria()}</a> <i
+					<a href="/subcategoria/${productoElegido.getSubcategoriaProducto().getTituloSubcategoriaURL()}/1"
+						class="producto-barra-titulo-enlace">${productoElegido.getSubcategoriaProducto().getTituloSubcategoria()}</a> <i
 						class="fas fa-angle-right producto-barra-titulo"></i>
 					<h1 class="producto-barra-titulo">Producto</h1>
 				</div>
@@ -93,7 +88,7 @@ pageContext.setAttribute("listaProductosRelacionados", listaProductosRelacionado
 						<div
 							class="d-none d-md-inline col-12 col-md-6 col-xl-5 mx-xl-auto">
 							<img
-								src="GeneralServlet?Imagen=Producto&Id=${productoElegido.getIdProducto()}"
+								src="/images/Producto/${productoElegido.getIdProducto()}"
 								class="card-img-top w-100 producto-imagen" alt="...">
 						</div>
 						<div
@@ -104,7 +99,7 @@ pageContext.setAttribute("listaProductosRelacionados", listaProductosRelacionado
 
 							<div class="d-flex d-md-none justify-content-center mt-4">
 								<img
-									src="GeneralServlet?Imagen=Producto&Id=${productoElegido.getIdProducto()}"
+									src="/images/Producto/${productoElegido.getIdProducto()}"
 									class="card-img-top w-100 w-xs-100 w-sm-75 producto-imagen"
 									alt="...">
 
@@ -117,13 +112,13 @@ pageContext.setAttribute("listaProductosRelacionados", listaProductosRelacionado
 									${productoElegido.getPrecioProducto()}</h5>
 							</c:if>
 
-							<h5  id = "producto-precio-final" class="producto-precio-final" value = "${productoElegido.getPrecioFinalProducto()}">$
-								${productoElegido.getPrecioFinalProducto()}</h5>
+							<h5  id = "producto-precio-final" class="producto-precio-final" value = "${PreciosUtils.getPrecioFinalProducto(productoElegido.getPrecioProducto(), productoElegido.getDescuentoProducto())}">$
+								${PreciosUtils.getPrecioFinalProducto(productoElegido.getPrecioProducto(), productoElegido.getDescuentoProducto())}</h5>
 
 							<c:if
 								test="${productoElegido.getDescuentoProducto().compareTo(BigDecimal.ZERO) == 1}">
 								<h5 class="producto-precio-rebajado">Ahorra
-									${productoElegido.getProcentajeDescuentoProducto()}%</h5>
+									${PreciosUtils.getProcentajeDescuentoProducto(productoElegido.getDescuentoProducto())}</h5>
 							</c:if>
 
 							

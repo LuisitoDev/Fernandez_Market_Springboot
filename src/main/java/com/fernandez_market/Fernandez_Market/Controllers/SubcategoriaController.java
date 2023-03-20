@@ -48,8 +48,10 @@ public class SubcategoriaController {
                 }
             }
 
-            if (subcategoriaElegida == null)
-                throw new Exception("Categoria no encontrada");
+            if (subcategoriaElegida == null) {
+                modelo.addAttribute("error", "Subcategoria no encontrada");
+                return "error";
+            }
         }
 
 

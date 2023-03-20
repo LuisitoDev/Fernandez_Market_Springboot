@@ -44,7 +44,10 @@ public class ProductosService {
     }
 
     public List<ProductosCardDTO> getProductosBySubcategoriaNombrePagina(int id_subcategoria, String nombreProducto, int page, int quantity) {
-
         return this.productoRepository.getProductosBySubcategoria(id_subcategoria, nombreProducto, PageRequest.of(page  - 1, quantity));
+    }
+
+    public List<ProductosCardDTO> getProductosRelacionados(int id_subcategoria, long id_producto) {
+        return this.productoRepository.getProductosRelacionados(id_subcategoria, id_producto, PageRequest.of(0, 12));
     }
 }

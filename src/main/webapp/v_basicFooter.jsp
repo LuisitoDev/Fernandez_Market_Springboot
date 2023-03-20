@@ -3,7 +3,7 @@
 		<div class="col-12 mt-3 mb-2">
 			<div class="row gx-0 justify-content-center">
 				<div class="col-4 mb-3 col-md-2 ms-lg-4 col-xl-1 me-xl-4">
-					<a href="/home"> <img src="/img/Logo.png" alt=""
+					<a href="/inicio"> <img src="/img/Logo.png" alt=""
 						class="w-100 w-sm-100 w-md-100 w-lg-75 w-xl-100">
 					</a>
 				</div>
@@ -39,7 +39,7 @@
 	<div class="row gx-0 sub-footer">
 		<div class="col-10 mt-2 mx-auto">
 			<p style="text-align: center;">
-				Copyright @ 2021 <a class="link" href="/home"> Fernendez Market. </a>
+				Copyright @ 2021 <a class="link" href="/inicio"> Fernendez Market. </a>
 				Todos los derechos reservados.
 			</p>
 		</div>

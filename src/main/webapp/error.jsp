@@ -7,7 +7,7 @@
 
 
 <%
-String error = request.getAttribute("error").toString();
+
 %>
 
 <!DOCTYPE html>

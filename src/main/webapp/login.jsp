@@ -93,7 +93,7 @@ if(request.getAttribute("usuarioIncorrecto") != null)
 										<p data-position="bottom"
 										data-intro="Si la persona no tiene una cuenta puede crear una dando click en el texto remarcado"
 										class="texto-sm-normal texto-md-normal">
-											¿Aun no tienes cuenta? <a class="link" href="/signUp.jsp"> ¡Crea
+											¿Aun no tienes cuenta? <a class="link" href="/registro"> ¡Crea
 												una ahora mismo! </a>
 										</p>
 									</div>

@@ -29,7 +29,7 @@ pageContext.setAttribute("iProducto", iProducto);
         </div>
          <div class="row gx-0 pt-1 pb-3 pb-md-0 ">
             <div class="col-2 px-1 col-xl-1" align="center">
-                <a href="DetallesProducto?IdProducto=${iProducto.getIdProducto()}" class="cart-producto-imagen">
+                <a href="/producto/${iProducto.getIdProducto()}" class="cart-producto-imagen">
                     <img src="GeneralServlet?Imagen=Producto&Id=${iProducto.getIdProducto()}" class="w-100" alt="...">
                 </a>
                 <a href="GeneralServlet?Imagen=Producto&Id=${iProducto.getIdProducto()}" target = "_blank">
@@ -37,7 +37,7 @@ pageContext.setAttribute("iProducto", iProducto);
                 </a>
             </div>
             <div class="col-6 col-sm-7 col-xl-8">
-                <a class="cart-producto-titulo" href="DetallesProducto?IdProducto=${iProducto.getIdProducto()}">${iProducto.getNombreProducto()}</a>
+                <a class="cart-producto-titulo" href="/producto/${iProducto.getIdProducto()}">${iProducto.getNombreProducto()}</a>
                 <br>
                 <p class="cart-producto-marca-label">Marca: </p>
                 <p class="cart-producto-marca">${iProducto.getMarcaProductoTexto()}</p>

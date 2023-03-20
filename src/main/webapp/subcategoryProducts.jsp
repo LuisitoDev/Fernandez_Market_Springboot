@@ -68,7 +68,7 @@
 			class="row gx-0 my-4 subcategoria-barra-titulo-fondo">
 				<div class="col-11 mt-2 mx-auto pb-2">
 
-					<a href="/home" class="subcategoria-barra-titulo-enlace">Inicio</a>
+					<a href="/inicio" class="subcategoria-barra-titulo-enlace">Inicio</a>
 					<i class="fas fa-angle-right subcategoria-barra-titulo"></i>
 					<h1 class="subcategoria-barra-titulo">
 					<c:if test="${not empty subcategoriaElegida}">

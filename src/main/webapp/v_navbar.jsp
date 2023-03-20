@@ -30,7 +30,7 @@ pageContext.setAttribute("cantidadProductosCarrito", cantidadProductosCarrito);
                 data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
 
             </button>
-            <a class="navbar-brand px-1" href="/home">
+            <a class="navbar-brand px-1" href="/inicio">
                 <img src="/img/Logo.png" alt="" style="width: 120px">
             </a>
         </div>
@@ -67,15 +67,10 @@ pageContext.setAttribute("cantidadProductosCarrito", cantidadProductosCarrito);
             	</a>
 			</c:if>
 			<c:if test="${empty usuarioElegido}">
-				<form action = "LoginUsuario" method = "get"  style="display: inline;">
-					<input type="hidden" name="opcion" value="login">
-					<button class="link-navbar invisible-button" type="submit">
-						<h1 class="label-navbar-sesion d-none d-xl-inline">Iniciar sesion</h1>
-                		<i class="fas fa-user button-navbar-icons mx-sm-1"></i>
-					</button>
-				</form>
-                	
-            	</a>
+				<a href="/login" class="link-navbar invisible-button" style="display: inline;">
+                    <h1 class="label-navbar-sesion d-none d-xl-inline">Iniciar sesion</h1>
+                    <i class="fas fa-user button-navbar-icons mx-sm-1"></i>
+                </a>
             </c:if>
             </div>
             <a 
@@ -98,12 +93,12 @@ pageContext.setAttribute("cantidadProductosCarrito", cantidadProductosCarrito);
                     </c:if>
                     
                     style="display: inline">
-                	<form action = "LoginUsuario" method = "get"  style="display: inline;">
-                		<input type="hidden" name="opcion" value="logout">
-		    			<button class="link-navbar invisible-button" type="submit">
-			    				<i class="fas fa-door-open  button-navbar-icons mx-sm-1"></i>
-				    	</button>
-				    </form>
+                	
+		    		
+                    <a href="/login" class="link-navbar invisible-button" style="display: inline;">
+                        <i class="fas fa-door-open  button-navbar-icons mx-sm-1"></i>
+                    </a>
+				    
                 </div>
 			</c:if>
 			
@@ -152,7 +147,7 @@ pageContext.setAttribute("cantidadProductosCarrito", cantidadProductosCarrito);
             	data-intro="Boton para ir a la página de inicio"
             </c:if>
             
-            class="nav-link categories-text" href="/home">
+            class="nav-link categories-text" href="/inicio">
                 Inicio 
             </a>
             <a 

@@ -4,7 +4,7 @@
 			class="col-11 mt-4 mb-3 ms-1 col-sm-5 ms-sm-5 col-lg-2 ms-lg-0 me-lg-0">
 			<div class="row gx-0">
 				<div class="col-10 mb-3 ms-3">
-					<a class="navbar-brand" href="/home"> <img src="/img/Logo.png"
+					<a class="navbar-brand" href="/inicio"> <img src="/img/Logo.png"
 						alt="" class="w-50 w-sm-50 w-md-50 w-lg-75 w-xl-75">
 					</a>
 				</div>

@@ -42,4 +42,14 @@ public interface ProductosRepository extends JpaRepository<Productos, Long> {
                 "AND cantidadStockProducto > 0  "
             ,nativeQuery = true)
     List<ProductosCardDTO> getProductosBySubcategoria(int id_subcategoria, String nombreProducto, Pageable pageable);
+
+    @Query(value =
+            "SELECT idProducto, nombreProducto, descripcionProducto, precioProducto, descuentoProducto, cantidadStockProducto, marcaProductoTexto  " +
+                    "FROM Productos  " +
+                "WHERE SubcategoriaProducto = ?1  " +
+                "AND IdProducto != ?2 " +
+                "AND CantidadStockProducto > 0  " +
+                "ORDER BY DescuentoProducto DESC"
+            ,nativeQuery = true)
+    List<ProductosCardDTO> getProductosRelacionados(int id_subcategoria, long id_producto, Pageable pageable);
 }

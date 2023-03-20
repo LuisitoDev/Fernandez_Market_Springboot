@@ -22,7 +22,7 @@ List<Subcategorias> listaSubcategorias = GeneralController.getSubcategorias();
         <div class="offcanvas-body">
             <div class="row px-0">
                 <div class="col-12 py-2 linea-top linea-bottom">
-                    <a class="nav-link categories-text" href="/home">
+                    <a class="nav-link categories-text" href="/inicio">
                         Inicio 
                     </a>
 
@@ -66,7 +66,7 @@ List<Subcategorias> listaSubcategorias = GeneralController.getSubcategorias();
 
         <div class="row gx-0">
             <div class="col-10 mb-3 ms-3">
-                <a class="navbar-brand" href="/home"> <img src="/img/Logo.png" alt=""
+                <a class="navbar-brand" href="/inicio"> <img src="/img/Logo.png" alt=""
                         class="w-50">
                 </a>
             </div>

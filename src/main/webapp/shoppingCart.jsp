@@ -78,7 +78,7 @@ pageContext.setAttribute("IdUsuarioActivo", IdUsuarioActivo);
             class="row gx-0 my-4 cart-barra-titulo-fondo">
 				<div class="col-11 mt-2 mx-auto pb-2">
 
-					<a href="/home" class="cart-barra-titulo-enlace">Inicio</a> <i
+					<a href="/homehome" class="cart-barra-titulo-enlace">Inicio</a> <i
 						class="fas fa-angle-right cart-barra-titulo"></i>
 					<h1 class="cart-barra-titulo">Carrito de compra</h1>
 					<i class="fas fa-angle-right cart-barra-titulo"></i> 
@@ -167,8 +167,8 @@ pageContext.setAttribute("IdUsuarioActivo", IdUsuarioActivo);
 	        	                    data-intro="Para finalizar la compra da click en el boton derecho<br>Para seguir viendo productos da click en el boton izquierdo" 
 										class="cart-carrito-compras row gx-0 py-2 mt-3 d-none d-lg-flex">
 										<div class="col-3 my-auto px-2 col-xl-2">
-											<form action = "/home	" method = "get">
-												<button class="btn cart-producto-button-volver w-100 py-2" type="submit" href="/home">
+											<form action/home= "/home	" method = "get">
+												<button class="btn cart-producto-button-volver w-100 py-2" type="submit/home href="/home">
 													Seguir comprando
 												</button>
 											</form>									

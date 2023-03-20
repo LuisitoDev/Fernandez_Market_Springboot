@@ -62,7 +62,7 @@ pageContext.setAttribute("pedidoElegido", pedidoElegido);
             class="row gx-0 my-4 pedido-barra-titulo-fondo">
 				<div class="col-11 mt-2 mx-auto pb-2">
 
-					<a href="/home" class="pedido-barra-titulo-enlace">Inicio</a>
+					<a href="/inicio" class="pedido-barra-titulo-enlace">Inicio</a>
 					<i class="fas fa-angle-right pedido-barra-titulo"></i> <a
 						href="CarritoProductos" class="pedido-barra-titulo-enlace">Carrito
 						de compra</a> <i class="fas fa-angle-right pedido-barra-titulo"></i>

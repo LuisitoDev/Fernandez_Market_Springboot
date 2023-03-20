@@ -14,7 +14,7 @@
 <div class="subcategorias-producto-card mx-3">
 
     
-    <a href="DetallesProducto?IdProducto=${iProducto.getIdProducto()}" class = "subcategorias-producto-enlace">
+    <a href="/producto/${iProducto.getIdProducto()}" class = "subcategorias-producto-enlace">
         <div class="row gx-0 subcategorias-producto-imagen_precio">
             <div class="col-6">
                 <img src="/images/Producto/${iProducto.getIdProducto()}" class="w-100" alt="...">
@@ -50,7 +50,7 @@
         <div class="col-12">
             <div class="card-body subcategorias-card-producto-texto">
 
-                <a class="subcategorias-producto-titulo" href="DetallesProducto?IdProducto=${iProducto.getIdProducto()}">${iProducto.getNombreProducto()}</a>
+                <a class="subcategorias-producto-titulo" href="/producto/${iProducto.getIdProducto()}">${iProducto.getNombreProducto()}</a>
                 <br>
                 <div class="subcategorias-producto-marca-container">
                     <p class="subcategorias-producto-marca-label">Marca: </p>

@@ -61,7 +61,7 @@ pageContext.setAttribute("listaPedidos", listaPedidos);
             data-intro="Barra de titulo de la página, aqui te mostrará en que página te encuentras y navegar entre cada apartado más fácil" 
             class="row gx-0 my-4 profileUser-barra-titulo-fondo">
 				<div class="col-11 mt-2 mx-auto pb-2">
-					<a href="/home" class="profileUser-barra-titulo-enlace">Inicio</a> <i
+					<a href="/inicio" class="profileUser-barra-titulo-enlace">Inicio</a> <i
 						class="fas fa-angle-right profileUser-barra-titulo"></i>
 					<h1 class="profileUser-barra-titulo">Perfil de Usuario</h1>
 				</div>

@@ -43,7 +43,7 @@
             <div class="row gx-0 my-4 nos_suc-barra-titulo-fondo">
                 <div class="col-11 mt-2 mx-auto pb-2">
 
-                    <a href="/home" class="nos_suc-barra-titulo-enlace">Inicio</a>
+                    <a href="/inicio" class="nos_suc-barra-titulo-enlace">Inicio</a>
                     <i class="fas fa-angle-right nos_suc-barra-titulo"></i>
                     <h1 class="nos_suc-barra-titulo">Sucursales</h1>
                 </div>
