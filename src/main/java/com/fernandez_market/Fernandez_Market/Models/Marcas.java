@@ -14,16 +14,16 @@ public class Marcas {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idMarca;
 
-    @Column(nullable = false, length = 45)
-    private String NombreMarca;
+    @Column(name = "NombreMarca", nullable = false, length = 45)
+    private String nombreMarca;
 
     @Lob
-    @Column(nullable = false)
+    @Column(name = "ImagenMarca", nullable = false)
     @JsonIgnore
     private byte[] imagenMarca;
 
-    @Column(length = 100)
-    private String PaginaMarca;
+    @Column(name = "PaginaMarca", length = 100)
+    private String paginaMarca;
 
     @OneToMany(mappedBy = "MarcaProducto")
     private List<Productos> Productos;
@@ -37,11 +37,11 @@ public class Marcas {
     }
 
     public String getNombreMarca() {
-        return NombreMarca;
+        return nombreMarca;
     }
 
     public void setNombreMarca(final String nombreMarca) {
-        this.NombreMarca = nombreMarca;
+        this.nombreMarca = nombreMarca;
     }
 
     public byte[] getImagenMarca() {
@@ -53,11 +53,11 @@ public class Marcas {
     }
 
     public String getPaginaMarca() {
-        return PaginaMarca;
+        return paginaMarca;
     }
 
     public void setPaginaMarca(final String paginaMarca) {
-        this.PaginaMarca = paginaMarca;
+        this.paginaMarca = paginaMarca;
     }
 
 }

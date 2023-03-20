@@ -12,11 +12,11 @@ public class Categorias {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idCategoria;
 
-    @Column(nullable = false, length = 45)
-    private String TituloCategoria;
+    @Column(name = "TituloCategoria", nullable = false, length = 45)
+    private String tituloCategoria;
 
     @Lob
-    @Column(nullable = false)
+    @Column(name = "ImagenCategoria", nullable = false)
     @JsonIgnore
     private byte[] imagenCategoria;
 
@@ -29,11 +29,11 @@ public class Categorias {
     }
 
     public String getTituloCategoria() {
-        return TituloCategoria;
+        return tituloCategoria;
     }
 
     public void setTituloCategoria(final String tituloCategoria) {
-        this.TituloCategoria = tituloCategoria;
+        this.tituloCategoria = tituloCategoria;
     }
 
     public byte[] getImagenCategoria() {

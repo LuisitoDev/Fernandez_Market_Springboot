@@ -20,23 +20,23 @@ public class Pedidos {
 
     @JsonFormat(pattern="dd-MM-yyyy", timezone = "UTC")
     @Temporal(TemporalType.DATE)
-    @Column(nullable = false)
-    private Date FechaCreacionPedido;
+    @Column(name = "FechaCreacionPedido", nullable = false)
+    private Date fechaCreacionPedido;
 
-    @Column(nullable = false, length = 200)
-    private String DomicilioPedido;
+    @Column(name = "DomicilioPedido", nullable = false, length = 200)
+    private String domicilioPedido;
 
-    @Column(nullable = false, length = 20)
-    private String TelefonoClientePedido;
+    @Column(name = "TelefonoClientePedido", nullable = false, length = 20)
+    private String telefonoClientePedido;
 
-    @Column(nullable = false, length = 45)
-    private String BancoClientePedido;
+    @Column(name = "BancoClientePedido", nullable = false, length = 45)
+    private String bancoClientePedido;
 
-    @Column(nullable = false, length = 20)
-    private String NumCuentaClientePedido;
+    @Column(name = "NumCuentaClientePedido", nullable = false, length = 20)
+    private String numCuentaClientePedido;
 
-    @Column(nullable = false, precision = 19, scale = 2)
-    private BigDecimal PrecioTotalPedido;
+    @Column(name = "PrecioTotalPedido", nullable = false, precision = 19, scale = 2)
+    private BigDecimal precioTotalPedido;
 
     @ManyToOne(fetch = FetchType.EAGER, optional = false)
     @JoinColumn(name = "UsuarioPedido", nullable = false)
@@ -55,51 +55,51 @@ public class Pedidos {
     }
 
     public Date getFechaCreacionPedido() {
-        return FechaCreacionPedido;
+        return fechaCreacionPedido;
     }
 
     public void setFechaCreacionPedido(final Date fechaCreacionPedido) {
-        this.FechaCreacionPedido = fechaCreacionPedido;
+        this.fechaCreacionPedido = fechaCreacionPedido;
     }
 
     public String getDomicilioPedido() {
-        return DomicilioPedido;
+        return domicilioPedido;
     }
 
     public void setDomicilioPedido(final String domicilioPedido) {
-        this.DomicilioPedido = domicilioPedido;
+        this.domicilioPedido = domicilioPedido;
     }
 
     public String getTelefonoClientePedido() {
-        return TelefonoClientePedido;
+        return telefonoClientePedido;
     }
 
     public void setTelefonoClientePedido(final String telefonoClientePedido) {
-        this.TelefonoClientePedido = telefonoClientePedido;
+        this.telefonoClientePedido = telefonoClientePedido;
     }
 
     public String getBancoClientePedido() {
-        return BancoClientePedido;
+        return bancoClientePedido;
     }
 
     public void setBancoClientePedido(final String bancoClientePedido) {
-        this.BancoClientePedido = bancoClientePedido;
+        this.bancoClientePedido = bancoClientePedido;
     }
 
     public String getNumCuentaClientePedido() {
-        return NumCuentaClientePedido;
+        return numCuentaClientePedido;
     }
 
     public void setNumCuentaClientePedido(final String numCuentaClientePedido) {
-        this.NumCuentaClientePedido = numCuentaClientePedido;
+        this.numCuentaClientePedido = numCuentaClientePedido;
     }
 
     public BigDecimal getPrecioTotalPedido() {
-        return PrecioTotalPedido;
+        return precioTotalPedido;
     }
 
     public void setPrecioTotalPedido(final BigDecimal precioTotalPedido) {
-        this.PrecioTotalPedido = precioTotalPedido;
+        this.precioTotalPedido = precioTotalPedido;
     }
 
     public Usuarios getUsuarioPedido() {

@@ -140,7 +140,7 @@ pageContext.setAttribute("IdUsuarioActivo", IdUsuarioActivo);
 													action = "CrearPedido" method = "get"
 												</c:if>
 												<c:if test="${IdUsuarioActivo == -1}">
-													action = "LoginUsuario" method = "get"
+													action = "/login" method = "get"
 												</c:if>
 										
 												>
@@ -188,7 +188,7 @@ pageContext.setAttribute("IdUsuarioActivo", IdUsuarioActivo);
 													action = "CrearPedido" method = "get"
 												</c:if>
 												<c:if test="${IdUsuarioActivo == -1}">
-													action = "LoginUsuario" method = "get"
+													action = "/login" method = "get"
 												</c:if>
 										
 										

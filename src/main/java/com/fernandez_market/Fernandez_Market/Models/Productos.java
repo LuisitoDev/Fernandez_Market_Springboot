@@ -20,30 +20,30 @@ public class Productos {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idProducto;
 
-    @Column(nullable = false, length = 60)
-    private String NombreProducto;
+    @Column(name = "NombreProducto", nullable = false, length = 60)
+    private String nombreProducto;
 
-    @Column(length = 500)
-    private String DescripcionProducto;
+    @Column(name = "DescripcionProducto", length = 500)
+    private String descripcionProducto;
 
     @Lob
-    @Column(nullable = false)
+    @Column(name = "ImagenProducto", nullable = false)
     @JsonIgnore
     private byte[] imagenProducto;
 
-    @Column(nullable = false, precision = 19, scale = 2)
-    private BigDecimal PrecioProducto;
+    @Column(name = "PrecioProducto", nullable = false, precision = 19, scale = 2)
+    private BigDecimal precioProducto;
 
-    @Column(nullable = false, precision = 5, scale = 2)
-    private BigDecimal DescuentoProducto;
+    @Column(name = "DescuentoProducto", nullable = false, precision = 5, scale = 2)
+    private BigDecimal descuentoProducto;
 
     @JsonFormat(pattern = "dd-MM-yyyy", timezone = "UTC")
     @Temporal(TemporalType.DATE)
-    @Column(nullable = false)
-    private Date FechaCreacionProducto;
+    @Column(name = "FechaCreacionProducto", nullable = false)
+    private Date fechaCreacionProducto = new Date();
 
-    @Column(nullable = false)
-    private Integer CantidadStockProducto;
+    @Column(name = "CantidadStockProducto", nullable = false)
+    private Integer cantidadStockProducto;
 
     @ManyToOne(fetch = FetchType.EAGER, optional = false)
     @JoinColumn(name = "MarcaProducto", nullable = true)
@@ -55,8 +55,8 @@ public class Productos {
     @OnDelete(action = OnDeleteAction.CASCADE)
     private Subcategorias SubcategoriaProducto;
 
-    @Column(length = 45, nullable = false)
-    private String MarcaProductoTexto;
+    @Column(name = "MarcaProductoTexto", length = 45, nullable = false)
+    private String marcaProductoTexto;
 
     @OneToMany(mappedBy = "ProductoCompra")
     private List<Compras> Compras;
@@ -74,19 +74,19 @@ public class Productos {
     }
 
     public String getNombreProducto() {
-        return NombreProducto;
+        return nombreProducto;
     }
 
     public void setNombreProducto(final String nombreProducto) {
-        this.NombreProducto = nombreProducto;
+        this.nombreProducto = nombreProducto;
     }
 
     public String getDescripcionProducto() {
-        return DescripcionProducto;
+        return descripcionProducto;
     }
 
     public void setDescripcionProducto(final String descripcionProducto) {
-        this.DescripcionProducto = descripcionProducto;
+        this.descripcionProducto = descripcionProducto;
     }
 
     public byte[] getImagenProducto() {
@@ -98,22 +98,22 @@ public class Productos {
     }
 
     public BigDecimal getPrecioProducto() {
-        return PrecioProducto;
+        return precioProducto;
     }
 
     public void setPrecioProducto(final BigDecimal precioProducto) {
-        this.PrecioProducto = precioProducto;
+        this.precioProducto = precioProducto;
     }
 
     public BigDecimal getPrecioFinalProducto() {
-        BigDecimal PrecioFinalProducto = this.PrecioProducto.subtract(getValorDescontado());
+        BigDecimal PrecioFinalProducto = this.precioProducto.subtract(getValorDescontado());
 
         PrecioFinalProducto = PrecioFinalProducto.setScale(2, BigDecimal.ROUND_HALF_EVEN);
         return PrecioFinalProducto;
     }
 
     public BigDecimal getValorDescontado() {
-        BigDecimal valorAux = this.PrecioProducto.multiply(this.DescuentoProducto);
+        BigDecimal valorAux = this.precioProducto.multiply(this.descuentoProducto);
         BigDecimal divisor = new BigDecimal(100);
 
         BigDecimal valorDividido = valorAux.divide(divisor);
@@ -123,31 +123,31 @@ public class Productos {
     }
 
     public BigDecimal getDescuentoProducto() {
-        return DescuentoProducto;
+        return descuentoProducto;
     }
 
     public BigDecimal getProcentajeDescuentoProducto() {
-        return this.DescuentoProducto.setScale(0, BigDecimal.ROUND_HALF_EVEN);
+        return this.descuentoProducto.setScale(0, BigDecimal.ROUND_HALF_EVEN);
     }
 
     public void setDescuentoProducto(final BigDecimal descuentoProducto) {
-        this.DescuentoProducto = descuentoProducto;
+        this.descuentoProducto = descuentoProducto;
     }
 
     public Date getFechaCreacionProducto() {
-        return FechaCreacionProducto;
+        return fechaCreacionProducto;
     }
 
     public void setFechaCreacionProducto(final Date fechaCreacionProducto) {
-        this.FechaCreacionProducto = fechaCreacionProducto;
+        this.fechaCreacionProducto = fechaCreacionProducto;
     }
 
     public Integer getCantidadStockProducto() {
-        return CantidadStockProducto;
+        return cantidadStockProducto;
     }
 
     public void setCantidadStockProducto(final Integer cantidadStockProducto) {
-        this.CantidadStockProducto = cantidadStockProducto;
+        this.cantidadStockProducto = cantidadStockProducto;
     }
 
     public Marcas getMarcaProducto() {
@@ -167,11 +167,11 @@ public class Productos {
     }
 
     public String getMarcaProductoTexto() {
-        return MarcaProductoTexto;
+        return marcaProductoTexto;
     }
 
     public void setMarcaProductoTexto(final String marcaProductoTexto) {
-        this.MarcaProductoTexto = marcaProductoTexto;
+        this.marcaProductoTexto = marcaProductoTexto;
     }
 
 }

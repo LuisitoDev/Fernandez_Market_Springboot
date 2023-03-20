@@ -8,7 +8,7 @@
 <%@page import ="java.math.BigDecimal" %>
 
 <%
-Usuarios usuarioElegido = GeneralController.getUsuario();
+Usuarios usuarioElegido = GeneralController.getUsuario(request);
 pageContext.setAttribute("usuarioElegido", usuarioElegido);
 
 List<Subcategorias> listaSubcategorias = GeneralController.getSubcategorias();
@@ -17,7 +17,7 @@ pageContext.setAttribute("listaSubcategorias", listaSubcategorias);
 String visualizarOnboarding = "true";
 pageContext.setAttribute("visualizarOnboarding", visualizarOnboarding);
 
-int cantidadProductosCarrito = 20;
+int cantidadProductosCarrito = GeneralController.getCantidadProductosCarrito(request);
 pageContext.setAttribute("cantidadProductosCarrito", cantidadProductosCarrito);
 %>
 

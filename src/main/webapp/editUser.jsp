@@ -169,8 +169,8 @@ pageContext.setAttribute("usuarioElegido", usuarioElegido);
     </div>
 </body>
     <script src="https://kit.fontawesome.com/d253da1760.js" crossorigin="anonymous"></script>
-    <script src = "Bootstrap/js/popper.min.js"></script>
-    <script src = "Bootstrap/js/bootstrap.min.js"></script>
+    <script src="/Bootstrap/js/popper.min.js"></script>
+    <script src="/Bootstrap/js/bootstrap.min.js"></script>
     <script src="/js/jquery.js"></script>
 	<script src ="js/jquery.validate.min.js"></script>
     <script src="/js/owlcarousel/owl.carousel.min.js"></script>    

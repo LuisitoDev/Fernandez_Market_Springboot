@@ -25,11 +25,11 @@ public class Compras {
     @OnDelete(action = OnDeleteAction.CASCADE)
     private Productos ProductoCompra;
 
-    @Column(nullable = false)
-    private Integer CantidadPiezasCompra;
+    @Column(name = "CantidadPiezasCompra", nullable = false)
+    private Integer cantidadPiezasCompra;
 
-    @Column(precision = 19, scale = 2)
-    private BigDecimal PrecioProductoCompra;
+    @Column(name = "PrecioProductoCompra", precision = 19, scale = 2)
+    private BigDecimal precioProductoCompra;
 
     public Long getIdCompra() {
         return idCompra;
@@ -56,19 +56,19 @@ public class Compras {
     }
 
     public Integer getCantidadPiezasCompra() {
-        return CantidadPiezasCompra;
+        return cantidadPiezasCompra;
     }
 
     public void setCantidadPiezasCompra(final Integer cantidadPiezasCompra) {
-        this.CantidadPiezasCompra = cantidadPiezasCompra;
+        this.cantidadPiezasCompra = cantidadPiezasCompra;
     }
 
     public BigDecimal getPrecioProductoCompra() {
-        return PrecioProductoCompra;
+        return precioProductoCompra;
     }
 
     public void setPrecioProductoCompra(final BigDecimal precioProductoCompra) {
-        this.PrecioProductoCompra = precioProductoCompra;
+        this.precioProductoCompra = precioProductoCompra;
     }
 
 }

@@ -13,25 +13,25 @@ public class Usuarios {
     @Column(name = "idUsuario", nullable = false)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idUsuario;
-    @Column(nullable = false, length = 30)
-    private String NombreUsuario;
-    @Column(nullable = false, length = 30)
-    private String ApellidoPaternoUsuario;
-    @Column(nullable = false, length = 30)
-    private String ApellidoMaternoUsuario;
+    @Column(name = "NombreUsuario", nullable = false, length = 30)
+    private String nombreUsuario;
+    @Column(name = "ApellidoPaternoUsuario", nullable = false, length = 30)
+    private String apellidoPaternoUsuario;
+    @Column(name = "ApellidoMaternoUsuario", nullable = false, length = 30)
+    private String apellidoMaternoUsuario;
 
-    @Column(nullable = false, length = 60)
-    private String CorreoUsuario;
-    @Column(nullable = false, length = 30)
-    private String PasswordUsuario;
+    @Column(name = "CorreoUsuario", nullable = false, length = 60)
+    private String correoUsuario;
+    @Column(name = "PasswordUsuario", nullable = false, length = 30)
+    private String passwordUsuario;
 
     @JsonFormat(pattern="dd-MM-yyyy", timezone = "UTC")
     @Temporal(TemporalType.DATE)
-    @Column(nullable = false)
-    private Date FechaCreacionUsuario;
+    @Column(name = "FechaCreacionUsuario", nullable = false)
+    private Date fechaCreacionUsuario = new Date();
 
-    @Column(nullable = false)
-    private Boolean EstadoUsuario = true;
+    @Column(name = "EstadoUsuario", nullable = false)
+    private Boolean estadoUsuario = true;
 
     @OneToMany(mappedBy = "UsuarioPedido")
     private List<Pedidos> Pedidos;
@@ -41,8 +41,8 @@ public class Usuarios {
 
     public Usuarios(Long idUsuario, String nombreUsuario, String correoUsuario) {
         this.idUsuario = idUsuario;
-        this.NombreUsuario = nombreUsuario;
-        this.CorreoUsuario = correoUsuario;
+        this.nombreUsuario = nombreUsuario;
+        this.correoUsuario = correoUsuario;
     }
 
     public Long getIdUsuario() {
@@ -54,66 +54,66 @@ public class Usuarios {
     }
 
     public String getNombreUsuario() {
-        return NombreUsuario;
+        return nombreUsuario;
     }
 
     public void setNombreUsuario(String nombreUsuario) {
-        this.NombreUsuario = nombreUsuario;
+        this.nombreUsuario = nombreUsuario;
     }
 
     public String getApellidoPaternoUsuario() {
-        return ApellidoPaternoUsuario;
+        return apellidoPaternoUsuario;
     }
 
     public void setApellidoPaternoUsuario(String apellidoPaternoUsuario) {
-        this.ApellidoPaternoUsuario = apellidoPaternoUsuario;
+        this.apellidoPaternoUsuario = apellidoPaternoUsuario;
     }
 
     public String getApellidoMaternoUsuario() {
-        return ApellidoMaternoUsuario;
+        return apellidoMaternoUsuario;
     }
 
     public void setApellidoMaternoUsuario(String apellidoMaternoUsuario) {
-        this.ApellidoMaternoUsuario = apellidoMaternoUsuario;
+        this.apellidoMaternoUsuario = apellidoMaternoUsuario;
     }
 
     public String getCorreoUsuario() {
-        return CorreoUsuario;
+        return correoUsuario;
     }
 
     public void setCorreoUsuario(String correoUsuario) {
-        this.CorreoUsuario = correoUsuario;
+        this.correoUsuario = correoUsuario;
     }
 
     public String getPasswordUsuario() {
-        return PasswordUsuario;
+        return passwordUsuario;
     }
 
     public void setPasswordUsuario(String passwordUsuario) {
-        this.PasswordUsuario = passwordUsuario;
+        this.passwordUsuario = passwordUsuario;
     }
 
     public Date getFechaCreacionUsuario() {
-        return FechaCreacionUsuario;
+        return fechaCreacionUsuario;
     }
 
     public void setFechaCreacionUsuario(Date fechaCreacionUsuario) {
-        this.FechaCreacionUsuario = fechaCreacionUsuario;
+        this.fechaCreacionUsuario = fechaCreacionUsuario;
     }
 
     public Boolean getEstadoUsuario() {
-        return EstadoUsuario;
+        return estadoUsuario;
     }
 
     public void setEstadoUsuario(Boolean estadoUsuario) {
-        this.EstadoUsuario = estadoUsuario;
+        this.estadoUsuario = estadoUsuario;
     }
 
     public String getNombreCompletoUsuario() {
-        return NombreUsuario + " " + ApellidoPaternoUsuario + " " + ApellidoMaternoUsuario;
+        return nombreUsuario + " " + apellidoPaternoUsuario + " " + apellidoMaternoUsuario;
     }
     public String getEstadoUsuarioString() {
-        if (EstadoUsuario) {
+        if (estadoUsuario) {
             return "Activo";
         }
         else {

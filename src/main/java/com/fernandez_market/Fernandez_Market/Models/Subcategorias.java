@@ -14,15 +14,15 @@ public class Subcategorias {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idSubcategoria;
 
-    @Column(nullable = false, length = 45)
-    private String TituloSubcategoria;
+    @Column(name = "TituloSubcategoria", nullable = false, length = 45)
+    private String tituloSubcategoria;
 
     @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name="categoriaPadre", nullable = false)
-    private Categorias CategoriaPadre;
+    @JoinColumn(name="CategoriaPadre", nullable = false)
+    private Categorias categoriaPadre;
 
     @Lob
-    @Column(nullable = false)
+    @Column(name = "ImagenSubcategorias", nullable = false)
     @JsonIgnore
     private byte[] imagenSubcategorias;
 
@@ -41,23 +41,23 @@ public class Subcategorias {
     }
 
     public String getTituloSubcategoria() {
-        return TituloSubcategoria;
+        return tituloSubcategoria;
     }
 
     public String getTituloSubcategoriaURL() {
-        return TituloSubcategoria.replace(" ", "-");
+        return tituloSubcategoria.replace(" ", "-");
     }
 
     public void setTituloSubcategoria(final String tituloSubcategoria) {
-        this.TituloSubcategoria = tituloSubcategoria;
+        this.tituloSubcategoria = tituloSubcategoria;
     }
 
     public Categorias getCategoriaPadre() {
-        return CategoriaPadre;
+        return categoriaPadre;
     }
 
     public void setCategoriaPadre(final Categorias categoriaPadre) {
-        this.CategoriaPadre = categoriaPadre;
+        this.categoriaPadre = categoriaPadre;
     }
 
     public byte[] getImagenSubcategorias() {

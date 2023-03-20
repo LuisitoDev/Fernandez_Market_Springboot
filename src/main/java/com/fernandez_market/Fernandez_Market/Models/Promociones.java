@@ -15,9 +15,9 @@ public class Promociones {
     private Long idPromociones;
 
     @Lob
-    @Column(nullable = false)
+    @Column(name = "ImagenPromocion", nullable = false)
     @JsonIgnore
-    private byte[] ImagenPromocion;
+    private byte[] imagenPromocion;
 
     @ManyToOne(fetch = FetchType.EAGER, optional = false)
     @JoinColumn(name = "Subcategoria", nullable = false)
@@ -33,11 +33,11 @@ public class Promociones {
     }
 
     public byte[] getImagenPromocion() {
-        return ImagenPromocion;
+        return imagenPromocion;
     }
 
     public void setImagenPromocion(final byte[] imagenPromocion) {
-        this.ImagenPromocion = imagenPromocion;
+        this.imagenPromocion = imagenPromocion;
     }
 
     public Subcategorias getSubcategoria() {

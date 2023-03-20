@@ -142,7 +142,7 @@ pageContext.setAttribute("visualizarOnboarding", visualizarOnboarding);
                 data-intro="Subcategorias de la tienda, puede dar click a las opciones para visualizar los productos de tal subcategoria">
                 <div class="row gx-0 mt-4 mb-3">
                     <div class="index-carousel-categorias-titulo-fondo col-12 py-2 col-md-6 col-lg-4 " align="center">
-                        <a href="SubcategoriaProductos?IdSubcategoria=0&numeroPagina=1" class="index-barra-titulo-enlace">Subcategorias</a>
+                        <a href="/subcategoria/General/1" class="index-barra-titulo-enlace">Subcategorias</a>
                     </div>
                 </div>
 
@@ -269,8 +269,8 @@ pageContext.setAttribute("visualizarOnboarding", visualizarOnboarding);
     <script src="/js/mainjquery.js"></script> --%>
 
  <script src="https://kit.fontawesome.com/d253da1760.js" crossorigin="anonymous"></script>
-    <script src = "Bootstrap/js/popper.min.js"></script>
-    <script src = "Bootstrap/js/bootstrap.min.js"></script>
+    <script src="/Bootstrap/js/popper.min.js"></script>
+    <script src="/Bootstrap/js/bootstrap.min.js"></script>
     
      <script src="/js/jquery.js"></script>
     <script src="/js/owlcarousel/owl.carousel.min.js"></script>

@@ -55,7 +55,7 @@ if(request.getAttribute("emailEncontrado") != null)
 						</div>
 					</div>
 
-					<form id="form_main-container" class = "form_main-container" method="post" action="SignUpUsuarios">
+					<form id="form_main-container" class = "form_main-container" method="post" action="/registro">
 						<div class="row mt-2 ">
 							<div class="col-12 mt-2 col-md-6 linea-md-right">
 								<div class="row">

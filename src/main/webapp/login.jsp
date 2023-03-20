@@ -64,7 +64,7 @@ if(request.getAttribute("usuarioIncorrecto") != null)
 						</div>
 					</div>
 
-					<form id="form_main-container" method="post" action="LoginUsuario" class = "form_main-container">
+					<form id="form_main-container" method="post" action="/login" class = "form_main-container">
 						<div class="row mt-2">
 
 							<div class="col-12">
@@ -127,8 +127,8 @@ if(request.getAttribute("usuarioIncorrecto") != null)
 </body>
 
 	<script src="https://kit.fontawesome.com/d253da1760.js" crossorigin="anonymous">
-	<script src = "Bootstrap/js/popper.min.js"></script>
-	<script src = "Bootstrap/js/bootstrap.min.js"></script>
+	<script src="/Bootstrap/js/popper.min.js"></script>
+	<script src="/Bootstrap/js/bootstrap.min.js"></script>
 	<script src="/js/jquery.js"></script>
 	<script src ="js/jquery.validate.min.js"></script>
 	<script src="/js/intro.js"></script>
