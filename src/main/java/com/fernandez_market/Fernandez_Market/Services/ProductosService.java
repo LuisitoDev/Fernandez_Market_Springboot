@@ -35,10 +35,12 @@ public class ProductosService {
         return null;
     }
 
+    public List<ProductosCardDTO> getProductosDeTuInteres(Long idUsuario) {
+        return this.productoRepository.getProductosDeTuInteres(idUsuario, PageRequest.of(0, 12));
+    }
     public List<ProductosCardDTO> getProductosMasVendidos() {
         return this.productoRepository.getProductosMasVendidos();
     }
-
     public List<ProductosCardDTO> getProductosNuevos() {
         return this.productoRepository.getProductosNuevos();
     }

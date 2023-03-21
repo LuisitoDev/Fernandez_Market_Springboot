@@ -14,6 +14,19 @@ public interface ProductosRepository extends JpaRepository<Productos, Long> {
     public Productos findByIdProducto(Long IdProducto);
 
     @Query(value =
+            "SELECT PINT.idProducto, PINT.nombreProducto, PINT.precioProducto, PINT.descuentoProducto, PINT.cantidadStockProducto, PINT.marcaProductoTexto  " +
+                    "FROM Productos AS PINT  " +
+                "WHERE PINT.SubcategoriaProducto IN   " +
+                    "(  " +
+                        "SELECT SubcategoriaProducto   " +
+                        "FROM (select @id_Usuario::=?1) parm , v_subcats_favoritas  " +
+                    ")  " +
+                "AND PINT.CantidadStockProducto > 0  " +
+                "ORDER BY DescuentoProducto DESC, PrecioProducto DESC  "
+            ,nativeQuery = true)
+    List<ProductosCardDTO> getProductosDeTuInteres(Long idUsuario, Pageable pageable);
+
+    @Query(value =
             "SELECT p.idProducto, p.nombreProducto, p.precioProducto, p.descuentoProducto, p.cantidadStockProducto, p.marcaProductoTexto, SUM(c.cantidadPiezasCompra) as cantVecesComprado " +
                     "FROM productos p " +
                     "LEFT JOIN compras c on c.productoCompra = p.idProducto " +

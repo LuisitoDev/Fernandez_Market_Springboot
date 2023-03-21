@@ -36,10 +36,10 @@ public class API_ProductoController {
         return productosService.getProducto(idProducto);
     }
 
-    @GetMapping("/getProductosMasVendidos")
+        @GetMapping("/getProductosInteres")
     public ResponseEntity<List<ProductosCardDTO>> getRecentBooks(){
 
-        return ResponseEntity.ok(this.productosService.getProductosMasVendidos());
+        return ResponseEntity.ok(this.productosService.getProductosDeTuInteres(1L));
     }
 
     @GetMapping("/buscar/{nombreProducto}")

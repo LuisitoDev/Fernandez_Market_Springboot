@@ -9,6 +9,7 @@ import com.fernandez_market.Fernandez_Market.Services.MarcasService;
 import com.fernandez_market.Fernandez_Market.Services.ProductosService;
 import com.fernandez_market.Fernandez_Market.Services.PromocionesService;
 import com.fernandez_market.Fernandez_Market.Services.SubcategoriasService;
+import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -33,17 +34,24 @@ public class HomeController {
     }
 
     @GetMapping()
-    public String getHome(Model modelo){
+    public String getHome(Model modelo, HttpServletRequest request){
         List<Marcas> marcas = this.marcasService.getMarcas();
         List<Promociones> promociones = this.promocionesService.getPromociones();
         List<Subcategorias> subcategorias = this.subcategoriasService.getSubcategorias();
+
         List<ProductosCardDTO> productosMasVendidos = this.productosService.getProductosMasVendidos();
         List<ProductosCardDTO> productosNuevos = this.productosService.getProductosNuevos();
+
+        List<ProductosCardDTO> listaProductosInteres = null;
+        if (request.getSession().getAttribute("IdUsuarioActivo") != null){
+            long idUsuarioActivo = (Long)request.getSession().getAttribute("IdUsuarioActivo");
+            listaProductosInteres = this.productosService.getProductosDeTuInteres(idUsuarioActivo);
+        }
 
         modelo.addAttribute("listaMarcas", marcas);
         modelo.addAttribute("listaPromociones", promociones);
         modelo.addAttribute("listaSubcategoria", subcategorias);
-        modelo.addAttribute("listaProductosInteres", productosMasVendidos);
+        modelo.addAttribute("listaProductosInteres", listaProductosInteres);
         modelo.addAttribute("listaProductosMasComprados", productosMasVendidos);
         modelo.addAttribute("listaProductosNuevos", productosNuevos);
 

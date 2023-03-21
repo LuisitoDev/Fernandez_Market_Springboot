@@ -29,4 +29,5 @@ public class API_UsuarioController {
     public Usuarios getUsuarios(@PathVariable("id_usuario") long id_usuario){
         return usuarioService.getUsuarioById(id_usuario);
     }
+
 }
