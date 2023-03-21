@@ -1,8 +1,10 @@
 package com.fernandez_market.Fernandez_Market.Controllers.api;
 
 import com.fernandez_market.Fernandez_Market.Models.Subcategorias;
+import com.fernandez_market.Fernandez_Market.Models.Usuarios;
 import com.fernandez_market.Fernandez_Market.Services.SubcategoriasService;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 

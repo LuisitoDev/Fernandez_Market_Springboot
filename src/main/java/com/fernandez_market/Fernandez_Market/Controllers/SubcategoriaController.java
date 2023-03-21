@@ -96,6 +96,10 @@ public class SubcategoriaController {
         modelo.addAttribute("numeroPagina", numeroPagina);
         modelo.addAttribute("nombreProducto", nombreProducto);
 
+        if (nombreProducto != null)
+            modelo.addAttribute("nombreProductoQuery", "/" + nombreProducto);
+
+
         return "subcategoryProducts";
     }
 

@@ -16,7 +16,7 @@
 	<c:set var="tituloSubcategoriaElegidaURL" value="General" />
 </c:if>
 
-<c:set var="nombreProductoQuery" value="" />
+
 
 
 <!DOCTYPE html>
@@ -189,7 +189,7 @@
 											<h1 class="subcategorias-busqueda-titulo">Producto buscado con nombre:</h1>
 											<h1 class="subcategorias-busqueda-titulo-producto">${nombreProducto}</h1>
 										</div>
-										<a href="/subcategoria/${tituloSubcategoriaElegidaURL.replace('-', ' ')}/1${nombreProductoQuery}" class="text-end"><i class="fas fa-times-circle subcategorias-busqueda-titulo-eliminar"></i></a>
+										<a href="/subcategoria/${tituloSubcategoriaElegidaURL.replace('-', ' ')}/1" class="text-end"><i class="fas fa-times-circle subcategorias-busqueda-titulo-eliminar"></i></a>
 									</div>
 								</div>
 							</div>

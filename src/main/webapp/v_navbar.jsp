@@ -41,15 +41,11 @@ pageContext.setAttribute("cantidadProductosCarrito", cantidadProductosCarrito);
             	data-intro="Buscador de productos, puede ingresar el nombre de un producto y dar click en el boton de la lupa para buscar todos los productos con un nombre similar"
             </c:if>
         class="order-3 col-12 px-2 mt-1 order-lg-2 col-lg-5  mt-lg-0  col-xl-4">
-            <form class="d-flex justify-content-center"  action = "SubcategoriaProductos" method = "get"  autocomplete="off">
                 <div class="navbar-search-bar col-12">
-                 	<input name="IdSubcategoria" type="hidden" value="0">
-                    <input name="numeroPagina" type="hidden" value="1">
                     <input id = "navbar-search-bar" class="navbar-search-bar-input" name = "nombreProducto" type="search" placeholder="Buscar producto"
                         aria-label="Buscar">
-                    <button class="button-navbar-search p-0 mx-2" type="submit"><i class="fas fa-search"></i></button>
+                    <button id="btn-buscar-producto" class="button-navbar-search p-0 mx-2"><i class="fas fa-search"></i></button>
                 </div>
-            </form>
         </div>
 
         <div class="order-2 col-6 ps-2  order-lg-3 col-lg-3" align="end">

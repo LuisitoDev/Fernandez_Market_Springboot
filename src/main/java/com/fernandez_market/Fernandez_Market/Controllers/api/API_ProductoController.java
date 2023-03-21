@@ -42,6 +42,16 @@ public class API_ProductoController {
         return ResponseEntity.ok(this.productosService.getProductosMasVendidos());
     }
 
+    @GetMapping("/buscar/{nombreProducto}")
+    public ResponseEntity<List<ProductosCardDTO>> getProductos(@PathVariable("nombreProducto") String nombreProducto){
+        int numeroProducto = 1;
+        short IdSubcategoriaElegida = 0;
+
+        List<ProductosCardDTO> listaProductos = this.productosService.getProductosBySubcategoriaNombrePagina(IdSubcategoriaElegida, nombreProducto, numeroProducto, 12);
+
+        return ResponseEntity.ok(listaProductos);
+    }
+
     @PostMapping("/ingresar-producto")
     public ResponseEntity<String> ingresarProducto(Model modelo, HttpServletRequest request, @RequestParam("IdProducto") Long IdProducto, @RequestParam("cantidadPiezas") int cantidadPiezas){
         Productos productoElegido = this.productosService.getProducto(IdProducto);
@@ -170,4 +180,6 @@ public class API_ProductoController {
 
         return null;
     }
+
+
 }
