@@ -13,7 +13,7 @@ $(function() {
 
 
 		$.ajax({
-			url: 'CarritoProductos',
+			url: '/api/producto/eliminar-producto-lista',
 			type: 'post',
 			data: {
 				opcion: 'eliminarProductoCarrito',
@@ -83,7 +83,7 @@ $(function() {
 		//var boton = elemento.text();
 
 		$.ajax({
-			url: 'CarritoProductos',
+			url: '/api/producto/conseguir-cantidad-stock',
 			type: 'post',
 			data: {
 				opcion: 'conseguirCantidadStock',
@@ -125,7 +125,7 @@ $(function() {
 
 
 		$.ajax({
-			url: 'CarritoProductos',
+			url: '/api/producto/cambiar-cantidad-productos',
 			type: 'post',
 			data: {
 				opcion: 'cambiarCantidadProductos',
@@ -172,7 +172,7 @@ $(function() {
 
 
 		$.ajax({
-			url: 'DetallesProducto',
+			url: '/api/producto/ingresar-producto',
 			type: 'post',
 			data: {
 				opcion: "ingresarProducto",
@@ -210,7 +210,7 @@ $(function() {
 '                <div class="col-12 col-sm-6 col-md-5 col-lg-4 col-xl-3 producto-agregado-contenedor"  style="z-index: 10000005">'+
 ''+
 ''+
-'                    <a href="CarritoProductos">'+
+'                    <a href="/carrito">'+
 '                    	<div class="row gx-0 producto-agregado-header py-2 px-2">'+
 '                       	 <div class="col-11">'+
 '                                <h2 class="producto-agregado-header-titulo">Producto agregado <i'+
@@ -220,12 +220,12 @@ $(function() {
 '                    </a>'+
 ''+
 ''+
-'                    <a href="CarritoProductos">'+
+'                    <a href="/carrito">'+
 ''+
 '                        <div class="d-none d-md-inline">'+
 '                            <div class="row gx-0 py-2">'+
 '                                <div class="col-3 px-1 d-none d-md-inline col-xxl-2" align="center">'+
-'                            		<img src="GeneralServlet?Imagen=Producto&Id=' + IdProducto + ' " style="width: 70px" alt="...">' +
+'                            		<img src="/images/Producto/' + IdProducto + '" style="width: 70px" alt="...">' +
 '                                </div>'+
 '                                <div class="col-10 col-md-6 ps-2 ps-md-0 ps-xxl-2 col-xxl-7">'+
 '  			                          	<h1 class="producto-agregado-titulo" >' +
@@ -303,7 +303,7 @@ $(function() {
 		//var boton = elemento.text();
 
 		$.ajax({
-			url: 'CarritoProductos',
+			url: '/api/producto/conseguir-cantidad-stock',
 			type: 'post',
 			data: {
 				opcion: 'conseguirCantidadStock',
@@ -342,7 +342,7 @@ $(function() {
 
 
 		$.ajax({
-			url: 'DetallesProducto',
+			url: '/api/producto/cambiar-cantidad-piezas',
 			type: 'post',
 			data: {
 				opcion: 'cambiarCantidadProductos',

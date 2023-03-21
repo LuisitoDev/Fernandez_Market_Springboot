@@ -9,30 +9,23 @@
 
 
 <%
-Productos_Model iProducto = (Productos_Model) request.getAttribute("iProducto");
-pageContext.setAttribute("iProducto", iProducto);
+
 %>
 
 <div class="row gx-0 mt-3">
     <div class="col-12 cart-card-producto">
         <div class=" row gx-0">
            <div class="col-12 pe-1 pt-1 pe-md-2" align="end">
-<!--             	<form id = "form_delete-main-container" action="CarritoProductos" method = "post"> -->
-<%--             		<input name="IdProducto" type="hidden" value="${iProducto.getIdProducto()}"> --%>
-<!--             		<button id = "cart-producto-eliminar-boton" class = "cart-producto-eliminar-boton" form = "form_delete-main-container"><i class="fas fa-times-circle cart-producto-eliminar"></i></button> -->
-<!--             	</form> -->
-
 					<input id = "IdProducto" name="IdProducto" type="hidden" value="${iProducto.getIdProducto()}">
-<%-- 					<span id = "IdProducto" class = "d-none">${iProducto.getIdProducto()}</span> --%>
 					<a id = "cart-producto-eliminar-boton" class = "cart-producto-eliminar-boton"><i class="fas fa-times-circle cart-producto-eliminar"></i></a>
             </div>
         </div>
          <div class="row gx-0 pt-1 pb-3 pb-md-0 ">
             <div class="col-2 px-1 col-xl-1" align="center">
                 <a href="/producto/${iProducto.getIdProducto()}" class="cart-producto-imagen">
-                    <img src="GeneralServlet?Imagen=Producto&Id=${iProducto.getIdProducto()}" class="w-100" alt="...">
+                    <img src="/images/Producto/${iProducto.getIdProducto()}" class="w-100" alt="...">
                 </a>
-                <a href="GeneralServlet?Imagen=Producto&Id=${iProducto.getIdProducto()}" target = "_blank">
+                <a href="/images/Producto/${iProducto.getIdProducto()}" target = "_blank">
                     <i class="fas fa-expand cart-producto-imagen-expandir py-2 px-2"></i>
                 </a>
             </div>

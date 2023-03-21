@@ -12,21 +12,6 @@
 <%@page import="java.math.BigDecimal"%>
 
 <%
-List<Productos_Model> productosCarrito = (List<Productos_Model>) request.getAttribute("productosCarrito");
-pageContext.setAttribute("productosCarrito", productosCarrito);
-
-BigDecimal totalPedido = (BigDecimal) request.getAttribute("totalPedido");
-pageContext.setAttribute("totalPedido", totalPedido);
-
-BigDecimal cantidadPiezasTotales = (BigDecimal) request.getAttribute("cantidadPiezasTotales");
-pageContext.setAttribute("cantidadPiezasTotales", cantidadPiezasTotales);
-
-long IdUsuarioActivo = -1;
-if (request.getSession().getAttribute("IdUsuarioActivo") != null){
-	IdUsuarioActivo = (Long)request.getSession().getAttribute("IdUsuarioActivo");
-}
-pageContext.setAttribute("IdUsuarioActivo", IdUsuarioActivo);
-
 %>
 
 <!DOCTYPE html>
@@ -135,26 +120,17 @@ pageContext.setAttribute("IdUsuarioActivo", IdUsuarioActivo);
 										</div>
 										<!-- align = "center" -->
 										<div class="col-4 my-auto px-2  col-sm-3  col-md-2 col-xl-3">
-											<form 
+											<a class="btn button-ok w-100 py-2" type="submit" 
 												<c:if test="${IdUsuarioActivo != -1}">
-													action = "CrearPedido" method = "get"
+													href = "/pedido"
 												</c:if>
 												<c:if test="${IdUsuarioActivo == -1}">
-													action = "/login" method = "get"
+													href = "/login/realizar-pedido"
 												</c:if>
-										
-												>
-										
-										
-												<c:if test="${IdUsuarioActivo == -1}">
-													<input type="hidden" name="opcion" value="login">
-													<input type="hidden" name="usuarioPedido" value="true">
-												</c:if>
-										
-												<button class="btn button-ok w-100 py-2" type="submit" href="CrearPedido">
-													Finalizar compra
-												</button>
-											</form>
+
+											>
+												Finalizar compra
+											</a>
 										</div>
 									</div>
 	
@@ -167,12 +143,9 @@ pageContext.setAttribute("IdUsuarioActivo", IdUsuarioActivo);
 	        	                    data-intro="Para finalizar la compra da click en el boton derecho<br>Para seguir viendo productos da click en el boton izquierdo" 
 										class="cart-carrito-compras row gx-0 py-2 mt-3 d-none d-lg-flex">
 										<div class="col-3 my-auto px-2 col-xl-2">
-											<form action/home= "/home	" method = "get">
-												<button class="btn cart-producto-button-volver w-100 py-2" type="submit/home href="/home">
-													Seguir comprando
-												</button>
-											</form>									
-								
+											<a class="btn cart-producto-button-volver w-100 py-2" type="submit/inicio" href="/inicio">
+												Seguir comprando
+											</a>
 										</div>
 
 										<div class="col-6 mx-auto my-auto col-xl-8 mx-xl-0"
@@ -183,26 +156,19 @@ pageContext.setAttribute("IdUsuarioActivo", IdUsuarioActivo);
 										</div>
 										<!-- align = "center" -->
 										<div class="col-3 my-auto px-2 col-xl-2">
-											<form 
+											
+											<a class="btn button-ok w-100 py-2" type="submit" 
 												<c:if test="${IdUsuarioActivo != -1}">
-													action = "CrearPedido" method = "get"
+													href = "/pedido"
 												</c:if>
 												<c:if test="${IdUsuarioActivo == -1}">
-													action = "/login" method = "get"
+													href = "/login/realizar-pedido"
 												</c:if>
-										
-										
-												>
-										
-												<c:if test="${IdUsuarioActivo == -1}">
-													<input type="hidden" name="opcion" value="login">
-													<input type="hidden" name="usuarioPedido" value="true">
-												</c:if>
-										
-												<button class="btn button-ok w-100 py-2" type="submit" href="CrearPedido">
-													Finalizar compra
-												</button>
-											</form>
+
+											>
+												Finalizar compra
+											</a>
+											
 									
 										</div>
 									</div>

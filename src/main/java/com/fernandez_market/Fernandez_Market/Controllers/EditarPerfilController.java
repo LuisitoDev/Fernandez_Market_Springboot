@@ -31,9 +31,9 @@ public class EditarPerfilController {
 
         long idUsuarioActivo = (Long)request.getSession().getAttribute("IdUsuarioActivo");
 
-        Optional<Usuarios> usuarioElegido = this.usuarioService.getUsuarioById(idUsuarioActivo);
+        Usuarios usuarioElegido = this.usuarioService.getUsuarioById(idUsuarioActivo);
 
-        modelo.addAttribute("usuarioElegido", usuarioElegido.get());
+        modelo.addAttribute("usuarioElegido", usuarioElegido);
 
         return "editUser";
     }
@@ -51,14 +51,14 @@ public class EditarPerfilController {
         long idUsuarioActivo = (Long)request.getSession().getAttribute("IdUsuarioActivo");
 
 
-        Optional<Usuarios> usuario = this.usuarioService.getUsuarioById(idUsuarioActivo);
+        Usuarios usuario = this.usuarioService.getUsuarioById(idUsuarioActivo);
 
-        usuario.get().setNombreUsuario(nombre);
-        usuario.get().setApellidoPaternoUsuario(apellidoP);
-        usuario.get().setApellidoMaternoUsuario(apellidoM);
-        usuario.get().setPasswordUsuario(password);
+        usuario.setNombreUsuario(nombre);
+        usuario.setApellidoPaternoUsuario(apellidoP);
+        usuario.setApellidoMaternoUsuario(apellidoM);
+        usuario.setPasswordUsuario(password);
 
-        this.usuarioService.updateUsuario(usuario.get());
+        this.usuarioService.updateUsuario(usuario);
 
         return "redirect:/perfil";
     }

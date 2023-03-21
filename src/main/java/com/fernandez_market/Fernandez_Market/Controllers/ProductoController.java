@@ -3,11 +3,10 @@ package com.fernandez_market.Fernandez_Market.Controllers;
 import com.fernandez_market.Fernandez_Market.Models.Productos;
 import com.fernandez_market.Fernandez_Market.Projections.ProductosCardDTO;
 import com.fernandez_market.Fernandez_Market.Services.ProductosService;
+import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 

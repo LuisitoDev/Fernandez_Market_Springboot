@@ -23,8 +23,22 @@ public class LoginController {
 
     @GetMapping
     public String getLoginPage(Model modelo, HttpServletRequest request){
-        if (request.getSession().getAttribute("IdUsuarioActivo") != null)
+        if (request.getSession().getAttribute("IdUsuarioActivo") != null) {
             request.getSession().setAttribute("IdUsuarioActivo", null);
+            request.getSession().setAttribute("usuarioPedido", null);
+        }
+
+        return "login";
+    }
+
+    @GetMapping("/realizar-pedido")
+    public String getLoginPageBeforeRealizarPedido(Model modelo, HttpServletRequest request){
+        if (request.getSession().getAttribute("IdUsuarioActivo") != null) {
+            request.getSession().setAttribute("IdUsuarioActivo", null);
+            request.getSession().setAttribute("usuarioPedido", null);
+        }
+
+        request.getSession().setAttribute("usuarioPedido", true);
 
         return "login";
     }
@@ -40,6 +54,9 @@ public class LoginController {
 
         request.getSession().setAttribute("IdUsuarioActivo", usuario.getIdUsuario());
 
-        return "redirect:/inicio";
+        if (request.getSession().getAttribute("usuarioPedido") != null)
+            return "redirect:/pedido";
+        else
+            return "redirect:/inicio";
     }
 }

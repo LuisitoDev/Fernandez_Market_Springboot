@@ -31,11 +31,11 @@ public class PerfilController {
 
         long idUsuarioActivo = (Long)request.getSession().getAttribute("IdUsuarioActivo");
 
-        Optional<Usuarios> usuarioElegido = this.usuarioService.getUsuarioById(idUsuarioActivo);
+        Usuarios usuarioElegido = this.usuarioService.getUsuarioById(idUsuarioActivo);
 
-        modelo.addAttribute("usuarioElegido", usuarioElegido.get());
+        modelo.addAttribute("usuarioElegido", usuarioElegido);
 
-        modelo.addAttribute("listaPedidos", usuarioElegido.get().getPedidos());
+        modelo.addAttribute("listaPedidos", usuarioElegido.getPedidos());
 
         return "profileUser";
     }

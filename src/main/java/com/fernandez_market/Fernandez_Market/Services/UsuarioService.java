@@ -24,8 +24,8 @@ public class UsuarioService {
         this.usuarioRepository.save(usuarioActualizar);
     }
 
-    public Optional<Usuarios> getUsuarioById(long idUsuario){
-        return this.usuarioRepository.findById(idUsuario);
+    public Usuarios getUsuarioById(long idUsuario){
+        return this.usuarioRepository.findById(idUsuario).get();
     }
 
     public List<Usuarios> getUsuarios(){

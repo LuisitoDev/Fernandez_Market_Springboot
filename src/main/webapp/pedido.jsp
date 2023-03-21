@@ -64,7 +64,7 @@ pageContext.setAttribute("pedidoElegido", pedidoElegido);
 
 					<a href="/inicio" class="pedido-barra-titulo-enlace">Inicio</a>
 					<i class="fas fa-angle-right pedido-barra-titulo"></i> <a
-						href="CarritoProductos" class="pedido-barra-titulo-enlace">Carrito
+						href="/carrito" class="pedido-barra-titulo-enlace">Carrito
 						de compra</a> <i class="fas fa-angle-right pedido-barra-titulo"></i>
 					<h1 class="pedido-barra-titulo">Pedido</h1>
 				</div>
@@ -85,7 +85,7 @@ pageContext.setAttribute("pedidoElegido", pedidoElegido);
 							</div>
 
 							<div class="row gx-0 mt-2 mb-4">
-								<form id = "form_main-container" class = "form_main-container" method="post" action="CrearPedido">
+								<form id = "form_main-container" class = "form_main-container" method="post" action="/pedido">
                                 <div  data-position="bottom"
                                 data-intro="Se llenará informacion sobre el domicilio y contacto, en los campos 'Numero Int/Ext', 'Telefono' y 'Codigo postal' deben ser ingresados puros numeros"
 									class="col-12">

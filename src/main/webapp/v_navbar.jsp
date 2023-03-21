@@ -79,7 +79,7 @@ pageContext.setAttribute("cantidadProductosCarrito", cantidadProductosCarrito);
     	        	data-intro="Boton ver el carrito de productos comprados"
             	</c:if>
             	
-            href="CarritoProductos" class="link-navbar" id = "navbar-carrito-icono" >
+            href="/carrito" class="link-navbar" id = "navbar-carrito-icono" >
                 <i class="fas fa-shopping-cart button-navbar-icons  me-1 ms-sm-1 position-relative">
                     <span class='navbar-carrito-cantidad-span' id='navbar-carrito-cantidad-productos'> ${cantidadProductosCarrito} </span>
                 </i>

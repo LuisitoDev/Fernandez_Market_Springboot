@@ -63,7 +63,11 @@ public class Productos {
 
     @JsonInclude(JsonInclude.Include.NON_NULL)
     @Transient
-    private Long CantVecesComprado;
+    private int CantVecesComprado;
+
+    @JsonIgnore
+    @Transient
+    private int cantidadPiezasComprar;
 
     public Long getIdProducto() {
         return idProducto;
@@ -173,5 +177,22 @@ public class Productos {
     public void setMarcaProductoTexto(final String marcaProductoTexto) {
         this.marcaProductoTexto = marcaProductoTexto;
     }
+
+
+    public int getCantidadPiezasComprar() {
+        return cantidadPiezasComprar;
+    }
+
+    public void setCantidadPiezasComprar(int cantidadPiezasComprar) {
+        this.cantidadPiezasComprar = cantidadPiezasComprar;
+    }
+
+    public BigDecimal getTotalPorPiezas() {
+        BigDecimal precioFinal = getPrecioFinalProducto();
+        BigDecimal cantidadPiezas = new BigDecimal(cantidadPiezasComprar);
+
+        return precioFinal.multiply(cantidadPiezas);
+    }
+
 
 }
