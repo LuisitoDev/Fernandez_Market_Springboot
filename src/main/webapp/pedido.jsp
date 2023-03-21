@@ -8,8 +8,6 @@
 <%@page import="java.math.BigDecimal"%>
 
 <%
-Pedidos_Model pedidoElegido = (Pedidos_Model) request.getAttribute("pedidoElegido");
-pageContext.setAttribute("pedidoElegido", pedidoElegido);
 
 %>
 
